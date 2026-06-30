@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>إدارة الأولويات (زوجتك أولاً) – خيركم</title>
+<meta name="description" content="دليل وضع شريكة الحياة في مقدمة الاهتمام لبناء أسرة متماسكة ومطمئنة – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: IDARAT AL-AWLAWIYYAT (DEEP TEAL & GOLD) ── */
+:root {
+  --teal-primary: #0F9E91;
+  --teal-deep:    #0A6E64;
+  --teal-light:   #D4F5F2;
+  --teal-ultra:   #E8FAF9;
+  --gold-primary: #C8973A;
+  --gold-deep:    #9A701C;
+  --gold-light:   #F7E9CC;
+  --gold-ultra:   #FDF7EC;
+  
+  --r-teal:       #0F9E91;
+  --r-teal-d:     #0A6E64;
+  --r-teal-lt:    #D4F5F2;
+}
+
+/* Page covers and backgrounds */
+.teal-bg { background: linear-gradient(160deg, var(--teal-ultra) 0%, white 60%); }
+.teal-label { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.teal-num { color: rgba(15, 158, 145, 0.06); }
+.teal-quote { background: var(--teal-light); border-right: 4px solid var(--teal-primary); color: var(--teal-deep); }
+.teal-color { background: linear-gradient(135deg, var(--teal-light), white); border-bottom: 2px solid rgba(15, 158, 145, 0.2); }
+.badge-teal { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+
+/* Custom components */
+.priority-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.priority-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-primary); display: flex; flex-direction: column; gap: 8px; }
+.priority-icon { font-size: 26px; }
+.priority-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.priority-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* list style */
+.prio-list { display: flex; flex-direction: column; gap: 10px; }
+.prio-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.prio-item-gold { border-right-color: var(--gold-primary); }
+.prio-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.prio-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.prio-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.pt-teal { background: var(--teal-light); color: var(--teal-deep); }
+.pt-gold { background: var(--gold-light); color: var(--gold-deep); }
+
+/* pyramid visual */
+.pyramid-wrap { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; align-items: center; }
+.pyr-level { border-radius: var(--r-md); padding: 14px 20px; text-align: center; box-shadow: var(--sh-sm); transition: all 0.3s; }
+.pyr-1 { width: 440px; background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); color: white; border: 1.5px solid var(--teal-deep); }
+.pyr-2 { width: 380px; background: linear-gradient(135deg, var(--gold-primary), var(--gold-deep)); color: white; border: 1.5px solid var(--gold-deep); }
+.pyr-3 { width: 320px; background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border: 1.5px solid #BBF7D0; color: #166534; }
+.pyr-4 { width: 260px; background: var(--g100); border: 1.5px solid var(--g200); color: var(--g700); }
+.pyr-title { font-size: 14px; font-weight: 900; margin-bottom: 4px; }
+.pyr-desc { font-size: 11px; opacity: 0.95; line-height: 1.5; }
+
+/* cover badges */
+.cv-prio-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-pb { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.pb1 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.pb2 { background: linear-gradient(135deg, var(--gold-primary), var(--gold-deep)); }
+.pb3 { background: linear-gradient(135deg, #166534, #14532D); }
+
+/* 30 day challenge */
+.prio-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.pc-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.pc-num { font-size: 16px; font-weight: 900; color: var(--teal-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.pc-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.pc-sp { background: var(--teal-light); border-color: var(--teal-primary); }
+.pc-sp2 { background: var(--gold-light); border-color: var(--gold-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#E8FAF9 0%,#FFFFFF 45%,var(--gold-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(15,158,145,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(200,151,58,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep));color:white;border-color:rgba(15, 158, 145, 0.3)">سلسلة التوازن والاستقرار الأسري</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(15, 158, 145, 0.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(200,151,58,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(15,158,145,.35))">⚖️</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">💚</div>
+        <div class="cv-coin c2" style="font-size:18px">💛</div>
+        <div class="cv-coin c3" style="font-size:20px">💎</div>
+        <div class="cv-coin c4" style="font-size:16px">✨</div>
+        <div class="cv-coin c5" style="font-size:18px">🏡</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:54px;background:linear-gradient(135deg,var(--teal-deep) 0%,var(--teal-primary) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">إدارة الأولويات</h1>
+      <div style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--g700);margin:4px 0">زوجتك أولاً</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--teal-primary),var(--gold))"></div>
+      <p class="cv-sub">دليل عملي لوضع شريكة الحياة في مقدمة الاهتمام<br>لتحقيق التوازن بين العمل والأهل والأصدقاء وبناء أسرة مطمئنة</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-prio-badges">
+      <div class="cv-pb pb1">⚖️ توازن سليم</div>
+      <div class="cv-pb pb2">🏡 أولويتي بيتي</div>
+      <div class="cv-pb pb3">💚 خيركم لأهله</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل التوازن والقيادة الأسرية · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">المنهج النبوي في ترتيب الأولويات</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">⚖️</div>
+      <h2>زوجتك أولاً</h2>
+      <p>الأصل الشرعي والتربوي لترتيب الأولويات لصالح استقرار الأسرة</p>
+    </div>
+
+    <div class="hadith-box" style="background:var(--teal-light);border-color:rgba(15, 158, 145, 0.2)">
+      <div class="hadith-text" style="color:var(--teal-deep)">«... وإنَّ لِأَهْلِكَ عَلَيْكَ حَقًّا»</div>
+      <div class="hadith-src" style="color:var(--teal-deep)">النبي محمد ﷺ · رواه البخاري وصحّحه</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--teal-primary)">
+      <p style="color:var(--teal-deep)">العلاقة الزوجية هي الميثاق الغليظ الذي يستحق الرعاية والاهتمام الأول. يظن بعض الرجال أن أداء الواجب المالي كافٍ، فيهملون تخصيص الوقت والاهتمام لزوجاتهم لصالح العمل أو الأصدقاء. هذا الدليل يعيد البوصلة لنصابها الصحيح لتكون زوجتك في قمة أولوياتك العملية والوجدانية.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--teal-ultra);border-color:var(--teal-light)">
+        <div class="tc-icon">🏡</div>
+        <h4 style="color:var(--teal-deep)">السكينة الأسرية</h4>
+        <p>شعور الزوجة بأنها الخيار الأول للزوج يمنحها أماناً عاطفياً عالياً ينعكس على هدوء البيت بالكامل.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="tc-icon">⚖️</div>
+        <h4 style="color:var(--gold)">التوازن الصحي</h4>
+        <p>مهارات رسم الحدود الذكية والواضحة بين متطلبات العمل، بر الوالدين، الأصدقاء، وحق الزوجة.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--pink-light);border-color:rgba(216,27,117,.15)">
+        <div class="tc-icon">🗣️</div>
+        <h4 style="color:var(--pink-primary)">شورى وتناغم</h4>
+        <p>تفعيل الشورى الزوجية وإشراكها في القرارات ليشعر الشريك بأهميته وقيمته الكبرى في حياتك.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 ما الذي يقدمه لك هذا الدليل؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal" style="background:var(--teal-light);color:var(--teal-deep)">🌱</div><span>فهم سلم الأولويات الأسرية الصحيح</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>اختبار قياس أولوية زوجتك في حياتك</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>خطة التوازن الأسبوعي للأوقات</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>المنهج والترتيب · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتويات رحلة التوازن والأولويات</h2>
+      <p>تنظيم أوقاتك واهتماماتك لصالح بناء علاقة زوجية مستقرة ومتماسكة</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">المنهج النبوي في ترتيب الأولويات</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">لماذا يجب أن تأتي زوجتك أولاً؟ الأثر النفسي</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal-primary)"></span>الفصل الأول: هرم الأولويات الزوجية</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal-primary)">الفصل ١</span><span class="te-name">ترتيب الأدوار: العمل، الأهل، الأصدقاء، الزوجة</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal-primary)">الفصل ١</span><span class="te-name">كيف توازن بين بر الوالدين وحق زوجتك؟</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold)"></span>الفصل الثاني: لصوص الوقت وعلاجها</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٢</span><span class="te-name">لصوص الوقت الزوجي: إدمان العمل والشبكات الاجتماعية</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٢</span><span class="te-name">مهارات رسم الحدود وقول «لا» للمشتتات الخارجية</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٢</span><span class="te-name">تنظيم السهرات الخارجية وحق السكن المنزلي</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--pink-primary)"></span>الفصل الثالث: لغات الاهتمام اليومي</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--pink-primary)">الفصل ٣</span><span class="te-name">كيف تشعر زوجتك بأنها الأولى في تفاصيل يومك؟</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--pink-primary)">الفصل ٣</span><span class="te-name">الشورى الزوجية وحماية صورة الشريك أمام الملأ</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal-deep)"></span>التمارين والتطبيقات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: هرم الأولويات الزوجية</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+          <div class="toc-entry"><span class="te-name">اختبار: هل تشعر زوجتك أنها أولوية في حياتك؟</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة عمل التوازن الأسبوعي وجدول الأوقات</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة مراجعة حدود العمل والعلاقات الاجتماعية</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي إدارة الأولويات والتركيز (30 يوماً)</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق التوازن اليومي</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء حفظ الأسرة واستقرارها</span><span class="te-dots"></span><span class="te-pg">١٨</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · WHY YOUR WIFE FIRST
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--teal-primary),var(--gold-primary),var(--pink-primary))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--teal-primary)">جوهر الأولوية</div>
+    <h2 class="intro-h2">لماذا يجب أن تأتي زوجتك أولاً؟</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(15, 158, 145, 0.2)">
+      <div class="iqb-mark" style="color:var(--teal-light)">"</div>
+      <p style="color:var(--teal-deep)">إن شعور الزوجة بأنها أولوية في ذهن زوجها وحياته هو صمام الأمان الحقيقي لولائها واهتمامها ببيتها. وحين تشك في ذلك، يبدأ الإحباط والتذمر، ويفقد البيت هدوءه وسكينته المعتادة.</p>
+    </div>
+
+    <p class="intro-para">ترتيب الأولويات لا يعني إهمال بر الوالدين أو التقصير في متطلبات العمل وبناء المستقبل المالي، بل يقتضي أن تمنح زوجتك وعلاقتكما المساحة الزمنية والذهنية الكافية، وألا تكون الفتات المتبقي بعد الأصدقاء وساعات العمل الإضافية غير الضرورية.</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--teal-light);border-color:rgba(15,158,145,.2)">
+        <div class="isr-num" style="color:var(--teal-deep)">الطمأنينة</div>
+        <div class="isr-txt">تزيل شكوك الزوجة في محبتك وتدفعها للبذل ورعايتك بحب غامر.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="isr-num" style="color:var(--gold)">التوازن</div>
+        <div class="isr-txt">يمنع حدوث اضطرابات أسرية أو تدخلات خارجية تفسد الود بينكما.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--pink-light);border-color:rgba(216,27,117,.15)">
+        <div class="isr-num" style="color:var(--pink-primary)">الريادة</div>
+        <div class="isr-txt">ترسخ قيادة الزوج الحكيمة للأسرة بالعدل والرحمة وإحقاق الحقوق.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">إدارة الوقت هي انعكاس مباشر لإدارة القيم في قلبك. ومنصة خيركم صممت هذا الدليل لمساعدتك في إعادة ضبط أوقاتك واهتماماتك لتصنع بيتاً مطمئناً يكون ملاذك ودرعك الواقي من صعاب الدنيا.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--teal-primary)">
+      <div class="ip-icon">⚖️</div>
+      <p style="color:var(--teal-deep)">وعد منصة خيركم: تطبيقك لخطط هذا الدليل وتحديد ساعات أسبوعية خاصة لزوجتك دون مقاطعة، سيعيد الألفة الحارة لبيتك ويوفر لك السكينة التي تبحث عنها.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>جوهر الأولوية · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg teal-bg">
+  <div class="ch-cover-num teal-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label teal-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">هرم الأولويات الزوجية</h2>
+    <p class="ch-cover-quote teal-quote">«التوازن السليم للأدوار هو سر بقاء البيت متماسكاً، وإعطاء كل ذي حق حقه بوعي وعدالة»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ كيفية وضع سلم أولويات أسرية متوازن وسليم شرعياً وعملياً</div>
+        <div class="cco-item">✓ مهارات التوازن بين بر الوالدين وحفظ حقوق شريكة الحياة</div>
+        <div class="cco-item">✓ تجنب خلط المسؤوليات وحماية خصوصية علاقتكما بالبيت</div>
+        <div class="cco-item">✓ تمرين رسم سلم الأولويات الأسبوعي الخاص بك</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header teal-color">
+    <span class="ch-badge badge-teal">الفصل الأول</span>
+    <span class="ch-title-sm">بر الوالدين وحق زوجتك: معادلة التوازن</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">معادلة بر الوالدين وحقوق الزوجة</h3>
+    <p class="body-p">يقع الكثير من الرجال في صراع بين إرضاء الوالدين (البر الواجب) وتلبية حقوق الزوجة (المعاشرة بالمعروف وحفظ الكرامة). الزوج الحكيم يدرك أن الحقوق لا تتصادم في الشريعة، وأن لكل منهما مساراً منفصلاً يجب إيفاؤه بالكامل دون تقصير أو خلط.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ سلوكيات تسبب الصدام والتقصير</div>
+        <div class="comp-items">
+          <div class="comp-item">السماح بتدخل الآخرين (حتى الأهل) في القرارات الخاصة ببيتك وزوجتك.</div>
+          <div class="comp-item">نقل مشاكل وخلافات البيت لوالديك، مما يفسد العلاقة وصورة زوجتك لديهم.</div>
+          <div class="comp-item">التقصير في حقوق زوجتك العاطفية والمالية بدعوى الانشغال بطلب رضا الأهل.</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right" style="background:var(--teal-light);border-color:rgba(15,158,145,.2)">
+        <div class="comp-title" style="color:var(--teal-deep)">✅ قواعد التوازن والقيادة الحكيمة</div>
+        <div class="comp-items">
+          <div class="comp-item" style="background:white;color:var(--teal-deep)">حفظ خصوصية بيتك وأسرارك الزوجية تماماً عن الجميع دون استثناء.</div>
+          <div class="comp-item" style="background:white;color:var(--teal-deep)">تخصيص أوقات منفصلة لخدمة والديك وأوقات خاصة لرعاية زوجتك وبيتك.</div>
+          <div class="comp-item" style="background:white;color:var(--teal-deep)">العدل والرحمة وحماية كرامة وصورة شريكة عمرك أمام أهلك والناس.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">حفظ الحدود والخصوصية الأسرية</h3>
+    <p class="body-p">بيتك وزوجتك هما مسؤوليتك الأولى التي ستحاسب عليها. لا تسمح لأي طرف خارجي بإدارة شؤون بيتك، ولا تبث شكواك لأحد خارج إطار أهل التخصص والإصلاح بوعي وسرية تامة.</p>
+
+    <div class="callout teal-callout" style="background:var(--teal-ultra);border-color:rgba(15,158,145,.2)">
+      <div class="callout-ic">📢</div>
+      <div class="callout-txt" style="color:var(--teal-deep)"><strong>قاعدة التوازن:</strong> بر والديك بمالك وبدنك ولطفك، وصن زوجتك وبيتك بخصوصيتك وقوامتك وعدلك، ولا تخلط بين الملفين تنجُ وتسعد في حياتك العائلية.</div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تأمل ذاتي للزوج: تقييم الحدود</h4>
+      <p>هل توجد تدخلات خارجية في شؤون بيتك؟ وكيف ستضع حداً صحياً لها لحماية خصوصية زوجتك؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">لصوص الوقت الزوجي وعلاجها</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«الوقت المخصص لزوجتك وبيتك ليس وقتاً ضائعاً، بل هو الاستثمار الأثمن لدوام الألفة وسكينة حياتك»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ التعرف على لصوص الوقت والاهتمام الزوجي الأربعة وعلاجها</div>
+        <div class="cco-item">✓ مهارات رسم الحدود وقول «لا» للمطالب الخارجية غير الضرورية</div>
+        <div class="cco-item">✓ تنظيم الأوقات المخصصة للعمل والأصدقاء وحق الجلوس بالمنزل</div>
+        <div class="cco-item">✓ تمرين فحص وتدوين ساعات الانشغال الخارجي الأسبوعية</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">لصوص الوقت ورسم الحدود مع الخارج</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">من هم لصوص الوقت والاهتمام الزوجي؟</h3>
+    <p class="body-p">يسرق انشغال الحياة المعاصرة أوقات الأزواج تدريجياً دون وعي. التوافق العاطفي يتطلب حماية أوقات بيتك من المشتتات واللصوص الأكثر شيوعاً:</p>
+
+    <div class="prio-list">
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--gold-primary)">
+        <div class="contain-icon">💼</div>
+        <div class="prio-content">
+          <h5>١. إدمان العمل والساعات الإضافية (Workaholism)</h5>
+          <p>أخذ أعباء العمل للمنزل والاستمرار بالنقاش الهاتفي المهني طوال المساء. احرص على وضع حد واضح: عندما تدخل عتبة بيتك، أغلق ملفات العمل لتتفرغ لأسرتك وزوجتك عاطفياً وجسدياً.</p>
+          <span class="prio-tag pt-gold">حماية وقت المنزل</span>
+        </div>
+      </div>
+
+      <div class="prio-item" style="border-right-color:var(--teal-primary)">
+        <div class="contain-icon">👥</div>
+        <div class="prio-content">
+          <h5>٢. السهرات والالتزامات الاجتماعية المفرطة</h5>
+          <p>تخصيص أغلب سهرات المساء وعطلات نهاية الأسبوع للأصدقاء والديوانيات. تذكر أن زوجتك تحتاج لرفقتك وأحاديثك الدافئة أكثر من أي صديق. وازن أوقاتك ليكون بيتك هو خيارك الأول.</p>
+          <span class="prio-tag pt-teal">التوازن المطلوب</span>
+        </div>
+      </div>
+
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--gold-primary)">
+        <div class="contain-icon">📱</div>
+        <div class="prio-content">
+          <h5>٣. الشاشات ووسائل التواصل الاجتماعي</h5>
+          <p>الجلوس بجوار شريكتك جسدياً ولكن ذهنك وعينيك منغمسين في تصفح الهواتف والشبكات. هذا الحضور البارد يُشعر الزوجة بالمهانة والإهمال الشديد. ضع قواعد للمناطق والأوقات الخالية من الهواتف بالمنزل.</p>
+          <span class="prio-tag pt-gold">حضور كامل</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>الفصل الثاني · ص ٨</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 2 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">مهارات قول «لا» لتنظيم الحياة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">صعوبة الرفض وترتيب الحدود</h3>
+    <p class="body-p">الكثير من الرجال يقصرون في حق زوجاتهم خجلاً من قول «لا» لطلبات أصدقائهم أو زملائهم بالعمل. القائد الأسري الحقيقي يملك الشجاعة ليعلن بوضوح: «هذا الوقت مخصص لبيتي وزوجتي، سأعتذر عن الحضور اليوم».</p>
+
+    <div class="science-box" style="background:var(--teal-ultra);border-color:rgba(15, 158, 145, 0.2)">
+      <div class="sb-icon">⚖️</div>
+      <div class="sb-content">
+        <h4 style="color:var(--teal-deep)">دراسة التوازن الأسري وأثر الحدود</h4>
+        <p style="color:var(--teal-deep)">تؤكد الأبحاث النفسية أن وضوح الحدود التي يضعها الرجل حول شؤون بيته وأوقات جلوسه مع زوجته يمنع حدوث ٩٠٪ من النزاعات الزوجية المعتادة. الزوجة التي تثق بأن زوجها يفضل التواجد معها ويحترم وقتهما المشترك تبدي مرونة عالية وتسامحاً تاماً في أوقات انشغاله الاضطراري الحقيقي بالعمل.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">كيف ترسم حدودك بذكاء واحترام؟</h3>
+    <p class="body-p">أعلم محيطك وأصدقاءك بأوقاتك المخصصة للعائلة بوضوح وبنبرة فخورة. التزم بجدول أسبوعي ليكون لزوجتك يوم أو سهرة مقدسة لا يُلغيها أي التزام خارجي إلا للضرورات القصوى الطارئة.</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تمرين تطبيقي للزوج: فحص الساعات</h4>
+      <p>كم ساعة تقريباً تقضيها أسبوعياً في السهرات أو تصفح الهاتف والعمل الإضافي بالمنزل؟ وكيف ستقتطع منها ٣ ساعات لزوجتك؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>الفصل الثاني · ص ٩</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold-deep)">لغات الاهتمام وتطبيق الأولوية</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold-primary);color:var(--gold-deep)">«الأولوية ليست شعاراً يُرفع، بل هي أفعال وتنازلات يومية لطيفة يشعر بها شريكك في تفاصيل يومه الصغير»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ كيف تشعر زوجتك بأهميتها وأولويتها في تفاصيل يومك اليومية</div>
+        <div class="cco-item">✓ مهارات الشورى الزوجية وتقدير قراراتها وآرائها</div>
+        <div class="cco-item">✓ الرد السريع والاهتمام بالاتصالات والمطالب الزوجية بيسر</div>
+        <div class="cco-item">✓ تمرين وضع خطة الاستشارة والشورى الزوجية الأسبوعية</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">تفاصيل الاهتمام والشورى الزوجية</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">كيف تترجم الأولوية في تفاصيل يومك؟</h3>
+    <p class="body-p">لا تحتاج الزوجة لخطابات لتثبت لها حبك، بل تحتاج لتفاصيل بسيطة يومية تؤكد لها أنك تفضلها وتضعها في مقدمة اهتماماتك. إليك أهم لغات تطبيق الأولوية:</p>
+
+    <div class="priority-grid">
+      <div class="priority-card" style="border-right-color:var(--teal-primary)">
+        <div class="priority-icon">📲</div>
+        <h4>سرعة التجاوب والرد الهاتفي</h4>
+        <p>الرد السريع على اتصالاتها ورسائلها، أو إعلامها بانشغالك فوراً بلطف «أنا باجتماع، سأتصل بك حال انتهاء عملي».</p>
+      </div>
+
+      <div class="priority-card" style="border-right-color:var(--gold-primary)">
+        <div class="priority-icon">🗣️</div>
+        <h4>الشورى وإشراكها بالقرارات</h4>
+        <p>استشارتها في شؤونك الخاصة والمهنية وقرارات البيت. هذا التقدير العقلي يُشعرها بأن رأيها مهم ومحترم جداً في حياتك.</p>
+      </div>
+
+      <div class="priority-card" style="border-right-color:var(--teal-primary)">
+        <div class="priority-icon">🛡️</div>
+        <h4>الدعم المباشر أمام الآخرين</h4>
+        <p>حماية صورتها والثناء عليها والدفاع عنها أمام الأهل والناس، وعدم السماح بالتقليل من كرامتها أو دورها بأي شكل.</p>
+      </div>
+
+      <div class="priority-card" style="border-right-color:var(--pink-primary)">
+        <div class="priority-icon">🕊️</div>
+        <h4>تقديم رغباتها بلطف وتسامح</h4>
+        <p>التنازل اللطيف أحياناً عن خروج مع أصدقائك لقضاء وقت معها، أو تفضيل تلبية طلب أو نزهة ترغب بها لإسعادها.</p>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:10px">
+      <div class="tip-ic">⭐</div>
+      <div><strong>قاعدة القيادة الأسرية:</strong> القوامة في الإسلام تكليف ورعاية وحماية، وأعلى مظاهر القوامة الناضجة هي الرحمة بزوجتك ووضعها في قلب اهتماماتك ورعاية أمنها النفسي والجسدي.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>الفصل الثالث · ص ١١</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · INFOGRAPHIC: PRIORITY PYRAMID
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink" style="background:linear-gradient(135deg,var(--teal-deep),var(--teal-primary))">
+    <div class="info-badge info-badge-pink" style="background:rgba(255,255,255,.2)">هرم الأدوار والمسؤوليات</div>
+    <h2>هرم الأولويات الزوجية والأسرية</h2>
+    <p>البناء الهيكلي لتنظيم اهتماماتك لضمان استقرار بيتك ورعاية شريكة حياتك بالعدل والرحمة</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px;align-items:center justify-content:center">
+    <div class="pyramid-wrap">
+      <!-- Level 1 -->
+      <div class="pyr-level pyr-1">
+        <div class="pyr-title">١. زوجتك وبيتك وأبناؤك</div>
+        <div class="pyr-desc">الرعاية العاطفية، الأمان العائلي، الحفظ والإنفاق، والوقت المشترك الحاضر يومياً بوعي واهتمام.</div>
+      </div>
+
+      <!-- Level 2 -->
+      <div class="pyr-level pyr-2">
+        <div class="pyr-title">٢. بر الوالدين وصلة الرحم</div>
+        <div class="pyr-desc">البر الإحساني الواجب، الرعاية المادية والبدنية، والزيارات المنظمة دون خلط أو إضرار بخصوصية بيتك.</div>
+      </div>
+
+      <!-- Level 3 -->
+      <div class="pyr-level pyr-3">
+        <div class="pyr-title">٣. العمل ومستقبل الأسرة المالي</div>
+        <div class="pyr-desc">السعي لتحصيل الرزق الحلال وبناء المستقبل دون أن يطغى على رعاية الجوانب الإنسانية والعاطفية لبيتك.</div>
+      </div>
+
+      <!-- Level 4 -->
+      <div class="pyr-level pyr-4">
+        <div class="pyr-title">٤. الأصدقاء والعلاقات الاجتماعية</div>
+        <div class="pyr-desc">المساحة الترفيهية والعلاقات الخارجية المنظمة بحدود واضحة لا تضر بوقت وحاجة زوجتك وأسرتك.</div>
+      </div>
+    </div>
+
+    <div class="gottman-rule" style="margin-top:10px;border-color:var(--teal-light);background:var(--teal-ultra)">
+      <div class="gr-icon">⭐</div>
+      <div class="gr-content" style="color:var(--teal-deep)">
+        <strong>معادلة التوازن:</strong> هرم الأولويات الصحيح يضمن أداء كافة الحقوق دون تقصير. وحين تضع زوجتك أولاً في قائمة اهتماماتك العائلية، تمنحها القوة لتكون السند الحقيقي لك في دروب السعي والعمل.
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>الإنفوجرافيك · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · WORKBOOK: QUIZ
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">
+    <div class="wb-badge">📝 اختبار قياس أولوية الزوجة</div>
+    <h2>هل تشعر زوجتك أنها أولوية في حياتك؟</h2>
+    <p>أجب عن الأسئلة بصدق تام لتقييم مدى وضعك لزوجتك وبيتك في مقدمة اهتماماتك العملية والذهنية</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="quiz-grid">
+      <div class="quiz-q">
+        <div class="quiz-qt">١. عندما تتصل بك زوجتك أو ترسل رسالة وأنت في العمل أو مع أصدقائك، فإنك:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q1"/> ترد سريعاً أو ترسل رسالة اعتذار وتتصل لاحقاً</label>
+          <label><input type="radio" name="q1"/> تؤجل الرد لساعات طويلة متناسياً الاتصال</label>
+          <label><input type="radio" name="q1"/> تتجاهل الاتصال أو ترد بنبرة غاضبة ومتذمرة</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٢. تخصيص الوقت الخاص لزوجتك دون مقاطعة الأطفال أو الهواتف:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q2"/> نحرص على سهرة أو موعد أسبوعي مخصص بانتظام</label>
+          <label><input type="radio" name="q2"/> يحدث نادراً وبشكل عشوائي وغير منظم</label>
+          <label><input type="radio" name="q2"/> لا نخصص وقتاً خاصاً بيننا أبداً بالمنزل</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٣. حين يطلب منك أصدقاؤك سهرة أو خروجاً يتعارض مع خطة أو طلب لزوجتك، فإنك:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q3"/> تعتذر للأصدقاء بلطف وتلتزم بوعدك لزوجتك</label>
+          <label><input type="radio" name="q3"/> تحاول إقناع زوجتك بالتأجيل مراراً لصالح أصدقائك</label>
+          <label><input type="radio" name="q3"/> تذهب مع أصدقائك متجاهلاً رغبتها وخلافها معك</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٤. مدى مشاركتك لزوجتك في القرارات الهامة واستشارتها في شؤون حياتك:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q4"/> أستشيرها دائماً وأحترم رأيها كشريكة أساسية</label>
+          <label><input type="radio" name="q4"/> أستشيرها في شؤون المنزل والأبناء فقط دون أموري</label>
+          <label><input type="radio" name="q4"/> أتخذ كافة القرارات بمفردي دون إعلامها أو شورى</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 قراءة النتائج وتطوير الأداء</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">الأجوبة الأولى تدل على **وضع زوجتك كأولوية حقيقية**، والثانية تدل على **وجود حاجة للتوازن والضبط**، والثالثة تدل على **إهمال كبير لحقوقها** يهدد استقرار علاقتكما. ابدأ بتطبيق التحدي الأسبوعي فوراً.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>اختبار الأولوية · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK: WEEKLY PLANNER
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">
+    <div class="wb-badge">📝 ورقة عمل التوازن الأسبوعي للأوقات</div>
+    <h2>مخطط تنظيم أوقات الأولويات الأسبوعي</h2>
+    <p>اجلس مع زوجتك لتنظيم الأوقات الأسبوعية وتحديد ساعات العمل والبيت وصلة الرحم بدقة وتفاهم</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px">
+    <div class="week-track" style="padding:12px 14px">
+      <h4>📅 مخطط توزيع الساعات الأسبوعي المقترح</h4>
+      <div class="wt-grid">
+        <div class="wt-row wt-header-row" style="grid-template-columns:110px 100px 1fr 100px;background:var(--teal-primary)">
+          <div class="wt-cell">المجال الأسبوعي</div>
+          <div class="wt-cell">عدد الساعات</div>
+          <div class="wt-cell">خطة التطبيق والتنظيم</div>
+          <div class="wt-cell">تم الالتزام؟</div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">موعد الزوجين الخاص</div>
+          <div class="wt-cell">٣ ساعات</div>
+          <div class="wt-cell">سهرة Date Night خارج البيت بلا هواتف</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">جلسة الحوار اليومي</div>
+          <div class="wt-cell">١.٥ ساعة (مقسمة)</div>
+          <div class="wt-cell">١٠ دقائق يومياً مع كوب الشاي للحديث العفوي</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">زيارة وصلة الأهل</div>
+          <div class="wt-cell">٤ ساعات</div>
+          <div class="wt-cell">تخصيص يوم الجمعة لزيارة الوالدين والصلة</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">وقت الأصدقاء والترفيه</div>
+          <div class="wt-cell">٣ ساعات</div>
+          <div class="wt-cell">سهرة واحدة أسبوعياً محددة ومنظمة مع الأصدقاء</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wb-sections" style="margin-top:10px">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--teal-primary)">١</div>
+          <h4>خطوة واحدة عملية ستقوم بها هذا الأسبوع لإثبات أولوية زوجتك بالمنزل:</h4>
+        </div>
+        <div class="write-area wa-md"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>جدول تنظيم الأوقات · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · WORKBOOK: LIMITS & BOUNDARIES
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">
+    <div class="wb-badge">📝 ورقة مراجعة الحدود الخارجية</div>
+    <h2>تخطيط الحدود وحماية خصوصية وأوقات البيت</h2>
+    <p>حدد الحدود التي تود رسمها مع محيطك الاجتماعي والمهني لحفظ استقرار بيتك وراحة شريكة حياتك</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--teal-primary)">١</div>
+          <h4>الحدود المطلوبة لتنظيم اتصالات وساعات العمل الإضافية بالمنزل بالمساء:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--teal-primary)">٢</div>
+          <h4>القواعد المتفق عليها مع الأصدقاء لتقليص الخروج المتكرر وتنظيمه أسبوعياً:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--teal-primary)">٣</div>
+          <h4>كيف ستواجه التدخلات أو الانتقادات الخارجية لقرارات بيتك بثقة وأدب؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>رسم الحدود · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · 30-DAY CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">
+    <div class="wb-badge">🗓 تحدي إدارة الأولويات</div>
+    <h2>تحدي ٣٠ يوماً لتكون زوجتك أولوية أولى</h2>
+    <p>تطبيقات وتصرفات يومية منظمة تعيد ترتيب اهتماماتك وتمنح زوجتك المكانة التي تستحقها ببيتك</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="prio-challenge">
+      <div class="pc-day pc-sp"><div class="pc-num">١</div><div class="pc-text">الرد الفوري على اتصالها الهاتفي</div></div>
+      <div class="pc-day"><div class="pc-num">٢</div><div class="pc-text">إغلاق الهاتف أثناء الحديث معها</div></div>
+      <div class="pc-day"><div class="pc-num">٣</div><div class="pc-text">١٠ د حوار صباحي دافئ ومبتسم</div></div>
+      <div class="pc-day pc-sp2"><div class="pc-num">٤</div><div class="pc-text">استشارتها في أمر يخص عملك</div></div>
+      
+      <div class="pc-day"><div class="pc-num">٥</div><div class="pc-text">الاعتذار عن سهرة غير ضرورية للجلوس معها</div></div>
+      <div class="pc-day pc-sp"><div class="pc-num">٦</div><div class="pc-text">سؤالها بلطف: كيف أستطيع دعمكِ اليوم؟</div></div>
+      <div class="pc-day"><div class="pc-num">٧</div><div class="pc-text">حفظ خصوصية مشكلة حدثت بالمنزل</div></div>
+      <div class="pc-day pc-sp2"><div class="pc-num">٨</div><div class="pc-text">مشاركة وجبة الغداء معها بإنصات واهتمام</div></div>
+
+      <div class="pc-day pc-sp2"><div class="pc-num">٩</div><div class="pc-text">الامتناع عن العمل ببيتك طوال المساء</div></div>
+      <div class="pc-day"><div class="pc-num">١٠</div><div class="pc-text">تخصيص سهرة أسبوعية للزوجين فقط</div></div>
+      <div class="pc-day pc-sp"><div class="pc-num">١١</div><div class="pc-text">الثناء على ذوقها وأسلوبها أمام الأولاد</div></div>
+      <div class="pc-day"><div class="pc-num">١٢</div><div class="pc-text">شراء قطعة حلوى تفضلها عند العودة</div></div>
+
+      <div class="pc-day"><div class="pc-num">١٣</div><div class="pc-text">مساعدتها في ترتيب ركن بالصالة معاً</div></div>
+      <div class="pc-day pc-sp2"><div class="pc-num">١٤</div><div class="pc-text">شكرها بصدق ودفء على رعايتها لبيتكما</div></div>
+      <div class="pc-day pc-sp"><div class="pc-num">١٥</div><div class="pc-text">حوار هادئ عن ميزانية وخطط الشهر القادم</div></div>
+      <div class="pc-day"><div class="pc-num">١٦</div><div class="pc-text">الدفاع عنها وتقديرها بصوت مسموع</div></div>
+
+      <div class="pc-day pc-sp"><div class="pc-num">١٧</div><div class="pc-text">ترك رسالة لطيفة على مرآة الحمام صباحاً</div></div>
+      <div class="pc-day"><div class="pc-num">١٨</div><div class="pc-text">إلغاء مشتتات التلفاز والهاتف عند جلوسكما</div></div>
+      <div class="pc-day pc-sp2"><div class="pc-num">١٩</div><div class="pc-text">الإنصات لشكواها وتعبها دون تقديم حلول باردة</div></div>
+      <div class="pc-day"><div class="pc-num">٢٠</div><div class="pc-text">صلاة ركعتين جماعة معاً بالمنزل ليلاً</div></div>
+
+      <div class="pc-day pc-sp2"><div class="pc-num">٢١</div><div class="pc-text">المشي معاً لـ ٢٠ دقيقة بالحي للحديث</div></div>
+      <div class="pc-day"><div class="pc-num">٢٢</div><div class="pc-text">تقديم هدية بسيطة ومفاجئة دون مناسبة</div></div>
+      <div class="pc-day pc-sp"><div class="pc-num">٢٣</div><div class="pc-text">مساعدتها في رعاية الأولاد لترتاح ساعة</div></div>
+      <div class="pc-day"><div class="pc-num">٢٤</div><div class="pc-text">قبل رأسها شاكراً وجودها السند بحياتك</div></div>
+
+      <div class="pc-day"><div class="pc-num">٢٥</div><div class="pc-text">تنظيم تواريخ المناسبات السنوية على هاتفك</div></div>
+      <div class="pc-day pc-sp2"><div class="pc-num">٢٦</div><div class="pc-text">التنازل عن رغبة شخصية تلبية لطلب ترغب به</div></div>
+      <div class="pc-day pc-sp"><div class="pc-num">٢٧</div><div class="pc-text">تجنب لومها أو عتابها طوال اليوم بلطف</div></div>
+      <div class="pc-day"><div class="pc-num">٢٨</div><div class="pc-text">سؤالها بصدق: هل تشعرين بأولويتكِ معي؟</div></div>
+    </div>
+    
+    <div class="prio-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="pc-day pc-sp" style="padding:12px"><div class="pc-num">٢٩</div><div class="pc-text">تخطيط أهداف وخطط العائلة للعام الجديد معها بجلسة خاصة</div></div>
+      <div class="pc-day pc-sp2" style="padding:12px;background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep));border-color:var(--teal-deep)"><div class="pc-num" style="color:white">٣٠</div><div class="pc-text" style="color:white">الاحتفال بنجاح تحدي الأولويات بتقديم وردة وعقد الوفاء 🌹</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>تحدي ٣٠ يوماً · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>خلاصة رحلة تنظيم الأولويات</h2>
+    <p>التزام واعٍ وقرار شجاع لبناء أسرة مطمئنة ومترابطة تحفها السكينة</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">⚖️</div>
+        <h4>توازن وريادة حكيمة</h4>
+        <p>التنظيم العادل للأوقات والاهتمامات دون خلط للمسؤوليات أو إهمال لحقوق شريكة حياتك.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--gold)">
+        <div class="sc-i">🛡️</div>
+        <h4>حفظ الحدود والخصوصية</h4>
+        <p>حماية بيتك وأسرارك الزوجية من التدخلات الخارجية، ورسم حدود صحية وواضحة مع الخارج.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--pink-primary)">
+        <div class="sc-i">🏡</div>
+        <h4>سكينة وأمان منزلي</h4>
+        <p>وضع زوجتك في مقدمة أولوياتك اليومية يمنحها الأمان العالي لتكون السند الحقيقي لأسرتكم.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--teal-primary)">
+      <div class="fq-mark" style="color:var(--teal-light)">"</div>
+      <p style="color:var(--teal-deep)">البيوت المستقرة لا تُبنى عفوياً، بل يقودها رجال يملكون الحكمة لتنظيم أوقاتهم والشجاعة لحماية حدود بيوتهم ووضع زوجاتهم في قمة اهتمامهم. زوجتك أولاً، تدم لك المودة والسلام.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--teal-deep)">🤝 تعهد وميثاق تنظيم الأولويات الزوجية</h4>
+      <p>أتعهد أنا الزوج أمام الله، بأن أكون خيراً لأهلي، قائداً لبيتي بالعدل والرحمة، واضعاً زوجتي وبيتي في مقدمة اهتماماتي العملية والوجدانية، حامياً لخصوصيتنا وأسرارنا من التدخلات، وموزعاً لأوقاتي بالتوازن السليم الذي يرضي الله. وأسأل الله التوفيق. آمين.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج الباني / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | إدارة الأولويات</span><span>الخلاصة والميثاق · ص ١٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 18 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--teal-primary),var(--gold),var(--pink-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(15, 158, 145, 0.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(200, 151, 58, 0.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(216, 27, 117, 0.2)"></div>
+      <div class="ty-heart-main" style="color:var(--teal-primary);animation:none">⚖️</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--teal-deep)">جزاكم الله خيراً</h2>
+    <p class="ty-sub">على اهتمامكم ببناء بيوت تسودها الطمأنينة والتوازن وتطبيق قيم المعاشرة بالمعروف<br>أسرتكم هي أمانتكم العظمى واستثماركم الأبقى في الدنيا والآخرة</p>
+
+    <div class="ty-dua" style="background:var(--teal-light);border-right:4px solid var(--teal-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--teal-deep)">اللهم بارك لنا في أوقاتنا وبيوتنا، وأعنا على أداء الحقوق وخدمة أهلينا بالحب والرحمة والعدل، واجعل ديارنا دور سكينة واستقرار ومودة دائمة. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في تقديم الإرشاد الأسري وتوعية المجتمع المسلم بأفضل التطبيقات التربوية والنفسية والشرعية المعاصرة لبناء علاقات زوجية آمنة ومستقرة ومزدهرة.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شارك هذا الدليل مع معارفك المتزوجين لتساهم في نشر ثقافة التوازن والاستقرار العائلي</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل إدارة الأولويات (زوجتك أولاً)» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
