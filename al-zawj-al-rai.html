@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>الزوج الراعي – خيركم</title>
+<meta name="description" content="دليل القوامة الحكيمة والرعاية المسؤولة للأسرة في ضوء الهدي النبوي – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: AL-ZAWJ AL-RAI (BLUE & GOLD) ── */
+:root {
+  --blue-primary: #1E3A8A;
+  --blue-deep:    #1E293B;
+  --blue-light:   #DBEAFE;
+  --blue-ultra:   #EFF6FF;
+  --teal-primary: #1DBFB0;
+  --teal-deep:    #0F9E91;
+  --teal-light:   #D4F5F2;
+  --gold-primary: #C8973A;
+  --gold-deep:    #9A701C;
+  --gold-light:   #F7E9CC;
+  --gold-ultra:   #FDF7EC;
+  
+  --r-blue:       #1E3A8A;
+  --r-blue-d:     #1E293B;
+  --r-blue-lt:    #DBEAFE;
+}
+
+/* Page covers and backgrounds */
+.blue-bg { background: linear-gradient(160deg, var(--blue-ultra) 0%, white 60%); }
+.blue-label { background: linear-gradient(135deg, var(--blue-primary), var(--blue-deep)); }
+.blue-num { color: rgba(30, 58, 138, 0.05); }
+.blue-quote { background: var(--blue-light); border-right: 4px solid var(--blue-primary); color: var(--blue-primary); }
+.blue-color { background: linear-gradient(135deg, var(--blue-light), white); border-bottom: 2px solid rgba(30, 58, 138, 0.2); }
+.badge-blue { background: linear-gradient(135deg, var(--blue-primary), var(--blue-deep)); }
+
+/* Custom components */
+.rai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.rai-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--blue-primary); display: flex; flex-direction: column; gap: 8px; }
+.rai-icon { font-size: 26px; }
+.rai-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.rai-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* list style */
+.rai-list { display: flex; flex-direction: column; gap: 10px; }
+.rai-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.rai-item-gold { border-right-color: var(--gold-primary); }
+.rai-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.rai-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.rai-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.rt-blue { background: var(--blue-light); color: var(--blue-primary); }
+.rt-gold { background: var(--gold-light); color: var(--gold-deep); }
+
+/* compass visual */
+.compass-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.compass-card { border-radius: var(--r-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.compass-spiritual { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1.5px solid #BFDBFE; }
+.compass-financial { background: linear-gradient(135deg, var(--gold-ultra), #FEF3CC); border: 1.5px solid #FCD34D; }
+.compass-emotional { background: linear-gradient(135deg, #FFF5F5, #FEE2E2); border: 1.5px solid #FECACA; }
+.compass-parenting { background: linear-gradient(135deg, var(--teal-ul), #D4F5F2); border: 1.5px solid var(--teal-light); }
+.compass-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: var(--dark); }
+.compass-body { font-size: 11.5px; line-height: 1.6; color: var(--g700); }
+.compass-body strong { display: block; color: var(--dark); margin-bottom: 2px; }
+.compass-action { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 4px 8px; margin-top: 4px; display: inline-block; }
+.ca-spiritual { background: #BFDBFE; color: #1E3A8A; }
+.ca-financial { background: #FDE68A; color: #92400E; }
+.ca-emotional { background: #FECACA; color: #991B1B; }
+.ca-parenting { background: var(--teal-lt); color: var(--teal-d); }
+
+/* cover badges */
+.cv-rai-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-rb { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.rb1 { background: linear-gradient(135deg, var(--blue-primary), var(--blue-deep)); }
+.rb2 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.rb3 { background: linear-gradient(135deg, var(--gold), #A07000); }
+
+/* 30 day rai challenge */
+.rai-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.rcd-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.rcd-num { font-size: 16px; font-weight: 900; color: var(--blue-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.rcd-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.rcd-sp { background: var(--blue-light); border-color: var(--blue-primary); }
+.rcd-sp2 { background: var(--gold-light); border-color: var(--gold-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#EFF6FF 0%,#FFFFFF 45%,var(--gold-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(30,58,138,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(200,151,58,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep));color:white;border-color:rgba(30, 58, 138, 0.3)">سلسلة القيادة والمسؤولية الأسرية</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(30, 58, 138, 0.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(200,151,58,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(30,58,138,.35))">🕌</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">💙</div>
+        <div class="cv-coin c2" style="font-size:18px">💚</div>
+        <div class="cv-coin c3" style="font-size:20px">💛</div>
+        <div class="cv-coin c4" style="font-size:16px">✨</div>
+        <div class="cv-coin c5" style="font-size:18px">🏛️</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:54px;background:linear-gradient(135deg,var(--blue-primary) 0%,var(--blue-deep) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">الزوج الراعي</h1>
+      <div style="font-family:var(--serif);font-size:26px;font-weight:700;color:var(--g700);margin:4px 0">القيادة بالمسؤولية والرحمة</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--blue-primary),var(--gold))"></div>
+      <p class="cv-sub">دليل إرشادي وأوراق عمل عملية للزوج لتطبيق قوامة الرعاية<br>والحماية والإنفاق ومشاركة المسؤولية وبناء أسرة مطمئنة</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-rai-badges">
+      <div class="cv-rb rb1">🏛️ قوامة الرعاية</div>
+      <div class="cv-rb rb2">🤲 رحمة القيادة</div>
+      <div class="cv-rb rb3">⚖️ أمان واستقرار</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل الزوج الراعي · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep))">النهج النبوي في قوامة الرعاية</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">🏛️</div>
+      <h2>الزوج الراعي</h2>
+      <p>تأصيل القوامة الحكيمة ورعاية الأسرة بالرحمة والمسؤولية في الإسلام</p>
+    </div>
+
+    <div class="hadith-box" style="background:var(--blue-light);border-color:rgba(30, 58, 138, 0.2)">
+      <div class="hadith-text" style="color:var(--blue-primary)">«كُلُّكُمْ راعٍ، وكُلُّكُمْ مَسْؤُولٌ عن رَعِيَّتِهِ... والرجُلُ راعٍ في أهْلِهِ وهو مَسْؤُولٌ عن رَعِيَّتِهِ»</div>
+      <div class="hadith-src" style="color:var(--blue-primary)">النبي محمد ﷺ · متفق عليه</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--blue-primary)">
+      <p style="color:var(--blue-primary)">القوامة في الإسلام ليست تسلطاً ولا تملكاً، بل هي تكليف عظيم للخدمة والرعاية والحماية والإنفاق. الزوج الراعي هو الذي يقود سفينة أسرته بالحب والرحمة والعدل، ويتحمل مسؤولياته بروح المسؤولية التي تضمن لزوجته وأولاده الاستقرار والسكينة والنمو.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--blue-ultra);border-color:var(--blue-light)">
+        <div class="tc-icon">🤲</div>
+        <h4 style="color:var(--blue-primary)">رعاية دينية وروحية</h4>
+        <p>مساعدة عائلتك في طريق الإيمان والصلاة، والقدوة الصالحة في السلوك والمعاملة اليومية.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="tc-icon">⚖️</div>
+        <h4 style="color:var(--gold)">رعاية مالية وعينية</h4>
+        <p>الإنفاق بالمعروف وبسخاء دون تقتير أو إسراف، وتوفير المتطلبات الأساسية لكرامة العيش.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="tc-icon">🏡</div>
+        <h4 style="color:var(--teal-d)">تربية مشتركة مسؤولة</h4>
+        <p>حضور الأب الفعال في رعاية وتربية الأبناء، والمساندة العملية لزوجته بالمنزل.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 ما الذي يقدمه لك هذا الدليل؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal" style="background:var(--blue-light);color:var(--blue-primary)">🌱</div><span>فهم أبعاد قوامة الرعاية الزوجية</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>اختبار قياس دورك كزوج راع بمسؤولية</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>خطة الرعاية والمساندة الأسبوعية</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>المنهج والمسؤولية · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتويات رحلة الرعاية والقيادة الحكيمة</h2>
+      <p>خارطة طريق عملية للزوج لتمثيل قوامة الرحمة والمسؤولية ببيته</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--blue-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">النهج النبوي في قوامة الرعاية والرحمة</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">مفهوم القوامة: تكليف رعاية لا تشريف سلطة</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--blue-primary)"></span>الفصل الأول: القيادة بالحب والرحمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--blue-primary)">الفصل ١</span><span class="te-name">الرعاية الروحية والدينية لأسرتك والقدوة الصالحة</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--blue-primary)">الفصل ١</span><span class="te-name">الاحتواء العاطفي والأمان الوجداني للزوجة والأولاد</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold)"></span>الفصل الثاني: الرعاية المادية والجسدية</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٢</span><span class="te-name">حق الإنفاق بالمعروف وبناء الأمن المالي للبيت</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٢</span><span class="te-name">تهيئة السكن الآمن والاهتمام بصحة ورعاية أهلك</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal)"></span>الفصل الثالث: رعاية الأبناء والتربية المشتركة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٣</span><span class="te-name">حضور الأب الفعال في تفاصيل حياة وألعاب الأبناء</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٣</span><span class="te-name">المشاركة العملية بمهام المنزل ومساندة زوجتك</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--blue-deep)"></span>التمارين والتطبيقات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: بوصلة الرعاية الزوجية</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+          <div class="toc-entry"><span class="te-name">اختبار: هل تمارس دورك كزوج راع بمسؤولية؟</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة عمل خطة الرعاية والمساندة العائلية الأسبوعية</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة التقييم والمراجعة المالية للإنفاق بالمعروف</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي الزوج الراعي والقيادة بالرحمة (30 يوماً)</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق الرعاية والوفاء الزوجي</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء حفظ الرعية والتوفيق</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · CONCEPT OF RAIN
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--blue-primary),var(--gold-primary),var(--teal-primary))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--blue-primary)">مفهوم الرعاية</div>
+    <h2 class="intro-h2">القوامة: تكليف خدمة لا تشريف سلطة</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(30, 58, 138, 0.2)">
+      <div class="iqb-mark" style="color:var(--blue-light)">"</div>
+      <p style="color:var(--blue-primary)">إن الزوج الراعي الحقيقي ليس هو الذي يفرض رأيه بالترهيب أو يطالب بالطاعة العمياء، بل هو الذي يسعى بجد لتوفير الأمان والحماية والإنفاق بالمعروف، ويتحمل مسؤولية أخطاء عائلته بروح حكيمة ورحيمة.</p>
+    </div>
+
+    <p class="intro-para">تتحقق القيادة الأسرية في الإسلام بالشورى والرفق وحفظ كرامة الشريك. القوامة تعني القيام بشؤون أهلك وحمايتهم مادياً ونفسياً وروحياً. وعندما يغيب هذا الوعي، تفرغ القوامة من مضمونها الإنساني وتتحول إلى تسلط يورث الجفاء والشقاق.</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--blue-light);border-color:rgba(30, 58, 138, .2)">
+        <div class="isr-num" style="color:var(--blue-primary)">الرعاية</div>
+        <div class="isr-txt">حفظ الأسرة من الانحراف أو التشتت بتوفير بيئة مطمئنة صالحة.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="isr-num" style="color:var(--gold)">الكفاية</div>
+        <div class="isr-txt">الإنفاق بالمعروف وتأمين السكن والملبس والرعاية الصحية لأهلك.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="isr-num" style="color:var(--teal-d)">القدوة</div>
+        <div class="isr-txt">الريادة الروحية بالالتزام بالصلاة والأخلاق الحسنة بالقول والعمل.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">منصة خيركم صممت هذا الدليل لتوضيح أبعاد القوامة الحكيمة وتوفير تدريبات عملية للزوج ليمارس دوره كراعٍ مسؤول بحكمة وتسامح، ليصنع بيتاً يفيض بالسكينة ويكون أساساً لبناء مجتمع مسلم متماسك ومستقر.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--blue-primary)">
+      <div class="ip-icon">🏛️</div>
+      <p style="color:var(--blue-primary)">وعد منصة خيركم: تطبيقك لخطط هذا الدليل وتفعيل الشورى والمساعدة بالمنزل سيزيد من مهابتك ومحبتك في قلوب أهلك ويرسخ أمان واستقرار عائلتك.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>مفهوم الرعاية · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg blue-bg">
+  <div class="ch-cover-num teal-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label blue-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--blue-primary)">القيادة بالحب والرحمة</h2>
+    <p class="ch-cover-quote blue-quote">«قوامة الرجل قيادة تحمي ولا تقيد، وترعى المودة وتصنع الأمان لقلوب عائلتها»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ أبعاد القوامة الروحية والدينية ومسؤولية القدوة الحسنة</div>
+        <div class="cco-item">✓ كيف تقود أسرتك بالحب والرحمة والشورى الزوجية الواعية</div>
+        <div class="cco-item">✓ بناء الأمان العاطفي والوجداني لزوجتك وأولادك بالمنزل</div>
+        <div class="cco-item">✓ تمرين صياغة «قيم القدوات الأسرية» الملتزم بها</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header blue-color">
+    <span class="ch-badge badge-blue">الفصل الأول</span>
+    <span class="ch-title-sm">الرعاية الروحية والقدوة الحسنة للأسرة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">القوامة الروحية ومسؤولية الإيمان</h3>
+    <p class="body-p">الزوج الراعي هو المسؤول الأول عن الحفاظ على الهوية الدينية والقيم الأخلاقية لبيته. لا تقتصر الرعاية على توفير الماديات، بل تمتد لتكون دليلاً لزوجتك وأولادك في طريق طاعة الله والالتزام بالصلاة والذكر العائلي.</p>
+
+    <div class="rai-grid">
+      <div class="rai-card" style="border-right-color:var(--blue-primary)">
+        <div class="rai-icon">🕌</div>
+        <h4>١. القدوة العملية بالصلاة والأخلاق</h4>
+        <p>الالتزام بالصلاة في أوقاتها وحسن المعاملة والصدق بالقول. الأولاد والزوجة يتعلمون بالقدوة والنظر لأفعالك قبل كلماتك ومواعظك.</p>
+      </div>
+
+      <div class="rai-card" style="border-right-color:var(--teal-primary)">
+        <div class="rai-icon">📖</div>
+        <h4>٢. تهيئة بيئة إيمانية بالمنزل</h4>
+        <p>تخصيص وقت لقراءة القرآن، صلاة النوافل والقيام جماعة بالمنزل، والاستغفار الجماعي والدعاء المشترك لعائلتكم بصدق.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">القيادة بالرحمة والشورى الزوجية</h3>
+    <p class="body-p">تجنب التفرد بالقرارات أو فرض سلطتك بغلظة. تفعيل الشورى الزوجية والاستماع لآراء زوجتك وتقدير صوتها في قرارات البيت يعزز التناغم والألفة ويشعرها بأهميتها ومشاركتها في قوامة الرعاية.</p>
+
+    <div class="callout teal-callout" style="background:var(--blue-ultra);border-color:rgba(30, 58, 138, 0.2)">
+      <div class="callout-ic">📢</div>
+      <div class="callout-txt" style="color:var(--blue-primary)"><strong>قاعدة الرعاية الروحية:</strong> قُد أهلك للجنة بصلاتك وبلطفك وبدعائك لهم بظهر الغيب. قوامة الرحمة هي التي تحول بيتك لواحة سكينة واطمئنان يرضى عنها الخالق.</div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تأمل ذاتي للزوج: تقييم القدوة</h4>
+      <p>ما هو السلوك الإيماني أو الأخلاقي الذي تود أن تلتزم به لتكون قدوة صالحة لزوجتك وأولادك بالمنزل؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">الرعاية المادية والجسدية للأسرة</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«الإنفاق بالمعروف وبسخاء هو برهان كرمك ورعايتك، وتهيئة السكن الآمن والصحي هو حق أصيل لأهلك»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ حق الإنفاق بالمعروف في الإسلام وحدود الكرم وتجنب البخل</div>
+        <div class="cco-item">✓ توفير الأمن المالي والسكن المستقر وحماية عائلتك جسدياً</div>
+        <div class="cco-item">✓ الاهتمام بالرعاية الطبية والصحية ونظام الغذاء لأهلك</div>
+        <div class="cco-item">✓ تمرين مراجعة بنود الإنفاق وإعداد ميزانية الرعاية</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">الإنفاق بالمعروف وبناء السكن الآمن والصحي</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">حق الإنفاق والكرم الزوجي</h3>
+    <p class="body-p">يعد الإنفاق على الزوجة والأبناء بالمعروف واجباً شرعياً وركيزة أساسية للقوامة. الإنفاق ليس منّة بل هو صدقة تؤجر عليها. الكرم وبسط اليد بالمعروف يجلب البركة للمال والرضا والأمان للقلوب، وتجنب البخل والتقتير يمنع النزاعات الأسرية.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ سلوكيات تضر بالرعاية المالية</div>
+        <div class="comp-items">
+          <div class="comp-item">التقتير والبخل على متطلبات الطعام والكسوة الأساسية بالرغم من قدرتك المالية.</div>
+          <div class="comp-item">التمنن الدائم بما تنفقه وإشعار زوجتك بأنها عبء مالي ثقيل عليك.</div>
+          <div class="comp-item">إهمال الرعاية الطبية أو تأجيل الصيانة المنزلية الضرورية تسويفاً للإنفاق.</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right">
+        <div class="comp-title" style="color:var(--teal-d)">✅ ممارسات الرعاية المالية الراقية</div>
+        <div class="comp-items">
+          <div class="comp-item" style="color:var(--teal-d)">توفير متطلبات كرامة العيش والكسوة لأهلك بزيادة ولطف حبا وتقداماً.</div>
+          <div class="comp-item" style="color:var(--teal-d)">الابتسام وطيب النفس عند دفع مصاريف المنزل وتجنب التذمر المالي.</div>
+          <div class="comp-item" style="color:var(--teal-d)">تهيئة السكن الآمن والاهتمام بالتأمين الصحي والرعاية الطبية الفورية لأهلك.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">تهيئة السكن الآمن والاهتمام بالصحة</h3>
+    <p class="body-p">تتطلب الرعاية توفير مسكن يوفر الستر والأمان لزوجتك وأولادك، والاهتمام بسلامة المنزل ونظام التهوية والإضاءة، بالإضافة لمتابعة الفحوصات الطبية الدورية ورعايتهم في أوقات مرضهم واعتلال صحتهم بحنان واهتمام كامل.</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">🧩</div>
+      <h4>تمرين تطبيقي للزوج: ميزانية الرعاية</h4>
+      <p>اكتب بنداً مالياً تود تحسين الإنفاق فيه لإدخال السرور على زوجتك وعائلتك هذا الشهر (مثال: بند الترفيه العائلي، تحسين أثاث):</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>الفصل الثاني · ص ٨</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold-deep)">رعاية الأبناء والتربية المشتركة</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold-primary);color:var(--gold-deep)">«حضور الأب الفعال في رعاية أبنائه هو سر تماسك شخصياتهم، ومشاركة زوجتك بمهام المنزل هي أعلى درجات المروءة»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ دور الأب الراعي والقدوة في رعاية وتربية وبناء شخصيات الأبناء</div>
+        <div class="cco-item">✓ المشاركة العملية الملموسة بمهام المنزل لمساندة وتخفيف العبء عن الزوجة</div>
+        <div class="cco-item">✓ التنسيق التربوي وتجنب تصادم القرارات أمام الأولاد بالمنزل</div>
+        <div class="cco-item">✓ تمرين إعداد «خطة المساندة المنزلية المشتركة» الأسبوعية</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">المشاركة المنزلية وحضور الأب التربوي</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">حضور الأب التربوي ورعاية الأبناء</h3>
+    <p class="body-p">لا يقتصر دور الأب على جلب المال وتوفير النفقات، بل يحتاج الأبناء لحضورك العاطفي والجسدي في حياتهم. خصص وقتاً يومياً للعب معهم، الاستماع لأفكارهم، ومتابعة دراستهم وبناء قيمهم الإيمانية بوعي واهتمام كامل.</p>
+
+    <div class="science-box" style="background:var(--teal-ultra);border-color:rgba(15, 158, 145, 0.2)">
+      <div class="sb-icon">🏡</div>
+      <div class="sb-content">
+        <h4 style="color:var(--teal-deep)">المشاركة المنزلية مروءة وسنة نبوية</h4>
+        <p style="color:var(--teal-deep)">كان النبي محمد ﷺ «في مهنة أهله» يساعد في أعمال بيته ويرقع ثوبه ويخصف نعله. إن مشاركة الزوج لزوجته بمهام البيت وترتيب شؤونه ليست تقليلاً من رجولته، بل هي أعلى درجات المروءة والرحمة والمحبة العملية التي تخفف الإرهاق والعبء النفسي عن زوجته وتوطد الاستقرار ببيتكما.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">التنسيق والانسجام التربوي للزوجين</h3>
+    <p class="body-p">تجنب مخالفة قرارات زوجتك التربوية أو التقليل من هيبتها وقراراتها أمام الأطفال. كونا جبهة موحدة دائماً أمامهم. إذا اختلفتما في وجهة نظر تربوية، فناقشاها بينكما سراً وخلف الأبواب المغلقة لتظهرا كفريق قيادي واحد ومتناسق أمام عائلتكما.</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تمرين تطبيقي للزوج: خطة المساندة</h4>
+      <p>ما هي المهمة المنزلية البسيطة التي تلتزم بالقيام بها بانتظام هذا الأسبوع لتخفيف العبء عن زوجتك؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>الفصل الثالث · ص ١٠</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · INFOGRAPHIC: COMPASS
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep))">
+    <div class="info-badge info-badge-pink" style="background:rgba(255,255,255,.2)">بوصلة القيادة الأسرية</div>
+    <h2>بوصلة رعاية ومسؤولية الزوج الراعي</h2>
+    <p>الأركان الأربعة المتكاملة لتطبيق قوامة الرعاية والرحمة والعدالة لضمان استقرار بيتك المسلم</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px">
+    <div class="compass-wrap">
+      <!-- Spiritual -->
+      <div class="compass-card compass-spiritual">
+        <div class="compass-header">🕌 الرعاية الروحية</div>
+        <div class="compass-body">
+          <strong>الهدف:</strong> بناء الهوية الدينية والقيم لبيتك.
+          <strong>التطبيق:</strong> الالتزام بالصلاة والقدوة الصالحة في المعاملة والصدق بالمنزل، وحث عائلتك على الإيمان والذكر بالحب.
+        </div>
+        <div class="compass-action ca-spiritual">🔒 الخطوة: صلاة النوافل جماعة</div>
+      </div>
+
+      <!-- Financial -->
+      <div class="compass-card compass-financial">
+        <div class="compass-header">⚖️ الرعاية المالية والعينية</div>
+        <div class="compass-body">
+          <strong>الهدف:</strong> توفير متطلبات العيش الكريم والإنفاق.
+          <strong>التطبيق:</strong> الإنفاق بسخاء بالمعروف دون تقتير، تهيئة السكن الآمن، الاهتمام بالرعاية الصحية وعلاج أهلك فوراً.
+        </div>
+        <div class="compass-action ca-financial">🔒 الخطوة: مراجعة ميزانية الكفاية</div>
+      </div>
+
+      <!-- Emotional -->
+      <div class="compass-card compass-emotional">
+        <div class="compass-header">💞 الرعاية العاطفية والأمان</div>
+        <div class="compass-body">
+          <strong>الهدف:</strong> رعاية استقرار الزوجة والأبناء نفسياً.
+          <strong>التطبيق:</strong> استيعاب توتر الزوجة، تجنب الإهانة والغضب، إتقان لغة الحب، وتخصيص أوقات حوار وضحك دافئة.
+        </div>
+        <div class="compass-action ca-emotional">🔒 الخطوة: تخصيص حوار بلا هواتف</div>
+      </div>
+
+      <!-- Parenting -->
+      <div class="compass-card compass-parenting">
+        <div class="compass-header">👦 الرعاية التربوية والمساندة</div>
+        <div class="compass-body">
+          <strong>الهدف:</strong> التربية المشتركة والمساعدة المنزلية.
+          <strong>التطبيق:</strong> التواجد الفعال واللعب مع الأبناء، والمساندة العملية بمهام البيت ورقع ثوب الألفة بمروءة وسنة نبوية.
+        </div>
+        <div class="compass-action ca-parenting">🔒 الخطوة: مساعدة بمهام المنزل أسبوعياً</div>
+      </div>
+    </div>
+
+    <div class="gottman-rule" style="margin-top:10px;border-color:var(--blue-light);background:var(--blue-ultra)">
+      <div class="gr-icon">⭐</div>
+      <div class="gr-content" style="color:var(--blue-primary)">
+        <strong>سر الاستقرار:</strong> الزوج الراعي هو حصن الأمان لبيته. عندما تتكامل رعاية جوانب الإيمان والمال والعاطفة والتربية بالرحمة والمسؤولية، يزدهر الزواج وتنشأ أسرة صالحة وقوية.
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>الإنفوجرافيك · ص ١١</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · WORKBOOK: QUIZ
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep))">
+    <div class="wb-badge">📝 اختبار قياس مسؤولية الزوج الراعي</div>
+    <h2>هل تمارس دورك كزوج راع بمسؤولية ورحمة؟</h2>
+    <p>أجب عن الأسئلة بصدق تام لتقييم مدى قيادتك لأسرتك بالحب والرحمة والإنفاق والمساندة العملية بالمنزل</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="quiz-grid">
+      <div class="quiz-q">
+        <div class="quiz-qt">١. عند قيامك بالإنفاق وسداد مصاريف البيت ومطالب زوجتك وعائلتك، فإنك:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q1"/> تنفق بالمعروف وبسخاء وطيب نفس مبتسماً</label>
+          <label><input type="radio" name="q1"/> تدفع مصاريف الأساسيات فقط بتذمر مالي مستمر</label>
+          <label><input type="radio" name="q1"/> تتهرب من الإنفاق وتتمنن بما تدفعه للبيت</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٢. مدى مساندتك العملية ومساعدتك لزوجتك بمهام المنزل وترتيب شؤونه:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q2"/> أساعد بانتظام ومبادرة بمهام بسيطة لتخفيف تعبها</label>
+          <label><input type="radio" name="q2"/> أساعد فقط إذا طلبت مني ذلك وبشكل عابر</label>
+          <label><input type="radio" name="q2"/> لا أتدخل بأعمال المنزل معتبراً أنها مسؤوليتها بمفردها</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٣. حضورك وتفاعلك التربوي والعاطفي مع أولادك بالمنزل يومياً:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q3"/> أخصص وقتاً ثابتاً للعب معهم والاستماع لبناء قيمهم</label>
+          <label><input type="radio" name="q3"/> أكتفي بالحديث العابر معهم ومتابعة الدراسة أحياناً</label>
+          <label><input type="radio" name="q3"/> منشغل عنهم تماماً بالعمل والهواتف والخروج</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٤. عندما يحتاج بيتك أو شؤون عائلتك لقرار هام أو استشارة، فإنك:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q4"/> تفعل الشورى وتناقش زوجتك بهدوء واحترام لرأيها</label>
+          <label><input type="radio" name="q4"/> تخبرها بقراراتك جاهزة دون مناقشة أو شورى حقيقية</label>
+          <label><input type="radio" name="q4"/> تتفرد بالقرارات تماماً وتفرض سلطتك بغلظة وتشدد</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 قراءة النتائج وتطوير دورك القيادي</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">الأجوبة الأولى تدل على **قوامة رعاية ورحمة ناضجة**، والثانية تدل على **حاجة لزيادة الحضور والمبادرة**، والثالثة تدل على **إهمال كبير للمسؤولية** وهدم لأمان عائلتك. ابدأ بالتحدي اليومي فوراً.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>اختبار قوامة الرعاية · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · WORKBOOK: WEEKLY PLANNER
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep))">
+    <div class="wb-badge">📝 ورقة عمل خطة المساندة الأسبوعية</div>
+    <h2>مخطط الرعاية والمساندة العائلية الأسبوعي</h2>
+    <p>اجلسا معاً لتوزيع المهام التربوية والمنزلية وتحديد ساعات المساعدة واللعب مع الأبناء بوضوح وتفاهم</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px">
+    <div class="week-track" style="padding:12px 14px">
+      <h4>📅 مخطط الرعاية والمساندة الأسبوعي المقترح</h4>
+      <div class="wt-grid">
+        <div class="wt-row wt-header-row" style="grid-template-columns:110px 100px 1fr 100px;background:var(--blue-primary)">
+          <div class="wt-cell">مجال الرعاية والمساندة</div>
+          <div class="wt-cell">الوقت المخصص</div>
+          <div class="wt-cell">خطة التطبيق والسلوك العملي بالمنزل</div>
+          <div class="wt-cell">تم الالتزام؟</div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">المساعدة المنزلية</div>
+          <div class="wt-cell">ساعتان (مقسمة)</div>
+          <div class="wt-cell">غسل الأطباق يومياً بعد العشاء أو ركن الصالة بمبادرة</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">حضور تربوي للأبناء</div>
+          <div class="wt-cell">٤ ساعات أسبوعياً</div>
+          <div class="wt-cell">اللعب مع الأبناء وقراءة قصص هادفة وبناء قيم الصلاة</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">رعاية وصيانة السكن</div>
+          <div class="wt-cell">عشوائي</div>
+          <div class="wt-cell">فحص أمان الكهرباء والغاز وتصليح الأعطال فوراً</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:110px 100px 1fr 100px">
+          <div class="wt-cell wt-day">العبادة العائلية</div>
+          <div class="wt-cell">٣٠ دقيقة</div>
+          <div class="wt-cell">صلاة ركعتين نوافل وقراءة قرآن جماعة بالمنزل</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wb-sections" style="margin-top:10px">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--blue-primary)">١</div>
+          <h4>تصرف عملي ستقوم به هذا الأسبوع لإثبات قوامة الخدمة والرحمة لزوجتك:</h4>
+        </div>
+        <div class="write-area wa-md"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>خطة المساندة · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK: FINANCIAL REVIEW
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep))">
+    <div class="wb-badge">📝 ورقة مراجعة الإنفاق بالمعروف</div>
+    <h2>تخطيط وتنظيم الكفاية المالية ومصاريف البيت</h2>
+    <p>راجع بنود إنفاقك وكرمك المالي على أهلك للتأكد من توفير الكفاية الكريمة وتجنب البخل والتقتير</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--blue-primary)">١</div>
+          <h4>هل تلبي مطالب زوجتك وبيتك بابتسامة وطيب نفس؟ وما الذي تود تحسينه بنبرتك المالية؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--blue-primary)">٢</div>
+          <h4>خطة الادخار والتأمين الطبي والصحي الفوري لحماية سلامة ورعاية أهلك:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--blue-primary)">٣</div>
+          <h4>كيف ستوفر الكفاية المالية وتوزع ميزانية الأسرة بالعدل والرحمة دون إسراف أو تقتير؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>مراجعة الإنفاق · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · 30-DAY CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep))">
+    <div class="wb-badge">🗓 تحدي الزوج الراعي</div>
+    <h2>تحدي ٣٠ يوماً للقيادة بالرحمة والمسؤولية</h2>
+    <p>تصرفات وسلوكيات يومية عملية ترسخ قوامة الرعاية والإنفاق والقدوة الصالحة لأسرة متماسكة</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="rai-challenge">
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١</div><div class="rcd-text">أداء صلاة الفريضة والقدوة بالمسجد</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢</div><div class="rcd-text">دفع مصروف البيت والمطالب بنفس طيبة</div></div>
+      <div class="rcd-day"><div class="rcd-num">٣</div><div class="rcd-text">مساعدة زوجتك في غسيل الأطباق</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٤</div><div class="rcd-text">استشارتها في قرار أسرى بالشورى</div></div>
+      
+      <div class="rcd-day"><div class="rcd-num">٥</div><div class="rcd-text">اللعب مع الأبناء لـ ٣٠ دقيقة باهتمام</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">٦</div><div class="rcd-text">فحص أمان توصيلات الغاز والكهرباء</div></div>
+      <div class="rcd-day"><div class="rcd-num">٧</div><div class="rcd-text">سؤالها بلطف: هل تودين راحة اليوم؟</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٨</div><div class="rcd-text">تجنب التذمر أو الغضب طوال اليوم</div></div>
+
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٩</div><div class="rcd-text">صلاة ركعتين قيام الليل جماعة معها</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٠</div><div class="rcd-text">تخصيص يوم الجمعة لبر والديك والرحمة</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١١</div><div class="rcd-text">تقديم هدية بسيطة ومفاجئة دون مناسبة</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٢</div><div class="rcd-text">الاعتذار الفوري والصادق عن تقصير قديم</div></div>
+
+      <div class="rcd-day"><div class="rcd-num">١٣</div><div class="rcd-text">توفير مصروف شخصي لزوجتك تكريماً لها</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">١٤</div><div class="rcd-text">متابعة الفحوصات أو المواعيد الطبية لأهلك</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١٥</div><div class="rcd-text">رعاية الأولاد ساعة كاملة لتنام وترتاح</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٦</div><div class="rcd-text">شراء عشاء جاهز تخفيفاً لعبء الطبخ عنها</div></div>
+
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١٧</div><div class="rcd-text">تنظيم ميزانية البيت بالعدل والرحمة</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٨</div><div class="rcd-text">قراءة قصة هادفة للأبناء قبل النوم</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">١٩</div><div class="rcd-text">إبداء التعاطف والتحقق من مشاعرها الحزينة</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٠</div><div class="rcd-text">تنظيف وترتيب مكتبك وركن بالصالة</div></div>
+
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٢١</div><div class="rcd-text">التحدث بنبرة منخفضة وخفض الصوت تماماً</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٢</div><div class="rcd-text">إحضار وجبة حلوى تحبها العائلة بالمساء</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">٢٣</div><div class="rcd-text">تجنب لومها أو عتابها على تقصير منزلي</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٤</div><div class="rcd-text">قبل جبينها بامتنان لشراكتها ورعايتها لبيتكما</div></div>
+
+      <div class="rcd-day"><div class="rcd-num">٢٥</div><div class="rcd-text">صنع كوب شاي لها والجلوس للشورى بهدوء</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٢٦</div><div class="rcd-text">شكرها وتقدير جهودها أمام الأبناء بصوت مسموع</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">٢٧</div><div class="rcd-text">سد منافذ التدخل الخارجي في خصوصيتكما</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٨</div><div class="rcd-text">سؤالها بلطف: «هل تشعرين بالرعاية والأمان معي؟»</div></div>
+    </div>
+    
+    <div class="rai-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="rcd-day rcd-sp" style="padding:12px"><div class="rcd-num">٢٩</div><div class="rcd-text">كتابة خطة أهداف الأسرة الروحية والمالية للعام القادم معها بجلسة خاصة</div></div>
+      <div class="rcd-day rcd-sp2" style="padding:12px;background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep));border-color:var(--blue-deep)"><div class="rcd-num" style="color:white">٣٠</div><div class="rcd-text" style="color:white">الاحتفال بنجاح تحدي الرعاية وتقديم هدية الكرم والوفاء 🌹</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>تحدي ٣٠ يوماً · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--blue-primary),var(--blue-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>خلاصة رحلة الرعاية والمسؤولية</h2>
+    <p>التزام واعٍ بتمثيل قوامة الرحمة والعدل والخدمة لبناء أسرة مطمئنة</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--blue-primary)">
+        <div class="sc-i">🏛️</div>
+        <h4>قوامة رحمة وخدمة</h4>
+        <p>القيادة بالحب والشورى والرفق وتجنب التفرد والغلظة والتسلط في إدارة شؤون الأسرة.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">⚖️</div>
+        <h4>إنفاق وكفاية كريمة</h4>
+        <p>الإنفاق بالمعروف وبطيب نفس وسخاء، وتأمين السكن والرعاية الطبية والصحية لأهلك.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--gold)">
+        <div class="sc-i">👦</div>
+        <h4>مساندة وتربية مسؤولة</h4>
+        <p>الحضور الفعال والقدوة الصالحة للأبناء، والمساعدة المنزلية لتخفيف الإرهاق والعبء عن زوجتك.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--blue-primary)">
+      <div class="fq-mark" style="color:var(--blue-light)">"</div>
+      <p style="color:var(--blue-primary)">البيوت تزهر وتستقر عندما يقودها زوج راعٍ يملك الحكمة والمسؤولية والرحمة ببيته وأهله. قوامتك رعاية وخدمة، تدم لك مودة أسرتك وسلامها.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--blue-primary)">🤝 تعهد وميثاق الرعاية والمسؤولية الزوجية</h4>
+      <p>أتعهد أنا الزوج أمام الله، بأن أكون خيراً لأهلي، قائداً لبيتي بالرحمة والشورى، حريصاً على الإنفاق بالمعروف والكفاية، قدوة صالحة لأبنائي بالصلاة والصدق والمعاملة، ومسانداً عملياً لزوجتي بالمنزل. وأسأل الله التوفيق لحفظ رعيّتي. آمين.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج الراعي / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الزوج الراعي</span><span>الخلاصة والميثاق · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--blue-primary),var(--gold),var(--teal-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(30, 58, 138, 0.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(200, 151, 58, 0.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(29, 196, 179, 0.2)"></div>
+      <div class="ty-heart-main" style="color:var(--blue-primary);animation:none">🏛️</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--blue-primary)">جزاكم الله خيراً</h2>
+    <p class="ty-sub">على اهتمامكم بنشر قيم الرعاية والمسؤولية وحفظ الأسرة وتطبيق المعاشرة بالمعروف<br>رعايتكم الصالحة لأهليكم هي درع أمان عائلتكم واستثماركم الأبقى بالدنيا والآخرة</p>
+
+    <div class="ty-dua" style="background:var(--blue-light);border-right:4px solid var(--blue-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--blue-primary)">اللهم بارك لنا في ذرياتنا وأزواجنا، واجعلنا من الرعاة المخلصين المسؤولين عن رعايتهم بالرحمة والعدل والقدوة الحسنة، واجمع شملنا على طاعتك ورضاك. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في توعية وإرشاد المجتمع المسلم بأفضل التطبيقات الأسرية والتربوية والشرعية المعاصرة لبناء علاقات زوجية آمنة ومستقرة ومبنية على المسؤولية والرحمة.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شارك هذا الدليل مع معارفك المتزوجين لتساهم في نشر ثقافة الرعاية والمسؤولية الأسرية</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل الزوج الراعي (القيادة بالمسؤولية والرحمة)» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

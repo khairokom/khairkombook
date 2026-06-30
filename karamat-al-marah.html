@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>كرامة المرأة أولاً – خيركم</title>
+<meta name="description" content="دليل صيانة وحفظ كرامة الزوجة لبناء علاقة قائمة على الاحترام المتبادل والرحمة – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: KARAMAT AL-MARAH (CRIMSON & GOLD) ── */
+:root {
+  --crimson-primary: #991B1B;
+  --crimson-deep:    #7F1D1D;
+  --crimson-light:   #FEE2E2;
+  --crimson-ultra:   #FFF5F5;
+  --teal-primary:    #1DBFB0;
+  --teal-deep:       #0F9E91;
+  --teal-light:      #D4F5F2;
+  --gold-primary:    #C8973A;
+  --gold-deep:       #9A701C;
+  --gold-light:      #F7E9CC;
+  --gold-ultra:      #FDF7EC;
+  
+  --r-crimson:       #991B1B;
+  --r-crimson-d:     #7F1D1D;
+  --r-crimson-lt:    #FEE2E2;
+}
+
+/* Page covers and backgrounds */
+.crimson-bg { background: linear-gradient(160deg, var(--crimson-ultra) 0%, white 60%); }
+.crimson-label { background: linear-gradient(135deg, var(--crimson-primary), var(--crimson-deep)); }
+.crimson-num { color: rgba(153, 27, 27, 0.05); }
+.crimson-quote { background: var(--crimson-light); border-right: 4px solid var(--crimson-primary); color: var(--crimson-deep); }
+.crimson-color { background: linear-gradient(135deg, var(--crimson-light), white); border-bottom: 2px solid rgba(153, 27, 27, 0.2); }
+.badge-crimson { background: linear-gradient(135deg, var(--crimson-primary), var(--crimson-deep)); }
+
+/* Custom components */
+.dignity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.dignity-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--crimson-primary); display: flex; flex-direction: column; gap: 8px; }
+.dignity-icon { font-size: 26px; }
+.dignity-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.dignity-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* list style */
+.dig-list { display: flex; flex-direction: column; gap: 10px; }
+.dig-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.dig-item-gold { border-right-color: var(--gold-primary); }
+.dig-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.dig-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.dig-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.dt-crimson { background: var(--crimson-light); color: var(--crimson-deep); }
+.dt-gold { background: var(--gold-light); color: var(--gold-deep); }
+
+/* shield visual */
+.shield-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.shield-card { border-radius: var(--r-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.shield-private { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1.5px solid #BFDBFE; }
+.shield-conflict { background: linear-gradient(135deg, var(--crimson-light), #FCA5A530); border: 1.5px solid #FCA5A5; }
+.shield-social { background: linear-gradient(135deg, var(--gold-ultra), #FEF3CC); border: 1.5px solid #FCD34D; }
+.shield-mental { background: linear-gradient(135deg, var(--teal-ul), #D4F5F2); border: 1.5px solid var(--teal-light); }
+.shield-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: var(--dark); }
+.shield-body { font-size: 11.5px; line-height: 1.6; color: var(--g700); }
+.shield-body strong { display: block; color: var(--dark); margin-bottom: 2px; }
+.shield-action { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 4px 8px; margin-top: 4px; display: inline-block; }
+.sa-private { background: #BFDBFE; color: #1E3A8A; }
+.sa-conflict { background: #FCA5A5; color: #7F1D1D; }
+.sa-social { background: #FDE68A; color: #92400E; }
+.sa-mental { background: var(--teal-lt); color: var(--teal-d); }
+
+/* cover badges */
+.cv-dig-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-db { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.db1 { background: linear-gradient(135deg, var(--crimson-primary), var(--crimson-deep)); }
+.db2 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.db3 { background: linear-gradient(135deg, var(--gold), #A07000); }
+
+/* 30 day respect challenge */
+.respect-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.rcd-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.rcd-num { font-size: 16px; font-weight: 900; color: var(--crimson-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.rcd-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.rcd-sp { background: var(--crimson-light); border-color: var(--crimson-primary); }
+.rcd-sp2 { background: var(--teal-ul); border-color: var(--teal-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#FFF5F5 0%,#FFFFFF 45%,var(--gold-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(153,27,27,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(29,191,176,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep));color:white;border-color:rgba(153, 27, 27, 0.3)">سلسلة الحقوق والكرامة الزوجية</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(153, 27, 27, 0.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(200,151,58,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(153,27,27,.35))">🛡️</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">❤️</div>
+        <div class="cv-coin c2" style="font-size:18px">💚</div>
+        <div class="cv-coin c3" style="font-size:20px">💛</div>
+        <div class="cv-coin c4" style="font-size:16px">✨</div>
+        <div class="cv-coin c5" style="font-size:18px">🛡️</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:52px;background:linear-gradient(135deg,var(--crimson-deep) 0%,var(--crimson-primary) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">كرامة المرأة أولاً</h1>
+      <div style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--g700);margin:4px 0">حفظ وصيانة كرامة الزوجة</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--crimson-primary),var(--gold))"></div>
+      <p class="cv-sub">دليل إرشادي وتدريبات عملية للزوج لحفظ كرامة شريكة حياته<br>ورسم حدود الاحترام والتقدير في السر والعلن ووقت الخلاف</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-dig-badges">
+      <div class="cv-db db1">🛡️ صون الكرامة</div>
+      <div class="cv-db db2">🤝 احترام متبادل</div>
+      <div class="cv-db db3">🕌 حسن العشرة</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل الكرامة والوفاء · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep))">النهج النبوي في إكرام المرأة</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">🛡️</div>
+      <h2>كرامة المرأة أولاً</h2>
+      <p>الأصل الشرعي والتربوي لإكرام الزوجة وصيانة مكانتها النفسية والاجتماعية</p>
+    </div>
+
+    <div class="hadith-box" style="background:var(--crimson-light);border-color:rgba(153, 27, 27, 0.2)">
+      <div class="hadith-text" style="color:var(--crimson-deep)">«مَا أَكْرَمَ النِّسَاءَ إِلَّا كَرِيمٌ، وَمَا أَهَانَهُنَّ إِلَّا لَئِيمٌ»</div>
+      <div class="hadith-src" style="color:var(--crimson-deep)">الهدي النبوي الشريف في إكرام القوارير</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--crimson-primary)">
+      <p style="color:var(--crimson-deep)">كرامة الزوجة ليست مجالاً للمساومة أو التنازل. الحب بدون احترام هو مبنى بلا أساس ينهار عند أول عاصفة. إن إكرام المرأة وصون كرامتها في القول والعمل، ووقت الرضا والغضب، هو علامة كرم النفس والرجولة الحقة في الإسلام.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--crimson-ultra);border-color:var(--crimson-light)">
+        <div class="tc-icon">🛡️</div>
+        <h4 style="color:var(--crimson-deep)">حماية وجدانية</h4>
+        <p>شعور الزوجة بأن كرامتها مصونة يمنحها ثقة عالية ورغبة في إسعاد زوجها ورعاية بيتها.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="tc-icon">🤝</div>
+        <h4 style="color:var(--gold)">احترام وقت الخلاف</h4>
+        <p>ضوابط الحوار المحترم وتجنب الكلمات الجارحة والإهانات اللفظية والجسدية تماماً.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="tc-icon">👥</div>
+        <h4 style="color:var(--teal-d)">صون الصورة الاجتماعية</h4>
+        <p>حفظ مكانة زوجتك واحترامها أمام الأهل والأصدقاء والمجتمع في حضورها وغيابها.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 ما الذي يقدمه لك هذا الدليل؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal" style="background:var(--crimson-light);color:var(--crimson-deep)">🌱</div><span>فهم ركائز حفظ كرامة الزوجة</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>اختبار تقييم مستوى الاحترام بينكما</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>تحدي التقدير والإكرام اليومي</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>النهج والمكانة · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتويات رحلة صون كرامة الزوجة</h2>
+      <p>تفاصيل عملية لبناء علاقة راقية أساسها الاحترام والإكرام النبوي</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--crimson-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">النهج النبوي في إكرام المرأة وصون مكانتها</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">لماذا كرامة زوجتك أولاً؟ الأثر النفسي والتربوي</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--crimson-primary)"></span>الفصل الأول: ركائز كرامة الزوجة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--crimson-primary)">الفصل ١</span><span class="te-name">ما الذي يجرح كرامة المرأة؟ السلوكيات السامة</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--crimson-primary)">الفصل ١</span><span class="te-name">احترام الرأي والقرارات وتفادي التقليل والتسفيه</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal)"></span>الفصل الثاني: الاحترام في أوقات الخلاف</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">ضوابط الخلاف المحترم وتجنب فخ الإهانة</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">نزع فتيل الغضب دون التعدي اللفظي أو التهديد</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">كيف تعتذر وتصلح الخطأ بصورة كريمة؟</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold)"></span>الفصل الثالث: حماية الصورة أمام الآخرين</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">إكرام الزوجة وصون صورتها أمام الأهل والأصدقاء</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">حماية كرامة شريكة حياتك في الغياب والسر</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--crimson-deep)"></span>التمارين والتطبيقات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: درع كرامة الزوجة</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+          <div class="toc-entry"><span class="te-name">اختبار: هل تشعر زوجتك باحترام كرامتها؟</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة عمل اتفاقية الخلاف المحترم والتفاهم</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة عمل مراجعة سلوكيات الغضب والتهدئة</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي صون الكرامة والإكرام اليومي (30 يوماً)</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق صون الكرامة والرحمة</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء السيرة العطرة وحسن الخلق</span><span class="te-dots"></span><span class="te-pg">١٨</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · WHY WIFE'S DIGNITY FIRST
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--crimson-primary),var(--gold-primary),var(--teal-primary))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--crimson-primary)">حفظ الكرامة</div>
+    <h2 class="intro-h2">أهمية كرامة الزوجة في الزواج</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(153,27,27,.2)">
+      <div class="iqb-mark" style="color:var(--crimson-light)">"</div>
+      <p style="color:var(--crimson-deep)">الكرامة هي الرداء النفسي الذي يحمي كيان المرأة. وحين تُمزق كرامة الزوجة بكلمة جارحة أو إهانة متكررة، ينطفئ الحب وتتحول العلاقة إلى صراع بارد يبحث فيه كل طرف عن حماية نفسه فحسب.</p>
+    </div>
+
+    <p class="intro-para">صيانة الكرامة لا تعني غياب الخلافات الزوجية، بل تقتضي إدارة الخلاف بوعي ورقٍ. فالرجل الكريم هو الذي يستطيع إيصال عتابه وغضبه لزوجته دون أن يجرح أنوثتها، أو يقلل من كرامتها، أو يسفه عقلها أمام أطفالها وأهلها.</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--crimson-light);border-color:rgba(153,27,27,.2)">
+        <div class="isr-num" style="color:var(--crimson-deep)">الاحترام</div>
+        <div class="isr-txt">هو التربة الصالحة التي ينمو فيها الحب ويثمر عطاءً واهتماماً.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="isr-num" style="color:var(--gold)">التربية</div>
+        <div class="isr-txt">احترامك لزوجتك يعلم أولادك حقيقة تقدير المرأة وبناء شخصيات متوازنة.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="isr-num" style="color:var(--teal-d)">السكينة</div>
+        <div class="isr-txt">حفظ كرامة شريكتك يمنح بيتكما هدوءاً دائماً ونزوعاً للصلح السريع.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">أخلاق الرجال تظهر في الخلافات لا في الوفاق. وصون الكرامة هو التزام ديني وأخلاقي رفيع. دليل خيركم هذا صُمم ليكون مرشداً عملياً لك لحفظ كرامة شريكة حياتك وجعل بيتك بيئة آمنة وراقية للجميع.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--crimson-primary)">
+      <div class="ip-icon">🛡️</div>
+      <p style="color:var(--crimson-deep)">وعد منصة خيركم: التزامك بضوابط هذا الدليل وتجنب إهانة زوجتك تماماً سيجعلها تبادلك الاحترام والتقدير بضعفين، ويرسخ لغة المودة الحقيقية في بيتك.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>أهمية الكرامة · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg crimson-bg">
+  <div class="ch-cover-num crimson-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label crimson-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--crimson-deep)">ركائز كرامة الزوجة</h2>
+    <p class="ch-cover-quote crimson-quote">«الاحترام هو الركن الأول للحب السعيد، وحفظ كرامة شريكتك هو حماية لمشروع عمركما»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم in this chapter:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ السلوكيات الخمس السامة التي تجرح كرامة المرأة وعلاجها</div>
+        <div class="cco-item">✓ مهارات تقدير الرأي وتجنب التسفيه والتقليل من شأنها</div>
+        <div class="cco-item">✓ احترام الفروق الفردية وتقدير جهودها اليومية بالمنزل</div>
+        <div class="cco-item">✓ تمرين مراجعة أساليب التعامل والتقييم العاطفي الذاتي</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header crimson-color">
+    <span class="ch-badge badge-crimson">الفصل الأول</span>
+    <span class="ch-title-sm">ما الذي يجرح كرامة المرأة وسلوكيات التقدير؟</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">السلوكيات السامة التي تدمر الكرامة</h3>
+    <p class="body-p">توجد تصرفات عابرة قد يقوم بها الزوج بدافع الغضب أو المزاح، لكنها تترك جروحاً عميقة في كرامة زوجته وتضعف الألفة بينهما. التزامك بتجنبها هو الخطوة الأولى لصيانة علاقتكما:</p>
+
+    <div class="dignity-grid">
+      <div class="dignity-card" style="border-right-color:var(--crimson-primary)">
+        <div class="dignity-icon">🗣️</div>
+        <h4>١. الانتقاد والتسفيه العلني</h4>
+        <p>انتقاد مظهرها، أو طعامها، أو رأيها أمام الأطفال، أو الأهل، أو الأصدقاء. هذا السلوك يكسر ثقتها بنفسها ويجرح كرامتها بشدة.</p>
+      </div>
+
+      <div class="dignity-card" style="border-right-color:var(--teal-primary)">
+        <div class="dignity-icon">⚡</div>
+        <h4>٢. المقارنات المستمرة بأخريات</h4>
+        <p>مقارنة جمالها، أو مهارتها، أو أسلوب حياتها بقريباتك أو بمشاهير وسائل التواصل الاجتماعي. المقارنة تقتل التميز وتورث الجفاء والغيرة.</p>
+      </div>
+
+      <div class="dignity-card" style="border-right-color:var(--gold-primary)">
+        <div class="dignity-icon">🤫</div>
+        <h4>٣. تجاهل الرأي والاستشارة بالمنزل</h4>
+        <p>اتخاذ القرارات الهامة لأسرتكما بشكل منفرد تماماً وتهميش دورها وآرائها كأنها شخص غير مؤهل للمشاركة والشورى.</p>
+      </div>
+
+      <div class="dignity-card" style="border-right-color:var(--crimson-deep)">
+        <div class="dignity-icon">💔</div>
+        <h4>٤. التهديد المستمر بالطلاق أو الزواج</h4>
+        <p>استخدام هذه الكلمات كوسيلة للضغط والسيطرة في الخلافات البسيطة. هذا السلوك يدمر الأمان النفسي ويهز أساسات علاقتكما.</p>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:10px">
+      <div class="tip-ic">💡</div>
+      <div><strong>نصيحة خيركم:</strong> احرص على أن تكون زوجتك موضع احترام وتقدير دائم ببيتك. إذا أردت تعديل سلوك أو نقد تصرف، فليكن ذلك بينكما سراً وبمنتهى اللطف وبأسلوب «أنا أحب كذا...» بدلاً من الهجوم الجارح.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">الاحترام في أوقات الخلاف</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«تظهر معادن الرجال وقيم الاحترام وقت الغضب والنزاع، والاعتذار الصادق وإصلاح الخطأ هو علامة القوة والرجولة الحقة»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ ضوابط وقواعد الخلاف الزوجي المحترم وتجنب التعدي</div>
+        <div class="cco-item">✓ مهارات التحكم بالغضب وامتصاص توتر الشريك بوعي وهدوء</div>
+        <div class="cco-item">✓ كيف تقدم اعتذاراً كريماً وصادقاً يصلح كرامة زوجتك بعد الخطأ</div>
+        <div class="cco-item">✓ تمرين صياغة «اتفاقية الخلاف المحترم» المشتركة بينكما</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">ضوابط الخلاف المحترم وتجنب إهانات الغضب</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">قواعد الخلاف الزوجي الراقي</h3>
+    <p class="body-p">الخلافات طبيعية وصحية لتطوير العلاقة، لكن شرطها الأساسي هو عدم المساس بالكرامة. الزوج الكريم يضع لنفسه حدوداً حمراء وقت الغضب لا يتجاوزها مهما اشتد النقاش.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ سلوكيات تهدم كرامة الشريك</div>
+        <div class="comp-items">
+          <div class="comp-item"><strong>الشتم والألفاظ الجارحة:</strong> استخدام كلمات تقلل من قيمتها أو تسخر من شكلها وأهلها.</div>
+          <div class="comp-item"><strong>الصراخ والترهيب الجسدي:</strong> رفع الصوت بغضب والتهديد بالحركة أو كسر الأشياء بالمنزل.</div>
+          <div class="comp-item"><strong>الهجر بلا مبرر:</strong> مغادرة المنزل أو النوم بغرفة منفصلة لأيام دون حديث وتوضيح.</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right">
+        <div class="comp-title" style="color:var(--teal-d)">✅ ضوابط صون الكرامة وقت الخلاف</div>
+        <div class="comp-items">
+          <div class="comp-item" style="color:var(--teal-d)"><strong>نقاش هادئ وخفض الصوت:</strong> التحدث بنبرة متزنة خالية من الصراخ والعدائية.</div>
+          <div class="comp-item" style="color:var(--teal-d)"><strong>التركيز على موضوع الخلاف:</strong> عدم نبش الماضي وأخطاء السنوات السابقة بالنقاش.</div>
+          <div class="comp-item" style="color:var(--teal-d)"><strong>أخذ مهلة للتهدئة (Time-out):</strong> إيقاف النقاش مؤقتاً عند الغضب للتهدئة والعودة لاحقاً.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">خطوات الاعتذار الفعال والكريم</h3>
+    <p class="body-p">إذا أخطأت في حق زوجتك أو تجاوزت حدود الاحترام وقت الغضب، فبادر بالاعتذار. الاعتذار لا يقلل من رجولتك، بل يرفع مكانتك. قل بصراحة: «أنا آسف لأنني رفعت صوتي واستخدمت كلمة جرحتكِ، حقكِ علي وكرامتكِ غالية عندي».</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">🧩</div>
+      <h4>تمرين تطبيقي للزوجين: اتفاقية الخلاف</h4>
+      <p>اكتبا معاً قاعدتين تلتزمان بهما تماماً عند حدوث أي نقاش حاد مستقبلاً (مثال: خفض نبرة الصوت، عدم النوم في غرف منفصلة):</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>الفصل الثاني · ص ٨</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 2 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">التحكم بالغضب وامتصاص التوتر</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">فنون السيطرة على الانفعال</h3>
+    <p class="body-p">يمثل الغضب البوابة الرئيسية لخرق كرامة الزوجة. الزوج الحكيم يمتلك أدوات واعية للتحكم في نفسه قبل أن ينطق بكلمات يندم عليها لاحقاً. الغضب لحظة عابرة لكن الكلمة الجارحة قد تعيش في قلب المرأة لسنوات.</p>
+
+    <div class="science-box" style="background:var(--crimson-ultra);border-color:rgba(153, 27, 27, 0.2)">
+      <div class="sb-icon">🛡️</div>
+      <div class="sb-content">
+        <h4 style="color:var(--crimson-deep)">الأثر الهرموني والنفسي للإهانة اللفظية</h4>
+        <p style="color:var(--crimson-deep)">تشير دراسات علم النفس الأسري إلى أن الكلمات المهينة والانتقادات اللاذعة وقت الخلاف تحفز هرمونات الضغط النفسي (الكورتيزول) لدى المرأة بمستويات تعادل التعرض للخطر الجسدي. هذا التوتر العالي يدمر ثقتها بزوجها ويحتاج إلى أسابيع من المعاملة الطيبة لإعادة التوازن للأمان العاطفي ببيتكما.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">قواعد السيطرة والتهدئة الأربع</h3>
+
+    <div class="prio-list">
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--crimson-primary)">
+        <div class="contain-icon">🧘‍♂️</div>
+        <div class="prio-content">
+          <h5>١. غيّر وضعك الجسدي وتنفّس عميقاً</h5>
+          <p>اتبع الهدي النبوي: إذا كنت غاضباً وأنت واقف فاجلس، وتوضأ بالماء البارد. خذ أنفاساً عميقة وبطيئة لتهدئة ضربات قلبك وجهازك العصبي المتوتر.</p>
+          <span class="prio-tag pt-gold" style="background:var(--crimson-light);color:var(--crimson-deep)">هدوء ذاتي</span>
+        </div>
+      </div>
+
+      <div class="prio-item" style="border-right-color:var(--teal-primary)">
+        <div class="contain-icon">🔇</div>
+        <div class="prio-content">
+          <h5>٢. التزم بالصمت المؤقت لحفظ اللسان</h5>
+          <p>عندما تشعر برغبة عارمة في استخدام كلمة جارحة أو مهاجمة كرامتها، توقف تماماً عن الكلام. الصمت في قمة الغضب هو شجاعة وصيانة لبيتك وزواجك.</p>
+          <span class="prio-tag pt-teal">حفظ اللسان</span>
+        </div>
+      </div>
+
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--crimson-primary)">
+        <div class="contain-icon">🚶‍♂️</div>
+        <div class="prio-content">
+          <h5>٣. غادر مكان النقاش بلطف ودون هجر</h5>
+          <p>قل بصوت هادئ: «أنا غاضب الآن ولا أود أن أقول شيئاً يؤذيكِ، سأخرج لأمشي قليلاً ونكمل حديثنا مساءً بهدوء». هذا السلوك يمتص التوتر فوراً.</p>
+          <span class="prio-tag pt-gold" style="background:var(--crimson-light);color:var(--crimson-deep)">مهلة للتفكير</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>الفصل الثاني · ص ٩</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold-deep)">حماية الصورة أمام الآخرين</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold-primary);color:var(--gold-deep)">«كرامة زوجتك أمام أهلك والناس هي من كرامتك الشخصية، والزوج الشهم هو الذي يستر عيوب أهله ويثني عليهم في المحافل»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ صون كرامة وصورة زوجتك أمام أهلك وأهلها والمجتمع بذكاء</div>
+        <div class="cco-item">✓ الالتزام بالإخلاص وحفظ الغيبة وحماية أسرار بيتك سراً</div>
+        <div class="cco-item">✓ تجنب السخرية والتهكم اللفظي المبطن بالمزاح أمام الآخرين</div>
+        <div class="cco-item">✓ تمرين صياغة ميثاق الحدود الاجتماعية لحفظ خصوصية الأسرة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">حفظ الغيبة وحماية صورة زوجتك اجتماعياً</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">صون مكانة زوجتك أمام الناس وأهلك</h3>
+    <p class="body-p">إن كرامة زوجتك وصورتها أمام عائلتك وأصدقائك تصنعها أنت بطريقة تعاملك وحديثك عنها. الزوج الراقي يحرص على إظهار الاحترام والتقدير لزوجته أمام الجميع ليرسخ مكانتها واحترامها في قلوبهم.</p>
+
+    <div class="prio-list">
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--gold-primary)">
+        <div class="contain-icon">🗣️</div>
+        <div class="prio-content">
+          <h5>١. تجنب النقد والسخرية المبطنة بالمزاح أمام العامة</h5>
+          <p>بعض الأزواج يمزحون بذكر عيوب زوجاتهم أو تقصيرهن في الطبخ والنظافة أمام التجمعات العائلية. هذا السلوك يجرح كرامة المرأة بشدة ويوغر صدرها ويسمح للآخرين بالاستخفاف بمكانتها.</p>
+          <span class="prio-tag pt-gold" style="background:var(--gold-light);color:var(--gold-deep)">احترام علني</span>
+        </div>
+      </div>
+
+      <div class="prio-item" style="border-right-color:var(--teal-primary)">
+        <div class="contain-icon">🔒</div>
+        <div class="prio-content">
+          <h5>٢. حفظ الغيبة وحماية أسرارها في غيابها</h5>
+          <p>الدفاع عنها والثناء عليها إذا ذكرت بسوء في غيابها، وعدم نقل عيوبها أو تفاصيل حياتكما الخاصة وخلافاتكما لأحد. خلافات البيت تحل داخل البيت وتبقى أسراراً مغلقة بينكما.</p>
+          <span class="prio-tag pt-teal">حفظ الغيبة</span>
+        </div>
+      </div>
+
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--gold-primary)">
+        <div class="contain-icon">🤝</div>
+        <div class="prio-content">
+          <h5>٣. إكرام أهلها وتوطيد الألفة معهم</h5>
+          <p>احترام والديها وعائلتها وتقديرهم بزيارات وهدايا مناسبة. إكرامك لعائلتها هو تقدير وحفظ مباشر لكرامتها ومكانتها الشخصية في حياتك.</p>
+          <span class="prio-tag pt-gold" style="background:var(--gold-light);color:var(--gold-deep)">إكرام الأهل</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>الفصل الثالث · ص ١١</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · INFOGRAPHIC: SHIELD OF DIGNITY
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink" style="background:linear-gradient(135deg,var(--crimson-deep),var(--crimson-primary))">
+    <div class="info-badge info-badge-pink" style="background:rgba(255,255,255,.2)">درع الحماية والاحترام</div>
+    <h2>درع كرامة وصون الزوجة</h2>
+    <p>الأركان الأربعة الأساسية لحفظ كرامة شريكة حياتك وضمان بيئة أسرية يسودها التقدير والرحمة</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px">
+    <div class="shield-wrap">
+      <!-- Private -->
+      <div class="shield-card shield-private">
+        <div class="shield-header">🔒 الخصوصية والستر</div>
+        <div class="shield-body">
+          <strong>الهدف:</strong> إبقاء تفاصيل حياتكما وأسرار بيتكما مغلقة تماماً.
+          <strong>التطبيق:</strong> عدم إشراك الأهل في الخلافات اليومية البسيطة، وحفظ غيبتها والثناء عليها في السر والعلن.
+        </div>
+        <div class="shield-action sa-private">🔒 الخطوة: سد منافذ التدخل الخارجي</div>
+      </div>
+
+      <!-- Conflict -->
+      <div class="shield-card shield-conflict">
+        <div class="shield-header">⚡ ضوابط الخلاف المحترم</div>
+        <div class="shield-body">
+          <strong>الهدف:</strong> حظر الإهانات اللفظية والجسدية وقت الغضب تماماً.
+          <strong>التطبيق:</strong> تجنب الصراخ والكلمات الجارحة، عدم التهديد بالطلاق، والاعتذار الفوري الصادق والكريم بعد الخطأ.
+        </div>
+        <div class="shield-action sa-conflict">🔒 الخطوة: التزام الصمت التام عند الانفعال</div>
+      </div>
+
+      <!-- Social -->
+      <div class="shield-card shield-social">
+        <div class="shield-header">👥 التقدير والثناء العلني</div>
+        <div class="shield-body">
+          <strong>الهدف:</strong> إكرام مكانتها أمام الأطفال والأهل والمجتمع.
+          <strong>التطبيق:</strong> تجنب السخرية والتهكم بجهودها ومظهرها كنوع من المزاح، وإظهار الاحترام لدورها وصوتها أمام الجميع.
+        </div>
+        <div class="shield-action sa-social">🔒 الخطوة: مديح جهودها أمام العائلة</div>
+      </div>
+
+      <!-- Mental -->
+      <div class="shield-card shield-mental">
+        <div class="shield-header">🧠 القبول والاحترام الفكري</div>
+        <div class="shield-body">
+          <strong>الهدف:</strong> إشراكها بوعي وتقدير في مسيرة وقرارات حياتكما.
+          <strong>التطبيق:</strong> إتقان الشورى الزوجية، احترام آرائها وقراراتها، والابتعاد الكامل عن التسفيه والتقليل من عقلها وخبراتها.
+        </div>
+        <div class="shield-action sa-mental">🔒 الخطوة: استشارتها بقرارات البيت والعمل</div>
+      </div>
+    </div>
+
+    <div class="gottman-rule" style="margin-top:10px;border-color:var(--crimson-light);background:var(--crimson-ultra)">
+      <div class="gr-icon">⭐</div>
+      <div class="gr-content" style="color:var(--crimson-deep)">
+        <strong>سر الاستدامة:</strong> صيانة كرامة الزوجة هي اللبنة الأولى لبناء مودة زوجية حقيقية وراسخة. وبقدر ما تحفظ كرامتها وتحترم كينونتها، بقدر ما تمنحك الحب والسكينة والولاء في السراء والضراء.
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>الإنفوجرافيك · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · WORKBOOK: QUIZ
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep))">
+    <div class="wb-badge">📝 اختبار كرامة وصون الزوجة</div>
+    <h2>هل تشعر زوجتك باحترام كرامتها في حياتكما؟</h2>
+    <p>أجب عن الأسئلة بصدق تام لتقييم مدى التزامك بضوابط الاحترام والإكرام اللفظي والوجداني لشريكة حياتك</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="quiz-grid">
+      <div class="quiz-q">
+        <div class="quiz-qt">١. عندما نختلف في الرأي وتشتد المناقشة بيننا بالمنزل، فإن تصرفي المعتاد هو:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q1"/> التحدث بنبرة هادئة وحل النزاع بأسلوب محترم</label>
+          <label><input type="radio" name="q1"/> الصراخ والمقاطعة المستمرة وفرض الرأي بالغضب</label>
+          <label><input type="radio" name="q1"/> استخدام شتائم أو إهانات لفظية والتمنن عليها</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٢. عند حضورنا في التجمعات العائلية (أهلي أو أهلها) أو المناسبات الاجتماعية:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q2"/> أثني عليها وأظهر الاحترام والتقدير لدورها أمامهم</label>
+          <label><input type="radio" name="q2"/> أتحدث بالرسميات متجنباً الحديث عنها أو إشراكها</label>
+          <label><input type="radio" name="q2"/> أنتقد تقصيرها وأسخر من تصرفاتها كنوع من المزاح والضحك</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٣. حين ترتكب زوجتي خطأ بالمنزل (مثل إحراق طعام أو نسيان طلب)، فإن ردي هو:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q3"/> التهوين عليها بلطف والقول «بسيطة، تتعوض المرة القادمة»</label>
+          <label><input type="radio" name="q3"/> لومها بنبرة حادة وذكر عيوبها وتقصيرها بالمنزل</label>
+          <label><input type="radio" name="q3"/> تسفيه عقلها ووصفها بالإهمال والغباء بكلمات جارحة</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٤. عندما أكتشف أنني تجاوزت حدود الاحترام أو أخطأت في حقها، فإنني:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q4"/> أبادر بالاعتذار الصادق والكريم وأقبل رأسها لإصلاح الأثر</label>
+          <label><input type="radio" name="q4"/> أنتظر حتى يهدأ الجو وتعود المياه لمجاريها دون كلام صريح</label>
+          <label><input type="radio" name="q4"/> أكابر وأرفض الاعتذار معتبراً أن اعتذار الزوج ضعف لرجولته</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 قراءة النتائج وتطوير الأداء</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">الأجوبة الأولى تدل على **التزام عالٍ بالاحترام النبوي وصون كرامتها**، والثانية تدل على **حاجة لضبط الانفعالات واللسان**، والثالثة تدل على **إهانة وسلوكيات سامة** تدمر الألفة. ابدأ بتطبيق التحدي فوراً.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>اختبار الكرامة · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK: CONFLICT AGREEMENT
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep))">
+    <div class="wb-badge">📝 ورقة عمل اتفاقية الخلاف المحترم</div>
+    <h2>ميثاق صون الاحترام الزوجي وقت الخلاف</h2>
+    <p>اجلسا معاً لوضع القواعد الذهبية والحدود الحمراء التي لا يتجاوزها أي منكما وقت الغضب والنزاع بالمنزل</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px">
+    <div class="week-track" style="padding:12px 14px">
+      <h4>📅 بنود اتفاقية الخلاف المحترم والحدود الحمراء</h4>
+      <div class="wt-grid">
+        <div class="wt-row wt-header-row" style="grid-template-columns:140px 1fr 100px;background:var(--crimson-primary)">
+          <div class="wt-cell">البند المتفق عليه</div>
+          <div class="wt-cell">خطة التطبيق والسلوك البديل</div>
+          <div class="wt-cell">موافق؟</div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:140px 1fr 100px">
+          <div class="wt-cell wt-day">خفض نبرة الصوت</div>
+          <div class="wt-cell">عدم استخدام الصراخ، والتحدث بنبرة هادئة متزنة وواضحة بالنقاش.</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:140px 1fr 100px">
+          <div class="wt-cell wt-day">حظر الكلمات الجارحة</div>
+          <div class="wt-cell">الامتناع التام عن استخدام شتائم، سخرية، أو مقارنات تسيء لكرامة الشريك.</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:140px 1fr 100px">
+          <div class="wt-cell wt-day">طلب مهلة للتهدئة</div>
+          <div class="wt-cell">يحق لأي طرف إيقاف النقاش لـ ٢٠ دقيقة للهدوء، والعودة لاحقاً لإكمال الحوار.</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:140px 1fr 100px">
+          <div class="wt-cell wt-day">حفظ خصوصية الخلاف</div>
+          <div class="wt-cell">عدم خروج تفاصيل النزاع خارج البيت أو إشراك الأهل والأولاد بالنقاش الحاد.</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wb-sections" style="margin-top:10px">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--crimson-primary)">١</div>
+          <h4>خطوة عملية ستقوم بها للسيطرة على غضبك وصون لسانك عند الخلاف القادم:</h4>
+        </div>
+        <div class="write-area wa-md"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>اتفاقية الخلاف · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · WORKBOOK: ANGER REVIEW
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep))">
+    <div class="wb-badge">📝 مراجعة سلوكيات الغضب والاعتذار</div>
+    <h2>تخطيط السيطرة على الانفعال وإصلاح الخطأ</h2>
+    <p>املأ هذه الورقة بمراجعة لأهم السلوكيات التي تود تحسينها عند الغضب وطريقتك المثالية للاعتذار الكريم</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--crimson-primary)">١</div>
+          <h4>ما هي أكثر التصرفات أو الألفاظ الجارحة التي قمت بها سابقاً وتود الامتناع عنها تماماً؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--crimson-primary)">٢</div>
+          <h4>خطتك المبتكرة للتهدئة والوضوء عند شعورك ببدء ثوران الغضب أثناء نقاش زوجتك:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--crimson-primary)">٣</div>
+          <h4>كيف ستقدم اعتذاراً كريماً ومكتوباً لزوجتك إذا تسببت في إغضابها أو جرح كرامتها مستقبلاً؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>مراجعة الغضب · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · 30-DAY CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep))">
+    <div class="wb-badge">🗓 تحدي إكرام وصون الكرامة</div>
+    <h2>تحدي ٣٠ يوماً لإكرام وصون زوجتك</h2>
+    <p>تطبيقات وسلوكيات عملية يومية ترسخ قيم الاحترام والتقدير والرفق بكرامة شريكة حياتك بالمنزل</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="respect-challenge">
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١</div><div class="rcd-text">التحدث بنبرة هادئة ومنخفضة بالمنزل</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢</div><div class="rcd-text">تجنب السخرية والمزاح الثقيل معها</div></div>
+      <div class="rcd-day"><div class="rcd-num">٣</div><div class="rcd-text">شكرها بصدق ودفء على طعام الغداء</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٤</div><div class="rcd-text">استشارتها في قرار أسرى هام</div></div>
+      
+      <div class="rcd-day"><div class="rcd-num">٥</div><div class="rcd-text">الامتناع عن الانتقاد العلني أمام الأولاد</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">٦</div><div class="rcd-text">إظهار الاحترام لرأيها أمام الأهل والناس</div></div>
+      <div class="rcd-day"><div class="rcd-num">٧</div><div class="rcd-text">تجنب لومها أو عتابها طوال اليوم</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٨</div><div class="rcd-text">الاعتذار الفوري بلطف عن خطأ بسيط</div></div>
+
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٩</div><div class="rcd-text">كتابة كرت تقدير ووضعه على مكتبها</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٠</div><div class="rcd-text">الاتفاق المشترك على ميثاق الخلاف المحترم</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١١</div><div class="rcd-text">شراء باقة ورد بسيطة مفاجئة إكراماً لها</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٢</div><div class="rcd-text">حفظ خصوصية مشكلة عابرة تماماً بالمنزل</div></div>
+
+      <div class="rcd-day"><div class="rcd-num">١٣</div><div class="rcd-text">التحدث عنها بفخر وإيجاب أمام والديك</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">١٤</div><div class="rcd-text">إعطاؤها مساحة كافية لتوضيح رأيها ونقاشها</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١٥</div><div class="rcd-text">جلسة حوار دقيقة للاتصال والشورى الزوجية</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٦</div><div class="rcd-text">تجنب المقارنات بأي امرأة أخرى تماماً</div></div>
+
+      <div class="rcd-day rcd-sp"><div class="rcd-num">١٧</div><div class="rcd-text">تلقي عتبها أو شكواها برحابة صدر ودون دفاع</div></div>
+      <div class="rcd-day"><div class="rcd-num">١٨</div><div class="rcd-text">شكر أهلها وإكرامهم بهدية أو اتصال حنون</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">١٩</div><div class="rcd-text">تجنب استخدام كلمة «طلاق» أو تهديد بالنقاش</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٠</div><div class="rcd-text">صناعة كوب شاي لها والجلوس للحديث الهادئ</div></div>
+
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٢١</div><div class="rcd-text">إسناد المسؤولية لها في تنظيم ركن بالمنزل وتثمينها</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٢</div><div class="rcd-text">عدم مقاطعتها أثناء حديثها الهام بالمساء</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">٢٣</div><div class="rcd-text">قبل جبينها بتقدير وامتنان لوجودها السند</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٤</div><div class="rcd-text">إظهار الامتنان لجهودها أمام عائلتها بذكاء</div></div>
+
+      <div class="rcd-day"><div class="rcd-num">٢٥</div><div class="rcd-text">السيطرة الكاملة على غضبك والوضوء عند التوتر</div></div>
+      <div class="rcd-day rcd-sp2"><div class="rcd-num">٢٦</div><div class="rcd-text">تخصيص موعد Date Night هادئ ومحترم للزوجين</div></div>
+      <div class="rcd-day rcd-sp"><div class="rcd-num">٢٧</div><div class="rcd-text">تجنب الهجر أو النوم بغرفة منفصلة عند النزاع</div></div>
+      <div class="rcd-day"><div class="rcd-num">٢٨</div><div class="rcd-text">سؤالها بلطف: «هل تشعرين بتقدير كرامتكِ معي؟»</div></div>
+    </div>
+    
+    <div class="respect-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="rcd-day rcd-sp" style="padding:12px"><div class="rcd-num">٢٩</div><div class="rcd-text">كتابة رسالة شكر لزوجتك تصف فيها دورها العظيم بحفظ استقرار بيتكما</div></div>
+      <div class="rcd-day rcd-sp2" style="padding:12px;background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep));border-color:var(--crimson-deep)"><div class="rcd-num" style="color:white">٣٠</div><div class="rcd-text" style="color:white">الاحتفال بنجاح تحدي الكرامة وتقديم هدية تقديرية راقية 🌹</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>تحدي ٣٠ يوماً · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--crimson-primary),var(--crimson-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>خلاصة رحلة صيانة واحترام الكرامة</h2>
+    <p>التزام أخلاقي وشرعي دائم لصيانة كرامة شريكة الحياة وبناء بيت مطمئن</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--crimson-primary)">
+        <div class="sc-i">🛡️</div>
+        <h4>احترام دائم للذات</h4>
+        <p>الامتناع الكامل عن إهانات الغضب اللفظية والجسدية، والالتزام بضوابط الخلاف الراقي بالمنزل.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">🔒</div>
+        <h4>ستر وحفظ الخصوصية</h4>
+        <p>حفظ أسرار بيتك وخصوصيتك الزوجية، وحماية صورتها أمام الأهل والتجمعات الاجتماعية في الغياب والسر.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--gold)">
+        <div class="sc-i">🧠</div>
+        <h4>تقدير وشورى عقلية</h4>
+        <p>استشارتها بوعي وإشراكها في مسار وقرارات الأسرة وتجنب التسفيه أو التقليل من آرائها وعقلها.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--crimson-primary)">
+      <div class="fq-mark" style="color:var(--crimson-light)">"</div>
+      <p style="color:var(--crimson-deep)">الكرامة هي سكن الروح ودرع العلاقة، وصيانتها وحفظها هو الدليل الأكبر على كرم النفس والرجولة الواعية الحقيقية في الإسلام. صُن كرامتها، تدم مودة بيتك وسلامه.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--crimson-deep)">🤝 تعهد وميثاق صون كرامة الزوجة</h4>
+      <p>أتعهد أنا الزوج أمام الله، بأن أكون خيراً لأهلي، صائناً لكرامة شريكة حياتي في الرضا والغضب، ملتزماً بضوابط الخلاف المحترم، ممتنعاً عن إهانات اللسان والقلب، حامياً لغيبتها وصورتها أمام عائلتي وعائلتها والناس، وجاعلاً بيتنا واحة أمان. وأسأل الله التوفيق والبركة. آمين.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج الباني / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | كرامة المرأة أولاً</span><span>الخلاصة والميثاق · ص ١٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 18 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--crimson-primary),var(--gold),var(--teal-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(153, 27, 27, 0.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(200, 151, 58, 0.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(29, 196, 179, 0.2)"></div>
+      <div class="ty-heart-main" style="color:var(--crimson-primary);animation:none">🛡️</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--crimson-deep)">جزاكم الله خيراً</h2>
+    <p class="ty-sub">على اهتمامكم ببناء بيوت تسودها الطمأنينة والاحترام وصون الكرامة الزوجية بالعدل والرحمة<br>كرامة أسركم هي حصنكم المنيع واستثماركم الأبقى بالدنيا والآخرة</p>
+
+    <div class="ty-dua" style="background:var(--crimson-light);border-right:4px solid var(--crimson-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--crimson-deep)">اللهم حسّن أخلاقنا، واجمع شملنا على الاحترام والسكينة والمودة، وأعنا على صون أهلينا وإكرام كرامتهم والرفق بهم، واجعل ديارنا دور أمان وسعادة. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في توجيه وإرشاد الأسر المسلمة بأفضل الممارسات العلمية والمعاصرة وتطبيقات الهدي النبوي الشريف لبناء علاقات زوجية آمنة ومستقرة ومبنية على الاحترام المتبادل.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شارك هذا الدليل مع معارفك المتزوجين لتساهم في نشر ثقافة الاحترام والكرامة العائلية</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل كرامة المرأة أولاً» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

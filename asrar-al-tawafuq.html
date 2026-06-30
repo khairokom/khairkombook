@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>أسرار التوافق العاطفي – خيركم</title>
+<meta name="description" content="أسرار التوافق العاطفي والانسجام بين الزوجين لبناء زواج متناغم وسعيد – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: ASRAR AL-TAWAFUQ (PURPLE) ── */
+:root {
+  --purple-primary: #7C3AED;
+  --purple-deep:    #5B21B6;
+  --purple-light:   #EDE9FE;
+  --purp-ultra:     #F5F3FF;
+  --teal-primary:   #1DBFB0;
+  --teal-deep:      #0F9E91;
+  --teal-light:     #D4F5F2;
+  --gold:           #C8973A;
+  --gold-light:     #F7E9CC;
+  --gold-ultra:     #FDF7EC;
+  
+  --r-purp:         #7C3AED;
+  --r-purp-d:       #5B21B6;
+  --r-purp-lt:      #EDE9FE;
+}
+
+/* Page covers and backgrounds */
+.purp-bg { background: linear-gradient(160deg, var(--purp-ultra) 0%, white 60%); }
+.purp-label { background: linear-gradient(135deg, var(--purple-primary), var(--purple-deep)); }
+.purp-num { color: rgba(124, 58, 237, 0.05); }
+.purp-quote { background: var(--purple-light); border-right: 4px solid var(--purple-primary); color: var(--purple-deep); }
+.purp-color { background: linear-gradient(135deg, var(--purple-light), white); border-bottom: 2px solid rgba(124, 58, 237, 0.2); }
+.badge-purp { background: linear-gradient(135deg, var(--purple-primary), var(--purple-deep)); }
+
+/* Custom components */
+.tawafuq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.tawafuq-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--purple-primary); display: flex; flex-direction: column; gap: 8px; }
+.tawafuq-icon { font-size: 26px; }
+.tawafuq-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.tawafuq-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* levels list */
+.level-list { display: flex; flex-direction: column; gap: 10px; }
+.level-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.level-item-purp { border-right-color: var(--purple-primary); }
+.level-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.level-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.level-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.level-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.lt-purp { background: var(--purple-light); color: var(--purple-deep); }
+.lt-teal { background: var(--teal-light); color: var(--teal-deep); }
+
+/* wheel visual */
+.wheel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0; }
+.wheel-card { border-radius: var(--r-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.wheel-intellect { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1.5px solid #BFDBFE; }
+.wheel-emotion { background: linear-gradient(135deg, var(--purple-light), #DDD6FE); border: 1.5px solid #C4B5FD; }
+.wheel-physical { background: linear-gradient(135deg, #FFF5F5, #FEE2E2); border: 1.5px solid #FECACA; }
+.wheel-spiritual { background: linear-gradient(135deg, var(--teal-ul), #D4F5F2); border: 1.5px solid var(--teal-light); }
+.wheel-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: var(--dark); }
+.wheel-body { font-size: 11.5px; line-height: 1.6; color: var(--g700); }
+.wheel-body strong { display: block; color: var(--dark); margin-bottom: 2px; }
+.wheel-action { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 4px 8px; margin-top: 4px; display: inline-block; }
+.wa-intellect { background: #BFDBFE; color: #1E3A8A; }
+.wa-emotion { background: #C4B5FD; color: #4C1D95; }
+.wa-physical { background: #FECACA; color: #991B1B; }
+.wa-spiritual { background: var(--teal-lt); color: var(--teal-d); }
+
+/* quiz layout */
+.quiz-grid { display: flex; flex-direction: column; gap: 8px; }
+.quiz-q { background: white; border-radius: var(--r-sm); padding: 12px 14px; box-shadow: var(--sh-sm); border: 1px solid var(--g200); }
+.quiz-qt { font-size: 12.5px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+.quiz-ans { display: flex; gap: 14px; }
+.quiz-ans label { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--g700); cursor: pointer; }
+.quiz-ans input { accent-color: var(--purple-primary); }
+
+/* cover badges */
+.cv-purp-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-pb { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.pb1 { background: linear-gradient(135deg, var(--purple-primary), var(--purple-deep)); }
+.pb2 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.pb3 { background: linear-gradient(135deg, var(--gold), #A07000); }
+
+/* 30 day compatibility grid */
+.comp-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.cc-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.cc-num { font-size: 16px; font-weight: 900; color: var(--purple-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.cc-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.cc-sp { background: var(--purple-light); border-color: var(--purple-primary); }
+.cc-sp2 { background: var(--teal-ul); border-color: var(--teal-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#F5F3FF 0%,#FFFFFF 45%,var(--gold-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(124,58,237,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(29,191,176,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep));color:white;border-color:rgba(124, 58, 237, 0.3)">سلسلة بناء السعادة الزوجية</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(124, 58, 237, 0.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(200,151,58,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(124,58,237,.35))">🧬</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">💜</div>
+        <div class="cv-coin c2" style="font-size:18px">💚</div>
+        <div class="cv-coin c3" style="font-size:20px">💛</div>
+        <div class="cv-coin c4" style="font-size:16px">✨</div>
+        <div class="cv-coin c5" style="font-size:18px">🧩</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:54px;background:linear-gradient(135deg,var(--purple-deep) 0%,var(--purple-primary) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">أسرار التوافق العاطفي</h1>
+      <div style="font-family:var(--serif);font-size:26px;font-weight:700;color:var(--g700);margin:4px 0">التناغم والانسجام بين الزوجين</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--purple-primary),var(--gold))"></div>
+      <p class="cv-sub">دليل إرشادي وتدريبات تطبيقية لتعزيز الترابط<br>الفكري والعاطفي والجسدي والروحي في الزواج</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-purp-badges">
+      <div class="cv-pb pb1">🧠 انسجام فكري</div>
+      <div class="cv-pb pb2">💞 تقارب عاطفي</div>
+      <div class="cv-pb pb3">🕊️ توافق روحي</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل التوافق والانسجام · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep))">التقارب والتأليف بين قلوب الأزواج</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">🧬</div>
+      <h2>أسرار التوافق العاطفي</h2>
+      <p>تأصيل الألفة والانسجام في ضوء القيم الإسلامية والدراسات الحديثة</p>
+    </div>
+
+    <div class="hadith-box" style="background:var(--purple-light);border-color:rgba(124, 58, 237, 0.2)">
+      <div class="hadith-text" style="color:var(--purple-deep)">«الأرْواحُ جُنُودٌ مُجَنَّدَةٌ، فَما تَعارَفَ مِنْها ائْتَلَفَ، وَما تَناكَرَ مِنْها اخْتَلَفَ»</div>
+      <div class="hadith-src" style="color:var(--purple-deep)">النبي محمد ﷺ · رواه مسلم</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--purple-primary)">
+      <p style="color:var(--purple-deep)">التوافق العاطفي ليس تشابهاً تاماً بين الزوجين، بل هو القدرة على التناغم والتكامل بالرغم من الاختلافات. إنه الفن الذي يربط بين عقلين، ويوائم بين قلبين، ويصنع لغة مشتركة للأمان والسكينة داخل البيت المسلم.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--purple-light);border-color:rgba(124,58,237,.2)">
+        <div class="tc-icon">💬</div>
+        <h4 style="color:var(--purple-deep)">الاتصال الفكري</h4>
+        <p>بناء أرضية مشتركة للحوار والتفاهم، واحترام الرأي الآخر، ومناقشة الأفكار والقيم دون تشنج.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="tc-icon">💞</div>
+        <h4 style="color:var(--teal-d)">التناغم العاطفي</h4>
+        <p>التجاوب الوجداني المستمر، وفهم الاحتياجات النفسية للشريك، وتقديم الأمان والدعم بلا شروط.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="tc-icon">🕊️</div>
+        <h4 style="color:var(--gold)">الاتصال الروحي</h4>
+        <p>الاجتماع على طاعة الله، ومشاركة القيم العليا، وتهيئة بيئة تفيض بالسكينة والدعاء المشترك.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 ما الذي يقدمه لك هذا الدليل؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal" style="background:var(--purple-light);color:var(--purple-deep)">🌱</div><span>فهم أبعاد التوافق الأربعة</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>اختبار تقييم التوافق الذاتي</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>تحدي تعزيز التقارب اليومي</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الألفة والتآلف · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتويات رحلة التوافق والانسجام</h2>
+      <p>خارطة طريق متكاملة لبناء زواج متناغم ومستدام</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--purple-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">التقارب والتأليف بين قلوب الأزواج</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">مفهوم التوافق العاطفي ومستوياته</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--purple-primary)"></span>الفصل الأول: المستويات الأربعة للتوافق</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--purple-primary)">الفصل ١</span><span class="te-name">التوافق الفكري والروحي: الأهداف والقيم المشتركة</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--purple-primary)">الفصل ١</span><span class="te-name">التوافق العاطفي والجسدي: كيمياء الألفة والتلامس</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--purple-primary)">الفصل ١</span><span class="te-name">كيف تتعاملان مع نقاط الاختلاف الطبيعية؟</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal)"></span>الفصل الثاني: جدران التباعد والعلاج</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">الفجوة العاطفية وجدران التباعد الصامت</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">كيف نعيد الاتصال ونهدم جدار الجفاء الزوجي؟</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">مهارات حماية التوافق من الروتين اليومي</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold)"></span>الفصل الثالث: لغات التقارب الحميم</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">بناء الألفة اليومية العميقة ونقاط التلامس</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">العادات والأنشطة المشتركة التي تعزز الانسجام</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--purple-deep)"></span>التمارين والتطبيقات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: عجلة التوافق الزوجي</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">اختبار تقييم التوافق العاطفي للزوجين</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">أوراق عمل التخطيط المشترك لبناء التقارب</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي تعزيز التوافق والانسجام (30 يوماً)</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق التناغم اليومي</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء التأليف بين القلوب</span><span class="te-dots"></span><span class="te-pg">١٨</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · INTRO TO COMPATIBILITY
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--purple-primary),var(--gold),var(--teal-primary))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--purple-primary)">مفهوم التوافق</div>
+    <h2 class="intro-h2">ما هو التوافق العاطفي؟</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(124,58,237,.2)">
+      <div class="iqb-mark" style="color:var(--purple-light)">"</div>
+      <p style="color:var(--purple-deep)">إن التوافق العاطفي الحقيقي لا يعني تطابق الشخصيتين، بل هو رقصة متناغمة يقترب فيها الزوجان ليجدا الدفء، ويحترمان المسافة العاطفية لكل منهما ليجدا الحرية والنمو، مع بقاء الالتزام والمحبة حبلًا متينًا يربطهما.</p>
+    </div>
+
+    <p class="intro-para">عندما يغيب التوافق العاطفي، يعيش الزوجان في بيت واحد ولكن في عالمين منفصلين — ما يسمى بـ "الطلاق العاطفي الصامت". بينما وجود التوافق والانسجام يجعل الشريك هو الصديق الأقرب، والملاذ الآمن للبوح، والشخص الأول الذي تود مشاركته نجاحاتك وهمومك.</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--purple-light);border-color:rgba(124,58,237,.2)">
+        <div class="isr-num" style="color:var(--purple-deep)">الفكري</div>
+        <div class="isr-txt">يبني لغة مشتركة لحل الأزمات وتبادل الآراء باحترام متبادل.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="isr-num" style="color:var(--gold)">العاطفي</div>
+        <div class="isr-txt">يضمن تدفق عبارات الحب والأمان والتحقق من المشاعر يومياً.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="isr-num" style="color:var(--teal-d)">الروحي</div>
+        <div class="isr-txt">يصل الزواج بمفهوم العبادة والسعي المشترك نحو الجنة.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">التوافق ليس هدية جاهزة تمنح للزوجين ليلة العقد، بل هو مهارة واعية وعادات يومية تُبنى وتُغذى بالتنازل اللطيف والاستماع الحقيقي والتقدير المتبادل. هذا الدليل هو دليلكما المشترك لرحلة تناغم فريدة ومستدامة.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--purple-primary)">
+      <div class="ip-icon">🕊️</div>
+      <p style="color:var(--purple-deep)">تعهد منصة خيركم: الالتزام بتطبيق قواعد هذا الدليل المشترك لتعزيز الانسجام العاطفي لمدة شهر، سيكشف لكما عن طبقات جديدة من التفاهم والألفة التي لم تختبراها من قبل.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>المقدمة · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg purp-bg">
+  <div class="ch-cover-num purp-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label purp-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--purple-deep)">المستويات الأربعة للتوافق</h2>
+    <p class="ch-cover-quote purp-quote">«الانسجام الكامل يبدأ من توافق الأرواح والقيم، ويمتد لعاطفة القلوب وتفاهم العقول»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ المستويات الأربعة للانسجام والتوافق الزوجي</div>
+        <div class="cco-item">✓ كيفية بناء التقارب الفكري والروحي وقيم الأسرة</div>
+        <div class="cco-item">✓ كيمياء الانسجام العاطفي والجسدي والألفة الحميمة</div>
+        <div class="cco-item">✓ تمرين تحديد القيم الزوجية المشتركة الخمس</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header purp-color">
+    <span class="ch-badge badge-purp">الفصل الأول</span>
+    <span class="ch-title-sm">التوافق الفكري والروحي: الأهداف والقيم</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">التوافق الفكري والروحي وركائزهما</h3>
+    <p class="body-p">يمثل التوافق الفكري والروحي الأساس الصلب للزواج. حين تتفق عقول الزوجين على قيم عليا وأهداف واضحة، تصبح مواجهة أزمات الحياة وقراراتها التربوية والمالية أكثر سهولة وانسجاماً.</p>
+
+    <div class="tawafuq-grid">
+      <div class="tawafuq-card" style="border-right-color:var(--purple-primary)">
+        <div class="tawafuq-icon">🎓</div>
+        <h4>الاتصال الفكري وتبادل الآراء</h4>
+        <p>القدرة على نقاش مواضيع متعددة (تربية، تخطيط، سياسة، شؤون يومية) دون تشنج أو سعي لإثبات غلبة طرف على الآخر.</p>
+      </div>
+
+      <div class="tawafuq-card" style="border-right-color:var(--teal-primary)">
+        <div class="tawafuq-icon">🕌</div>
+        <h4>الاتصال الروحي والقيم المشتركة</h4>
+        <p>التوافق على قيم دينية وأخلاقية واحدة كالأمانة، الرحمة، عبادة الله المشتركة، السعي لنيل رضا الله وبناء بيت مسلم بحدود واضحة.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">كيف تبنيان هذا المستوى من التوافق؟</h3>
+    <p class="body-p">لا يتطلب التوافق الفكري أن تحبا نفس الكتب والاهتمامات الحرفية، بل يقتضي احترام عقل الشريك والإنصات لأفكاره وإجراء حوارات دافئة منتظمة حول مستقبل الأسرة وأحلامكما الفردية والمشتركة.</p>
+
+    <div class="callout teal-callout" style="background:var(--purp-ultra);border-color:rgba(124,58,237,.2)">
+      <div class="callout-ic">📜</div>
+      <div class="callout-txt" style="color:var(--purple-deep)"><strong>قاعدة الانسجام الفكري:</strong> الزواج الناجح لا ينظر فيه الزوجان إلى بعضهما البعض طوال الوقت، بل ينظران معاً في نفس الاتجاه. حددا بوصلة بيتكما لتكون الأهداف موحدة.</div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تمرين تحديد القيم المشتركة للزوجين</h4>
+      <p>اكتبا معاً ثلاث قيم أخلاقية أو دينية أساسية تودان أن يقام عليها بيتكما وتربية أطفالكما:</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 1 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header purp-color">
+    <span class="ch-badge badge-purp">الفصل الأول</span>
+    <span class="ch-title-sm">التوافق العاطفي والجسدي: كيمياء الألفة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">الألفة العاطفية والجسدية بين الزوجين</h3>
+    <p class="body-p">يمثل التناغم العاطفي والجسدي محرك الدفء والمودة الحية في العلاقة. التقارب الجسدي واللمسات الحانية اليومية تبني جسراً متيناً من الألفة يذيب أي جفاء ناتج عن ضغوط العمل اليومية.</p>
+
+    <div class="level-list">
+      <div class="level-item level-item-purp">
+        <div class="level-icon">💞</div>
+        <div class="level-content">
+          <h5>الاتصال والتناغم الوجداني</h5>
+          <p>وهو سرعة تجاوب كلا الشريكين مع الحالة العاطفية للآخر. عندما يفرح أحدهما يجد تفاعلاً صادقاً، وعندما يحزن يجد احتواءً ودعماً فورياً دون تبرير أو لوم، مما يبني أماناً عاطفياً عالياً.</p>
+          <span class="level-tag lt-purp">تناغم المشاعر</span>
+        </div>
+      </div>
+
+      <div class="level-item">
+        <div class="level-icon">🤗</div>
+        <div class="level-content">
+          <h5>الاتصال والتقارب الجسدي اليومي</h5>
+          <p>التلامس التلقائي غير المرتبط بالعلاقة الحميمة مباشرة، مثل العناق، إمساك الأيدي، القبلة العفوية في الصباح والمساء. هذه النقاط البسيطة تحفز هرمونات الارتباط العائلي والأمان النفسي.</p>
+          <span class="level-tag lt-teal">الألفة اليومية</span>
+        </div>
+      </div>
+
+      <div class="level-item level-item-purp">
+        <div class="level-icon">🔒</div>
+        <div class="level-content">
+          <h5>احترام مساحة الاختلاف والخصوصية</h5>
+          <p>التوافق العاطفي الناضج يمنح كلاً من الزوجين مساحة صحية للتواجد الفردي أو ممارسة هواياته الخاصة، دون شعور بالتهديد أو الرغبة في التملك والسيطرة الكاملة على الشريك.</p>
+          <span class="level-tag lt-purp">حدود صحية</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:10px">
+      <div class="tip-ic">💡</div>
+      <div><strong>نصيحة خيركم:</strong> احرصا على إنهاء أي يوم بعناق دافئ أو كلمة حب رقيقة مهما كانت خلافات النهار. لا تدعا الشمس تغيب على جفاء أو تباعد عاطفي داخل بيتكما.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الفصل الأول · ص ٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">جدران التباعد العاطفي وعلاجها</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«تتباعد القلوب تدريجياً وبصمت حين نهمل صيانة العلاقة، وإصلاح الجفاء في أوله أسهل بكثير من هدم جدران الصمت القديمة»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ جدران التباعد العاطفي الأربعة وكيف تنشأ صمتاً</div>
+        <div class="cco-item">✓ مهارات هدم الصمت الزوجي وإعادة الاتصال الدافئ</div>
+        <div class="cco-item">✓ كيفية كسر الروتين وحماية الانسجام من ضغوط الحياة</div>
+        <div class="cco-item">✓ تمرين عملي لـ «حوار الدقائق العشر» اليومي لإعادة الألفة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">جدران التباعد وعلاج الصمت الزوجي</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">كيف ينشأ التباعد العاطفي؟</h3>
+    <p class="body-p">لا يحدث التباعد العاطفي فجأة، بل يبدأ بمسافات صغيرة مهملة: انشغال بالهواتف، صمت عند تناول الطعام، تراكم خلافات لم تُحل بوضوح، مما يبني تدريجياً جداراً من الجفاء والصمت داخل البيت.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ سلوكيات تبني جدران التباعد</div>
+        <div class="comp-items">
+          <div class="comp-item"><strong>الصمت العقابي:</strong> رفض الحديث لأيام بعد أي خلاف كوسيلة للضغط والسيطرة.</div>
+          <div class="comp-item"><strong>الانتقاد المستمر:</strong> التركيز على العيوب وتجاهل الإيجابيات وجهود الشريك.</div>
+          <div class="comp-item"><strong>الهجر الرقمي:</strong> قضاء الأوقات المشتركة خلف شاشات الهواتف ووسائل التواصل.</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right">
+        <div class="comp-title" style="color:var(--teal-d)">✅ خطوات تهدم الجدران وعلاجها</div>
+        <div class="comp-items">
+          <div class="comp-item" style="color:var(--teal-d)"><strong>المبادرة اللطيفة:</strong> كسر الصمت بكلمة طيبة أو اعتذار شجاع لبدء الحوار.</div>
+          <div class="comp-item" style="color:var(--teal-d)"><strong>الامتنان والتقدير:</strong> الثناء على المحاسن والجهود اليومية بوضوح وصوت مسموع.</div>
+          <div class="comp-item" style="color:var(--teal-d)"><strong>وقت التلاقي الخالي:</strong> تخصيص دقائق خالية من الأجهزة تماماً للحديث العفوي.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">قاعدة الدقائق العشر اليومية للاتصال</h3>
+    <p class="body-p">اتفقا على تخصيص ١٠ دقائق يومياً للحديث في أي شيء باستثناء العمل ومسؤوليات الأطفال والالتزامات المالية. تحدثا عن مشاعركما، أو ذكريات جميلة، أو أشياء لطيفة تودان فعلها معاً. هذا الحوار القصير يعيد الحياة للاتصال العاطفي بانتظام.</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">🧩</div>
+      <h4>تمرين تطبيقي للزوجين:</h4>
+      <p>حددا موعداً ثابتاً في اليوم لـ «حوار الدقائق العشر» (مثال: مع قهوة المساء أو قبل النوم). ما هو الوقت الأنسب لكما هذا الأسبوع؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الفصل الثاني · ص ٩</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 2 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">حماية التناغم من الروتين الزوجي</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">فخ الروتين العاطفي اليومي</h3>
+    <p class="body-p">الروتين هو القاتل الصامت للألفة والانسجام. حين تصبح كل حوارات الزوجين مقتصرة على الطلبات المنزلية اليومية ومصاريف الحياة، تفقد العلاقة حيويتها. حماية التوافق تتطلب إدخال تجديد مستمر على حياة الأسرة.</p>
+
+    <div class="science-box" style="background:var(--purp-ultra);border-color:rgba(124, 58, 237, 0.2)">
+      <div class="sb-icon">💜</div>
+      <div class="sb-content">
+        <h4 style="color:var(--purple-deep)">قاعدة الانسجام المتجدد</h4>
+        <p style="color:var(--purple-deep)">أثبتت دراسات العلاقات الزوجية أن الأزواج الذين يشاركون معاً في أنشطة جديدة وغير معتادة (مثل تعلم مهارة، أو ممارسة رياضة جديدة، أو السفر لأماكن جديدة) تفرز أدمغتهم مستويات أعلى من الدوبامين، وهو هرمون الإثارة والارتباط والتقارب العاطفي المماثل لبداية الزواج.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">عادات ثلاث لحماية الألفة اليومية</h3>
+
+    <div class="contain-list">
+      <div class="contain-item contain-item-pink" style="border-right-color:var(--purple-primary)">
+        <div class="contain-icon">🌅</div>
+        <div class="contain-content">
+          <h5>١. عهد الصباح وابتسامة التلاقي</h5>
+          <p>أن تبدأ يومك بالنظر لوجه شريكك والابتسام وتقديم أمنية بيوم جميل. لا تبدأ يومك بذكر المشاكل والالتزامات أو التصفح الصامت للهواتف.</p>
+          <span class="contain-tag ct-pink" style="background:var(--purple-light);color:var(--purple-deep)">بداية واعية</span>
+        </div>
+      </div>
+
+      <div class="contain-item" style="border-right-color:var(--teal-primary)">
+        <div class="contain-icon">📅</div>
+        <div class="contain-content">
+          <h5>٢. الموعد الأسبوعي الثابت (Date Night)</h5>
+          <p>تخصيص ليلة أو نزهة أسبوعية ثابتة للزوجين فقط خارج المنزل، لمناقشة أمور خارجة عن نطاق الأبناء والمسؤوليات، واستعادة روح الصداقة والضحك معاً.</p>
+          <span class="contain-tag ct-teal">تجديد الألفة</span>
+        </div>
+      </div>
+
+      <div class="contain-item contain-item-pink" style="border-right-color:var(--purple-primary)">
+        <div class="contain-icon">🙏</div>
+        <div class="contain-content">
+          <h5>٣. الامتنان والتعبير اللفظي اليومي</h5>
+          <p>تقديم كلمة ثناء واحدة حقيقية يومياً لشريكك على صنيع قام به (طعام، مساعدة، اهتمام، حسن مظهر). هذا يجعله يشعر بأن جهوده مرئية ومقدرة دائماً.</p>
+          <span class="contain-tag ct-pink" style="background:var(--purple-light);color:var(--purple-deep)">إيداع عاطفي</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الفصل الثاني · ص ١٠</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold),#A07000)">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold)">لغات التقارب والاتصال الحميم</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold);color:#7A5000">«الزواج الناجح هو الذي يتقن فيه الشريكان صياغة لغة خاصة للاتصال وبناء الألفة في التفاصيل اليومية الصغيرة»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ بناء الألفة والاتصال العاطفي والجسدي في التفاصيل</div>
+        <div class="cco-item">✓ كيف تصنع عادات مشتركة دافئة تعزز التناغم بينكما</div>
+        <div class="cco-item">✓ أسرار الحوار الحميم والاتصال بالعينين ونزع الخلاف</div>
+        <div class="cco-item">✓ تمارين وتطبيقات أسبوعية لزيادة الألفة والانسجام</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">العادات والأنشطة المشتركة للتقارب</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">أهمية الأنشطة المشتركة في التوافق</h3>
+    <p class="body-p">تتآكل الألفة تدريجياً حين يعيش كل من الزوجين اهتمامات وهوايات منفصلة بالكامل. إن بناء عادات مشتركة بسيطة هو سر الزيجات السعيدة التي تستمر في النمو والانسجام لعقود طويلة.</p>
+
+    <div class="nature-grid">
+      <div class="nature-card" style="border-right-color:var(--purple-primary)">
+        <div class="nature-icon">🚶‍♂️🚶‍♀️</div>
+        <h4>١. المشي والرياضة المشتركة</h4>
+        <p>المشي معاً لـ ٢٠ دقيقة يومياً أو ٣ مرات أسبوعياً خيار رائع للحديث العفوي، تحسين المزاج، وبناء صحة مشتركة دافئة.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--teal-primary)">
+        <div class="nature-icon">📖</div>
+        <h4>٢. القراءة أو التعلم المشترك</h4>
+        <p>قراءة فصل من كتاب معاً ونقاش أفكاره، أو حضور دورة تعليمية أسرية، يثري عقول الزوجين ويبني حواراً فكرياً متجدداً.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--gold)">
+        <div class="nature-icon">🤝</div>
+        <h4>٣. مشاريع الخير والأعمال المنزلية</h4>
+        <p>القيام بمهمة معا بالمنزل كإعداد وجبة عشاء مبتكرة، أو زراعة شرفة المنزل، أو تخطيط لمشروع خيري لعائلتكما.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--purple-deep)">
+        <div class="nature-icon">🕌</div>
+        <h4>٤. العبادة والذكر الجماعي</h4>
+        <p>صلاة ركعتين معاً في الليل، قراءة ورد من القرآن، أو الاستغفار والدعاء لأسرتكما ولبعضكما البعض بظهر الغيب.</p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-ic">⭐</div>
+      <div><strong>قاعدة الانسجام اليومي:</strong> لا تبحثا عن عادات معقدة أو مكلفة. التوافق العاطفي يُصنع بأكواب الشاي المشتركة، والأحاديث العفوية الهادئة، والضحكات المشتركة حول مواقف اليوم البسيطة.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الفصل الثالث · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · INFOGRAPHIC: COMPATIBILITY WHEEL
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink" style="background:linear-gradient(135deg,var(--purple-deep),var(--purple-primary))">
+    <div class="info-badge info-badge-pink" style="background:rgba(255,255,255,.2)">بوصلة التناغم الزوجي</div>
+    <h2>عجلة التوافق العاطفي والانسجام</h2>
+    <p>الأبعاد الأربعة المتكاملة لبناء حياة زوجية متوازنة ومليئة بالحب والسكينة</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px">
+    <div class="wheel-grid">
+      <!-- Intellect -->
+      <div class="wheel-card wheel-intellect">
+        <div class="wheel-header">🧠 التوافق الفكري</div>
+        <div class="wheel-body">
+          <strong>الهدف:</strong> بناء تفاهم وحوار عقلي راقٍ ومتبادل.
+          <strong>التطبيق:</strong> احترام الرأي الآخر، مناقشة الخطط والقرارات التربوية والمالية بحكمة وهدوء كامل.
+        </div>
+        <div class="wheel-action wa-intellect">🔒 الخطوة: حوار هادئ بلا هجوم</div>
+      </div>
+
+      <!-- Emotion -->
+      <div class="wheel-card wheel-emotion">
+        <div class="wheel-header">💞 التوافق العاطفي</div>
+        <div class="wheel-body">
+          <strong>الهدف:</strong> تبادل المشاعر والأمان العاطفي يومياً.
+          <strong>التطبيق:</strong> إتقان لغة حب الشريك، الكلمة الطيبة، التحقق من المشاعر والتعاطف الوجداني مع شكواه وتوتره.
+        </div>
+        <div class="wheel-action wa-emotion">🔒 الخطوة: تقدير يومي صريح</div>
+      </div>
+
+      <!-- Physical -->
+      <div class="wheel-card wheel-physical">
+        <div class="wheel-header">🤗 التوافق الجسدي</div>
+        <div class="wheel-body">
+          <strong>الهدف:</strong> ترسيخ الألفة والقرب والتلامس الدافئ.
+          <strong>التطبيق:</strong> العناق اليومي، إمساك الأيدي العفوي، اللمسات الحانية، والحرص على العلاقة الحميمة المتناغمة.
+        </div>
+        <div class="wheel-action wa-physical">🔒 الخطوة: عناق دافئ يومياً</div>
+      </div>
+
+      <!-- Spiritual -->
+      <div class="wheel-card wheel-spiritual">
+        <div class="wheel-header">🕊️ التوافق الروحي</div>
+        <div class="wheel-body">
+          <strong>الهدف:</strong> السير معاً في طريق الإيمان وبناء السكينة.
+          <strong>التطبيق:</strong> الصلاة جماعة بالمنزل، قراءة القرآن المشتركة، الاستغفار والدعاء لبعضكما ولأبنائكما بصدق.
+        </div>
+        <div class="wheel-action wa-spiritual">🔒 الخطوة: صلاة ودعاء مشترك</div>
+      </div>
+    </div>
+
+    <div class="gottman-rule" style="margin-top:10px">
+      <div class="gr-icon">⭐</div>
+      <div class="gr-content" style="color:var(--purple-deep)">
+        <strong>معادلة التناغم:</strong> عندما تعمل الأبعاد الأربعة معاً، يصبح بيتكما واحة أمان ضد ضغوط الحياة وتحدياتها. التوازن بينها يحمي الزواج ويضمن المودة الدائمة.
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الإنفوجرافيك · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK: COMPATIBILITY TEST
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep))">
+    <div class="wb-badge">📝 اختبار قياس التوافق والانسجام</div>
+    <h2>اختبار التوافق العاطفي للزوجين</h2>
+    <p>ليجب كل منكما بمفرده عن هذه الأسئلة لتقييم مستوى الانسجام الحالي وتحديد نقاط التقوية</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="quiz-grid">
+      <div class="quiz-q">
+        <div class="quiz-qt">١. عندما يتحدث شريكي عن همومه أو مشاعره السلبية، فإنني:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q1"/> أستمع بتعاطف وأحتويه</label>
+          <label><input type="radio" name="q1"/> أحاول تقديم حل منطقي فوراً</label>
+          <label><input type="radio" name="q1"/> أتذمر أو أنشغل بالهاتف</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٢. مدى تكرار التلامس الجسدي العفوي (العناق، إمساك اليد) بيننا يومياً:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q2"/> عدة مرات طوال اليوم</label>
+          <label><input type="radio" name="q2"/> مرة واحدة عابرة</label>
+          <label><input type="radio" name="q2"/> نادراً جداً أو لا يحدث</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٣. حين نختلف في الرأي حول قرارات المنزل أو شؤون الأبناء، فإننا:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q3"/> نتناقش بهدوء ونصل لحل وسط</label>
+          <label><input type="radio" name="q3"/> يفرض أحدنا رأيه على الآخر</label>
+          <label><input type="radio" name="q3"/> نتشاجر ونلجأ للصمت الطويل</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٤. ممارستنا للأنشطة والاهتمامات والعبادات المشتركة معاً:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q4"/> نحرص عليها بانتظام أسبوعياً</label>
+          <label><input type="radio" name="q4"/> تحدث أحياناً وبشكل عشوائي</label>
+          <label><input type="radio" name="q4"/> لا توجد أنشطة مشتركة بيننا</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 كيف تقرآن النتيجة؟</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">ناقشا الإجابات معاً بلطف. الإجابات الأولى تدل على **توافق عالٍ**، والثانية تدل على **حاجة للتنسيق والاهتمام**، والثالثة تدل على **وجود فجوة عاطفية** تتطلب العمل المشترك وتطبيق تدريبات هذا الدليل بهمة وجدية.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>اختبار التوافق · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · WORKBOOK: PARTNERSHIP PLAN
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep))">
+    <div class="wb-badge">📝 ورقة التخطيط المشترك لبناء التقارب</div>
+    <h2>خطة تعزيز التوافق العاطفي والانسجام</h2>
+    <p>اجلسا معاً في جلسة هادئة لملء هذه الخطة ووضع قواعد جديدة لتقوية اتصالكما</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--purple-primary)">١</div>
+          <h4>نشاط فكري أو ترفيهي جديد نود تجربته معاً هذا الشهر:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--purple-primary)">٢</div>
+          <h4>كيف سنطبق «قاعدة الدقائق العشر» لحوارنا اليومي؟ متى وأين؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--purple-primary)">٣</div>
+          <h4>ما الذي يحتاجه كل منا من الآخر ليشعر بمزيد من الأمان والتوافق العاطفي؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+
+    <div class="daily-promise" style="margin-top:10px;border-color:var(--purple-light);background:var(--purp-ultra)">
+      <div class="dp-icon">🤝</div>
+      <p style="color:var(--purple-deep)">عهد التقارب: نلتزم نحن الزوجين بتخصيص وقت حقيقي لرعاية اتصالنا وحماية علاقتنا من روتين وجفاف الأيام. <div class="dp-line"></div></p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>خطة التقارب · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · 30-DAY COMPATIBILITY CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep))">
+    <div class="wb-badge">🗓 تحدي الانسجام والتقارب</div>
+    <h2>تحدي ٣٠ يوماً لبناء توافق عاطفي عميق</h2>
+    <p>خطوات يومية مشتركة وسهلة لتجديد كيمياء الألفة والتناغم الفكري والروحي بينكما</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="comp-challenge">
+      <div class="cc-day cc-sp"><div class="cc-num">١</div><div class="cc-text">ابتسامة ونظرة تلاقي بالصباح</div></div>
+      <div class="cc-day"><div class="cc-num">٢</div><div class="cc-text">١٠ د حوار عن أحلامكما</div></div>
+      <div class="cc-day"><div class="cc-num">٣</div><div class="cc-text">رسالة امتنان متبادلة</div></div>
+      <div class="cc-day cc-sp2"><div class="cc-num">٤</div><div class="cc-text">قراءة مقال أو فصل معاً</div></div>
+      
+      <div class="cc-day"><div class="cc-num">٥</div><div class="cc-text">عناق دافئ لـ ١٠ ثوانٍ</div></div>
+      <div class="cc-day cc-sp"><div class="cc-num">٦</div><div class="cc-text">شرب كوب شاي معاً بهدوء</div></div>
+      <div class="cc-day"><div class="cc-num">٧</div><div class="cc-text">المشي معاً لـ ٢٠ دقيقة</div></div>
+      <div class="cc-day cc-sp2"><div class="cc-num">٨</div><div class="cc-text">مشاركة وجبة خفيفة ومرح</div></div>
+
+      <div class="cc-day cc-sp2"><div class="cc-num">٩</div><div class="cc-text">مدح خصلة تميز الشريك</div></div>
+      <div class="cc-day"><div class="cc-num">١٠</div><div class="cc-text">صلاة ركعتين جماعة بالليل</div></div>
+      <div class="cc-day cc-sp"><div class="cc-num">١١</div><div class="cc-text">مفاجأة لطيفة يحبها الآخر</div></div>
+      <div class="cc-day"><div class="cc-num">١٢</div><div class="cc-text">نقاش هادئ لقيمة عائلية</div></div>
+
+      <div class="cc-day"><div class="cc-num">١٣</div><div class="cc-text">مشاهدة صور ذكريات زواجكما</div></div>
+      <div class="cc-day cc-sp2"><div class="cc-num">١٤</div><div class="cc-text">كلمة شكر صادقة على صنيع</div></div>
+      <div class="cc-day cc-sp"><div class="cc-num">١٥</div><div class="cc-text">جلسة تدليك أو مساج مهدئ</div></div>
+      <div class="cc-day"><div class="cc-num">١٦</div><div class="cc-text">تجنب العتاب ليوم كامل</div></div>
+
+      <div class="cc-day cc-sp"><div class="cc-num">١٧</div><div class="cc-text">جلسة اتصال بالعينين لدقيقة</div></div>
+      <div class="cc-day"><div class="cc-num">١٨</div><div class="cc-text">إعداد وجبة عشاء مشتركة</div></div>
+      <div class="cc-day cc-sp2"><div class="cc-num">١٩</div><div class="cc-text">رسالة حب غامرة بالواتساب</div></div>
+      <div class="cc-day"><div class="cc-num">٢٠</div><div class="cc-text">دعاء مشترك لعائلتكما وأولادكما</div></div>
+
+      <div class="cc-day cc-sp2"><div class="cc-num">٢١</div><div class="cc-text">تنسيق ركن بالمنزل معاً</div></div>
+      <div class="cc-day"><div class="cc-num">٢٢</div><div class="cc-text">لعبة أسئلة تعارف جديدة</div></div>
+      <div class="cc-day cc-sp"><div class="cc-num">٢٣</div><div class="cc-text">التحدث بنبرة هادئة ورقيقة</div></div>
+      <div class="cc-day"><div class="cc-num">٢٤</div><div class="cc-text">الاعتراف بخطأ قديم والاعتذار</div></div>
+
+      <div class="cc-day"><div class="cc-num">٢٥</div><div class="cc-text">نزهة Date Night للزوجين</div></div>
+      <div class="cc-day cc-sp2"><div class="cc-num">٢٦</div><div class="cc-text">مشاركة هواية يفضلها شريكك</div></div>
+      <div class="cc-day cc-sp"><div class="cc-num">٢٧</div><div class="cc-text">كتابة عهد الأمان للعام الجديد</div></div>
+      <div class="cc-day"><div class="cc-num">٢٨</div><div class="cc-text">تبادل الهدايا العفوية البسيطة</div></div>
+    </div>
+    
+    <div class="comp-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="cc-day cc-sp" style="padding:12px"><div class="cc-num">٢٩</div><div class="cc-text">حديث طويل عن مستقبل أحلامنا المشتركة</div></div>
+      <div class="cc-day cc-sp2" style="padding:12px;background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep));border-color:var(--purple-deep)"><div class="cc-num" style="color:white">٣٠</div><div class="cc-text" style="color:white">احتفال بمرور شهر التوافق والخروج معاً 🎉</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>تحدي ٣٠ يوماً · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--purple-primary),var(--purple-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>خلاصة رحلة التناغم والتوافق</h2>
+    <p>التزام واعي يومي لبناء زواج استثنائي متناغم وسعيد</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--purple-primary)">
+        <div class="sc-i">🧠</div>
+        <h4>تواصل فكري راقٍ</h4>
+        <p>الاحترام المتبادل لآراء الشريك وبناء حوار هادئ يتسع للاختلافات دون صراع وغلبة.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">💞</div>
+        <h4>أمان عاطفي دائم</h4>
+        <p>التعبير اليومي عن المودة والامتنان والتحقق من مشاعر الشريك واحتواء تقلباته بابتسامة.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--gold)">
+        <div class="sc-i">🕊️</div>
+        <h4>سعي روحي مشترك</h4>
+        <p>الاجتماع على طاعة الله ورضا الخالق وبناء بيت تحفّه السكينة والأمان والدعاء المستمر.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--purple-primary)">
+      <div class="fq-mark" style="color:var(--purple-light)">"</div>
+      <p style="color:var(--purple-deep)">البيوت الناجحة لا تهبط عليها السكينة والانسجام صدفة، بل تُبنى بجهد واعٍ وتسامح حقيقي وعادات يومية تغذي الاتصال والألفة. توافقا عاطفياً، تدم لكما المودة والرحمة والسلام.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--purple-deep)">🤝 تعهد وميثاق الانسجام الزوجي</h4>
+      <p>نتعهد نحن الزوجين أمام الله، بأن نحمي اتصالنا العاطفي والفكري والجسدي والروحي، ونتجنب الصمت والجفاء العاطفي، ونبذل وسعنا في فهم احتياجات بعضنا البعض والتعامل مع الاختلافات بالرحمة والحكمة، ونجعل بيتنا دور سكينة وطمأنينة. آمين.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج الباني / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | أسرار التوافق العاطفي</span><span>الخلاصة والميثاق · ص ١٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 18 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--purple-primary),var(--gold),var(--teal-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(124, 58, 237, 0.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(200, 151, 58, 0.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(29, 191, 176, 0.2)"></div>
+      <div class="ty-heart-main" style="color:var(--purple-primary);animation:none">🧬</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--purple-deep)">جزاكم الله خيراً</h2>
+    <p class="ty-sub">على سعيكما لبناء زواج استثنائي متناغم وسعيد يسوده الحب والسكينة<br>أسرتكما هي استثماركما الأكبر في الدنيا والآخرة</p>
+
+    <div class="ty-dua" style="background:var(--purple-light);border-right:4px solid var(--purple-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--purple-deep)">اللهم ألّف بين قلوبنا، وأصلح ذات بيننا، واهدنا سبل السلام، وجنبنا الفواحش والفتن ما ظهر منها وما بطن، واجعل بيوتنا واحات مودة ورحمة وسكينة. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في نشر وتوعية الأسر المسلمة بفنون الإرشاد والعلاقات الزوجية المستندة للهدي النبوي الشريف والتطبيقات العلمية والنفسية المعاصرة لضمان زواج آمن ومستمر ومزدهر.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شاركا هذا الدليل مع معارفكما لتساهما في نشر ثقافة المودة والتوافق الأسري</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل أسرار التوافق العاطفي» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

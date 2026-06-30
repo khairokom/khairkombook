@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>حماتي على رأسي – خيركم</title>
+<meta name="description" content="دليل الزوج الذكي لكسب قلب أم زوجته وبناء علاقة عائلية يسودها التقدير والاحترام – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: HAMATI ALA RASI (EMERALD & GOLD) ── */
+:root {
+  --emerald-primary: #15803D;
+  --emerald-deep:    #166534;
+  --emerald-light:   #DCFCE7;
+  --emerald-ultra:   #F0FDF4;
+  --teal-primary:    #1DBFB0;
+  --teal-deep:       #0F9E91;
+  --teal-light:      #D4F5F2;
+  --gold-primary:    #C8973A;
+  --gold-deep:       #9A701C;
+  --gold-light:      #F7E9CC;
+  --gold-ultra:      #FDF7EC;
+  
+  --r-emerald:       #15803D;
+  --r-emerald-d:     #166534;
+  --r-emerald-lt:    #DCFCE7;
+}
+
+/* Page covers and backgrounds */
+.emerald-bg { background: linear-gradient(160deg, var(--emerald-ultra) 0%, white 60%); }
+.emerald-label { background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-deep)); }
+.emerald-num { color: rgba(21, 128, 61, 0.05); }
+.emerald-quote { background: var(--emerald-light); border-right: 4px solid var(--emerald-primary); color: var(--emerald-deep); }
+.emerald-color { background: linear-gradient(135deg, var(--emerald-light), white); border-bottom: 2px solid rgba(21, 128, 61, 0.2); }
+.badge-emerald { background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-deep)); }
+
+/* Custom components */
+.hamat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.hamat-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--emerald-primary); display: flex; flex-direction: column; gap: 8px; }
+.hamat-icon { font-size: 26px; }
+.hamat-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.hamat-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* list style */
+.hmt-list { display: flex; flex-direction: column; gap: 10px; }
+.hmt-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.hmt-item-gold { border-right-color: var(--gold-primary); }
+.hmt-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.hmt-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.hmt-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.ht-emerald { background: var(--emerald-light); color: var(--emerald-deep); }
+.ht-gold { background: var(--gold-light); color: var(--gold-deep); }
+
+/* compass visual */
+.hcompass-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.hcompass-card { border-radius: var(--r-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.hcompass-respect { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1.5px solid #BFDBFE; }
+.hcompass-gift { background: linear-gradient(135deg, var(--gold-ultra), #FEF3CC); border: 1.5px solid #FCD34D; }
+.hcompass-listening { background: linear-gradient(135deg, #FFF5F5, #FEE2E2); border: 1.5px solid #FECACA; }
+.hcompass-boundaries { background: linear-gradient(135deg, var(--teal-ul), #D4F5F2); border: 1.5px solid var(--teal-light); }
+.hcompass-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: var(--dark); }
+.hcompass-body { font-size: 11.5px; line-height: 1.6; color: var(--g700); }
+.hcompass-body strong { display: block; color: var(--dark); margin-bottom: 2px; }
+.hcompass-action { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 4px 8px; margin-top: 4px; display: inline-block; }
+.hca-respect { background: #BFDBFE; color: #1E3A8A; }
+.hca-gift { background: #FDE68A; color: #92400E; }
+.hca-listening { background: #FECACA; color: #991B1B; }
+.hca-boundaries { background: var(--teal-lt); color: var(--teal-d); }
+
+/* cover badges */
+.cv-hmt-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-hb { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.hb1 { background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-deep)); }
+.hb2 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.hb3 { background: linear-gradient(135deg, var(--gold), #A07000); }
+
+/* 30 day harmony challenge */
+.hmt-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.hcd-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.hcd-num { font-size: 16px; font-weight: 900; color: var(--emerald-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.hcd-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.hcd-sp { background: var(--emerald-light); border-color: var(--emerald-primary); }
+.hcd-sp2 { background: var(--gold-light); border-color: var(--gold-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#F0FDF4 0%,#FFFFFF 45%,var(--gold-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(21,128,61,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(200,151,58,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep));color:white;border-color:rgba(21, 128, 61, 0.3)">سلسلة العلاقات والألفة العائلية</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(21, 128, 61, 0.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(200,151,58,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(21,128,61,.35))">👵</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">💚</div>
+        <div class="cv-coin c2" style="font-size:18px">💛</div>
+        <div class="cv-coin c3" style="font-size:20px">☕</div>
+        <div class="cv-coin c4" style="font-size:16px">✨</div>
+        <div class="cv-coin c5" style="font-size:18px">🏡</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:54px;background:linear-gradient(135deg,var(--emerald-deep) 0%,var(--emerald-primary) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">حماتي على رأسي</h1>
+      <div style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--g700);margin:4px 0">فن التعامل مع أم الزوجة</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--emerald-primary),var(--gold))"></div>
+      <p class="cv-sub">دليل الزوج الذكي لكسب قلب أم زوجته بالتقدير والاحترام<br>وحل إشكاليات التدخل وبناء علاقة عائلية متينة تسودها المحبة</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-hmt-badges">
+      <div class="cv-hb hb1">👵 كسب قلب الحماة</div>
+      <div class="cv-hb hb2">🤝 ذكاء اجتماعي</div>
+      <div class="cv-hb hb3">🌱 صلة ورحمة</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل الألفة العائلية · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep))">النهج النبوي في صلة وإكرام الحماة</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">👵</div>
+      <h2>حماتي على رأسي</h2>
+      <p>صلة أم الزوجة من إكرام الزوجة والبر العائلي المتبادل في الإسلام</p>
+    </div>
+
+    <div class="hadith-box" style="background:var(--emerald-light);border-color:rgba(21, 128, 61, 0.2)">
+      <div class="hadith-text" style="color:var(--emerald-deep)">«... مَن كانَ يُؤْمِنُ باللَّهِ والْيَومِ الآخِرِ فَلْيَصِلْ رَحِمَهُ»</div>
+      <div class="hadith-src" style="color:var(--emerald-deep)">النبي محمد ﷺ · متفق عليه</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--emerald-primary)">
+      <p style="color:var(--emerald-deep)">أم زوجتك هي المرأة التي وهبتك شريكة حياتك، ورعتها وسهرت عليها حتى أصبحت سكناً لك. إكرامك لأم زوجتك بالمعروف وتقدير منزلتها ليس فقط واجباً أخلاقياً، بل هو طريق مختصر لكسب قلب زوجتك وضمان انسجام أسرى دافئ وبعيد عن الشقاق والتدخلات السلبية.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--emerald-ultra);border-color:var(--emerald-light)">
+        <div class="tc-icon">💚</div>
+        <h4 style="color:var(--emerald-deep)">إكرام وتقدير</h4>
+        <p>إظهار اللطف والاحترام لأم زوجتك في اللقاءات وتقدير نصائحها وخبرتها الحياتية برأس مرفوعة.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="tc-icon">💡</div>
+        <h4 style="color:var(--gold)">ذكاء اجتماعي</h4>
+        <p>فنون التهادي والتواصل المستمر وتجنب الخلافات والجدال غير المجدي مع الحماة.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="tc-icon">🛡️</div>
+        <h4 style="color:var(--teal-d)">إدارة الحدود</h4>
+        <p>مهارات رسم الحدود اللطيفة والواضحة لحفظ خصوصية قرارات بيتك دون إحداث جفاء.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 ما الذي يقدمه لك هذا الدليل؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal" style="background:var(--emerald-light);color:var(--emerald-deep)">🌱</div><span>فهم ركائز كسب قلب أم زوجتك</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>اختبار قياس جودة صلتك وتعاملك معها</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>تحدي كسب قلب الحماة والود العائلي</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الصلة والبر · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتويات رحلة الألفة العائلية</h2>
+      <p>تفاصيل عملية لكسب قلب أم زوجتك وتجنب الخلافات ورسم الحدود بثقة وأدب</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--emerald-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">النهج النبوي في صلة وإكرام أم زوجتك</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">لماذا تعد الحماة مفتاح استقرار بيتك؟ الأثر النفسي</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--emerald-primary)"></span>الفصل الأول: قواعد الذكاء الاجتماعي مع الحماة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--emerald-primary)">الفصل ١</span><span class="te-name">كيف تكسب قلب أم زوجتك؟ خطوات عملية</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--emerald-primary)">الفصل ١</span><span class="te-name">فنون الاستماع لنصائحها والتقدير وخبرتها</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal)"></span>الفصل الثاني: إدارة الحدود وحل الخلافات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">التعامل مع التدخلات الزائدة بحكمة ودون صدام</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">حل سوء التفاهم خلف الأبواب المغلقة ودور الزوجة</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">كيف تحمي زوجتك من فخ الوقوف بالمنتصف؟</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold)"></span>الفصل الثالث: التهادي والصلة العائلية</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">أفكار هدايا مبتكرة ومحببة لقلب أم زوجتك</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">زيارات المناسبات وتنظيم الصلة الهاتفية الأسبوعية</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--emerald-deep)"></span>التمارين والتطبيقات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: بوصلة كسب قلب الحماة</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+          <div class="toc-entry"><span class="te-name">اختبار: هل علاقتك بأم زوجتك مبنية على الذكاء؟</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة عمل خطة التواصل والتهادي لأم الزوجة</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة عمل مراجعة مواقف التدخل ورسم الحدود</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي كسب قلب الحماة والبر العائلي (30 يوماً)</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق الصلة والبر العائلي المشترك</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء الألفة الأسرية وصلة الأرحام</span><span class="te-dots"></span><span class="te-pg">١٨</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · WHY MOTHER IN LAW KEY
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--emerald-primary),var(--gold-primary),var(--teal-primary))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--emerald-primary)">مفتاح الاستقرار</div>
+    <h2 class="intro-h2">لماذا تعد حماتك مفتاح استقرار بيتك؟</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(21, 128, 61, 0.2)">
+      <div class="iqb-mark" style="color:var(--emerald-light)">"</div>
+      <p style="color:var(--emerald-deep)">إن كسب قلب أم زوجتك بالاحترام واللطف هو استثمار ذكي في سلام واستقرار بيتك. وحين تشعر الحماة بتقديرك ومحبتك الصادقة لجهودها، تصبح أكبر مدافع عنك وسنداً لعائلتك في أوقات الأزمات.</p>
+    </div>
+
+    <p class="intro-para">تمثل أم الزوجة المرجع الوجداني لشريكة حياتك. إكرامك لها يزيل مخاوفها الطبيعية كأم، ويشعر زوجتك بفيض من الامتنان والفخر بك كزوج يقدر عائلتها وأمها. بينما الصدام مع الحماة يضع زوجتك في خيار صعب يمزق راحتها واستقرارها.</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--emerald-light);border-color:rgba(21, 128, 61, .2)">
+        <div class="isr-num" style="color:var(--emerald-deep)">البر</div>
+        <div class="isr-txt">إكرام أم زوجتك هو جزء أصيل من المعاشرة بالمعروف لزوجتك.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="isr-num" style="color:var(--gold)">الأمان</div>
+        <div class="isr-txt">كسب ود الحماة يقلل من احتمالات التدخل السلبي ببيتكما.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="isr-num" style="color:var(--teal-d)">القدوة</div>
+        <div class="isr-txt">يعلم أطفالك قيم احترام الأجداد والبر العائلي العملي بالمنزل.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">الذكاء الاجتماعي والعاطفي يتطلب منك كسر الصور النمطية السلبية السائدة حول الحماة. منصة خيركم تقدم لك هذا الدليل العملي لبناء علاقة قائمة على التقدير والود الذي يضمن سكينة وسعادة بيتك ومحيطك العائلي بالكامل.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--emerald-primary)">
+      <div class="ip-icon">👵</div>
+      <p style="color:var(--emerald-deep)">وعد منصة خيركم: تطبيقك لخطوات التهادي اللطيف والاتصال المنتظم بأم زوجتك سيجعلها تحبك كابن لها، وينعكس حباً وتقديراً مضاعفاً من زوجتك لك.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>مفتاح الاستقرار · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg emerald-bg">
+  <div class="ch-cover-num emerald-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label emerald-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--emerald-deep)">ذكاء كسب قلب أم الزوجة</h2>
+    <p class="ch-cover-quote emerald-quote">«الاحترام الصادق وتقدير مشاعر الأمومة هما المفتاح الأول لولوج قلب حماتك بأمان»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ القواعد الذهبية للذكاء الاجتماعي واللفظي مع أم زوجتك</div>
+        <div class="cco-item">✓ فنون الإنصات لنصائحها وتقدير خبرتها التربوية والحياتية</div>
+        <div class="cco-item">✓ الثناء على تربيتها لزوجتك ومدح محاسن ابنتها أمامها بصدق</div>
+        <div class="cco-item">✓ تمرين مراجعة أساليب التواصل وصياغة مكالمة الصلة الأولى</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header emerald-color">
+    <span class="ch-badge badge-emerald">الفصل الأول</span>
+    <span class="ch-title-sm">ذكاء كسب قلب الحماة والتقدير اللفظي</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">قواعد الذكاء الاجتماعي مع أم زوجتك</h3>
+    <p class="body-p">تثمين دور أم زوجتك وإظهار الاحترام لها في المجالس واللقاءات هو علامة نضج ورقي عاطفي. كسب ودها لا يتطلب تصنعاً، بل تصرفات واعية ولطيفة تشعرها بمكانتها الكبرى لديك كابن لها:</p>
+
+    <div class="hamat-grid">
+      <div class="hamat-card" style="border-right-color:var(--emerald-primary)">
+        <div class="hamat-icon">👂</div>
+        <h4>١. الإنصات لخبرتها ونصائحها</h4>
+        <p>الاستماع لنصائحها في شؤون الحياة أو التربية بأدب واحترام. حتى وإن اختلفت مع رأيها، قل بلطف: «كلامكِ على راسي وله قيمة كبيرة عندنا».</p>
+      </div>
+
+      <div class="hamat-card" style="border-right-color:var(--teal-primary)">
+        <div class="hamat-icon">🗣️</div>
+        <h4>٢. مدح ابنتها وتربيتها الصالحة</h4>
+        <p>الثناء على أخلاق زوجتك ومهارتها أمام أمها وإسناد الفضل لها: «أنا محظوظ بابنتكِ، تربيتكِ الصالحة تظهر في طيب أصلها وأخلاقها».</p>
+      </div>
+
+      <div class="hamat-card" style="border-right-color:var(--gold-primary)">
+        <div class="hamat-icon">☕</div>
+        <h4>٣. السؤال المستمر والصلة الهاتفية</h4>
+        <p>مكالمة هاتفية قصيرة كل أسبوع أو أسبوعين للاطمئنان على صحتها وأحوالها بمبادرة شخصية منك دون تكليف من زوجتك.</p>
+      </div>
+
+      <div class="hamat-card" style="border-right-color:var(--emerald-deep)">
+        <div class="hamat-icon">👑</div>
+        <h4>٤. إكرام مجلسها والتقدير العلني</h4>
+        <p>تقديمها في الجلوس والحديث، وتقبيل رأسها أو يدها عند اللقاء والوداع إقراراً بمنزلتها كأولى الناس بالاحترام ببيتك.</p>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:10px">
+      <div class="tip-ic">💡</div>
+      <div><strong>نصيحة خيركم:</strong> تجنب تماماً التذمر أو إبداء الضيق من اتصالات أم زوجتك أو رغبتها في زيارة ابنتها. أظهر الترحيب الحار والابتسامة دائماً، فهذا الترحيب يبني أماناً عاطفياً عالياً لزوجتك.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">إدارة الحدود وحل الخلافات</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«رسم الحدود اللطيفة يحمي خصوصية بيتك دون إحداث جفاء، وحل سوء التفاهم بحكمة يحفظ كرامة الجميع»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ كيفية التعامل الحكيم مع تدخلات أم الزوجة الزائدة دون صدام</div>
+        <div class="cco-item">✓ مهارات حل سوء التفاهم مع الحماة خلف الأبواب المغلقة</div>
+        <div class="cco-item">✓ حماية زوجتك وتجنب وضعها في فخ الوقوف بالمنتصف بينكما</div>
+        <div class="cco-item">✓ تمرين رسم خطة «الحدود الصحية اللطيفة» لخصوصية بيتك</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">التعامل مع التدخلات الزائدة ورسم الحدود</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">التدخل الزائد: دافع أمومة أم رغبة سيطرة؟</h3>
+    <p class="body-p">يحدث التدخل من أم الزوجة غالباً بدافع القلق والحب الزائد لابنتها ورغبتها في التأكد من استقرارها وراحتها. تفهم هذا الدافع يجنبك الغضب والردود الحادة ويساعدك على إدارة الموقف بذكاء:</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ ردود أفعال تسبب الصدام والجفاء</div>
+        <div class="comp-items">
+          <div class="comp-item">مواجهة الحماة بغضب والتحدث بنبرة حادة «هذا بيتي وأنا حر بقراراتي».</div>
+          <div class="comp-item">إجبار زوجتك على مقاطعة والدتها أو منعها من زيارتها كنوع من العقاب.</div>
+          <div class="comp-item">السخرية من نصائح الحماة أو التذمر منها بصوت مسموع أمام الأولاد.</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right">
+        <div class="comp-title" style="color:var(--teal-d)">✅ ممارسات رسم الحدود بذكاء وأدب</div>
+        <div class="comp-items">
+          <div class="comp-item" style="color:var(--teal-d)">الاستماع لنصيحتها بأدب وشكرها، ثم اتخاذ القرار المناسب لبيتكما بهدوء.</div>
+          <div class="comp-item" style="color:var(--teal-d)">التنسيق المسبق والكامل مع زوجتك لتظهرا كفريق واحد متناسق أمام الأهل.</div>
+          <div class="comp-item" style="color:var(--teal-d)">رسم الحدود الخاصة لبيتكما بلطف وبطريقة عير مباشرة وتفادي الصدام المباشر.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">تجنب فخ وضع زوجتك بالمنتصف</h3>
+    <p class="body-p">لا تجبر زوجتك على الاختيار بينك وبين والدتها. هذا الاختيار يمزق أمانها ويورث الشقاق. كن حكيماً في معالجة أي سوء تفاهم مع أمها بشكل غير مباشر أو من خلال كلمات حب واحتواء لزوجتك تجعلها تتدخل بلطف لحل الإشكال تلقائياً.</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">🧩</div>
+      <h4>تمرين تطبيقي للزوج: رسم الحدود اللطيفة</h4>
+      <p>اكتب عبارة مؤدبة وواضحة تود قولها لحماتك عند تدخلها في قرار يخص تربية أولادك أو بيتك (مثال: «رأيكِ مهم يا خالتي وسندسه بهدوء»):</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الفصل الثاني · ص ٨</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 2 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">حل سوء التفاهم وحماية صورة الشريك</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">ضوابط حل النزاعات مع أم الزوجة</h3>
+    <p class="body-p">إذا حدث سوء تفاهم أو خلاف بينك وبين حماتك، فالتزم بالهدوء التام وحفظ مكانتها الكبرى كأم. لا تدخل في جدال مباشر معها، ودع زوجتك تعالج الأمر بلطف أو بادر بالصلح بتقديم لفتة كرم بسيطة تذيب الجفاء فوراً.</p>
+
+    <div class="science-box" style="background:var(--emerald-ultra);border-color:rgba(21, 128, 61, 0.2)">
+      <div class="sb-icon">👵</div>
+      <div class="sb-content">
+        <h4 style="color:var(--emerald-deep)">الأثر النفسي والتربوي للوفاق مع الحماة</h4>
+        <p style="color:var(--emerald-deep)">تؤكد دراسات العلاقات العائلية أن احترام الزوج لعائلة زوجته وأمها يمثل العامل الأول لزيادة ولائها واهتمامها براحته وبيتها. كما أن البيئة العائلية المتصالحة والخالية من صراعات الأصهار تمنح الأطفال استقراراً نفسياً عالياً وثقة تامة ببرهم لذويهم مستقبلاً.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">كيف تبادر بالصلح وتزيل الجفاء؟</h3>
+    <p class="body-p">الهدية البسيطة أو المبادرة بزيارتها والاطمئنان على صحتها بعد أي سوء تفاهم هي علامة كرم وشجاعة أخلاقية. كسر الجفاء يبسط الود ويعيد الهدوء والسكينة لبيتكما سريعاً.</p>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 ميثاق كتمان الخلافات العائلية</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">تعهد بأن تبقي أي خلاف عابر مع حماتك أو عائلة زوجتك سراً مغلقاً لا تنقله لأحد. الستر وحفظ الود هو السبيل الوحيد لضمان الاحترام المتبادل وسلام بيتكما طوال العمر.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الفصل الثاني · ص ٩</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold-deep)">التهادي والصلة العائلية لأم الزوجة</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold-primary);color:var(--gold-deep)">«الهدية البسيطة والصلة الهاتفية المنظمة لأم زوجتك تصنع معجزات الألفة وتزيل جبال سوء التفاهم»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ أفكار هدايا مبتكرة ومناسبة لأم زوجتك لإسعاد قلبها وتقديرها</div>
+        <div class="cco-item">✓ تنظيم المكالمات والزيارات الأسبوعية والاهتمام بصلتها بانتظام</div>
+        <div class="cco-item">✓ إشراكها في المناسبات السعيدة لأسرتكما وتوطيد الألفة</div>
+        <div class="cco-item">✓ تمرين إعداد خطة «التهادي والصلة العائلية» السنوية للحماة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">أفكار الهدايا وتنظيم الصلة العائلية لأم الزوجة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">فن كسب قلب حماتك بالتهادي اللطيف</h3>
+    <p class="body-p">الهدية تذيب القلوب وتفتح المغاليق. لا تبحث عن هدايا باهظة بل ابحث عن لمسات اهتمام دافئة تعبر عن تقديرك لوجودها ومكانتها الكبرى في عائلتكما:</p>
+
+    <div class="hmt-list">
+      <div class="hmt-item hmt-item-gold" style="border-right-color:var(--gold-primary)">
+        <div class="contain-icon">🎁</div>
+        <div class="hmt-content">
+          <h5>أفكار هدايا ملموسة ومحببة</h5>
+          <p>شال أو عباءة أنيقة بلونها المفضل، سجادة صلاة ومصحف مغلف بأناقة، أو عطور دهن العود والمسك الفاخرة التي تفضلها الأمهات.</p>
+          <span class="hmt-tag gt-gold">تقدير واحترام</span>
+        </div>
+      </div>
+
+      <div class="hmt-item" style="border-right-color:var(--teal-primary)">
+        <div class="contain-icon">💐</div>
+        <div class="hmt-content">
+          <h5>هدايا اللمسات والمفاجآت البسيطة</h5>
+          <p>إحضار علبة حلوى شرقية أو نوع فاكهة تحبه عند زيارتها، أو باقة ورد جورى ناعمة مع كرت شكر مكتوب فيه «شكراً لوجودكِ معنا يا أمي».</p>
+          <span class="hmt-tag gt-pink">بهجة ولطف</span>
+        </div>
+      </div>
+
+      <div class="hmt-item hmt-item-gold" style="border-right-color:var(--gold-primary)">
+        <div class="contain-icon">📞</div>
+        <div class="hmt-content">
+          <h5>تنظيم الصلة والاتصال الأسبوعي</h5>
+          <p>خصص يوماً في الأسبوع للاتصال بها والاطمئنان على صحتها ودعوتها لتناول الغداء أو زيارتكم بالمنزل. هذا الاهتمام المنظم يبني وداً مستداماً.</p>
+          <span class="hmt-tag gt-gold">صلة مستدامة</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الفصل الثالث · ص ١١</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · INFOGRAPHIC: COMPASS TO WIN HEART
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink" style="background:linear-gradient(135deg,var(--emerald-deep),var(--emerald-primary))">
+    <div class="info-badge info-badge-pink" style="background:rgba(255,255,255,.2)">بوصلة الألفة والبر العائلي</div>
+    <h2>بوصلة كسب قلب أم زوجته (حماتي)</h2>
+    <p>الأركان الأربعة الأساسية لبناء علاقة قائمة على التقدير والذكاء الاجتماعي لضمان استقرار بيتكما</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px">
+    <div class="hcompass-wrap">
+      <!-- Respect -->
+      <div class="hcompass-card hcompass-respect">
+        <div class="hcompass-header">👑 الاحترام والتقدير العلني</div>
+        <div class="hcompass-body">
+          <strong>الهدف:</strong> إظهار التقدير لمنزلتها كأولى الناس بالاحترام.
+          <strong>التطبيق:</strong> تقبيل رأسها أو يدها عند اللقاء، وتجنب السخرية منها أو نقد طعامها ومظهرها بالكامل.
+        </div>
+        <div class="hcompass-action hca-respect">🔒 الخطوة: تقديمها بالحديث والجلوس</div>
+      </div>
+
+      <!-- Gift -->
+      <div class="hcompass-card hcompass-gift">
+        <div class="hcompass-header">🎁 التهادي والصلة المنظمة</div>
+        <div class="hcompass-body">
+          <strong>الهدف:</strong> بناء الود والمحبة بالتواصل والاهتمام.
+          <strong>التطبيق:</strong> إرسال هدايا بسيطة بالمناسبات، والاطمئنان الهاتفي الأسبوعي عليها بمبادرة ذاتية منك.
+        </div>
+        <div class="hcompass-action hca-gift">🔒 الخطوة: مكالمة أسبوعية للاطمئنان</div>
+      </div>
+
+      <!-- Listening -->
+      <div class="hcompass-card hcompass-listening">
+        <div class="hcompass-header">👂 الإنصات والتحقق لخبرتها</div>
+        <div class="hcompass-body">
+          <strong>الهدف:</strong> تقدير أمومتها وخبراتها الحياتية.
+          <strong>التطبيق:</strong> الاستماع لنصائحها التربوية بأدب، وشكرها، ومدح ابنتها وتربيتها الصالحة أمامها بصدق.
+        </div>
+        <div class="hcompass-action hca-listening">🔒 الخطوة: مدح تربيتها لزوجتك بوضوح</div>
+      </div>
+
+      <!-- Boundaries -->
+      <div class="hcompass-card hcompass-boundaries">
+        <div class="hcompass-header">🛡️ إدارة الحدود والخصوصية</div>
+        <div class="hcompass-body">
+          <strong>الهدف:</strong> حماية خصوصية قرارات بيتك بلطف وأدب.
+          <strong>التطبيق:</strong> التنسيق مع زوجتك لتكونا فريقاً واحداً، وتفادي الصدام المباشر مع الحماة، وكتمان الأسرار بالمنزل.
+        </div>
+        <div class="hcompass-action hca-boundaries">🔒 الخطوة: حل الخلافات سراً وخلف الأبواب</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الإنفوجرافيك · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · WORKBOOK: QUIZ
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep))">
+    <div class="wb-badge">📝 اختبار كسب قلب الحماة</div>
+    <h2>هل علاقتك بأم زوجتك مبنية على الذكاء الاجتماعي؟</h2>
+    <p>أجب عن الأسئلة بصدق تقييماً لطريقتك في بناء الألفة والصلة العائلية مع أم شريكة حياتك</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="quiz-grid">
+      <div class="quiz-q">
+        <div class="quiz-qt">١. عند قيامك بالاتصال والاطمئنان الهاتفي على صحة وأحوال أم زوجتك (حماتك):</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q1"/> أتصل بها بمبادرة ذاتية مني أسبوعياً للاطمئنان</label>
+          <label><input type="radio" name="q1"/> أتصل بها فقط في المناسبات السنوية أو الأعياد</label>
+          <label><input type="radio" name="q1"/> لا أتصل بها هاتفياً أبداً متجنباً صلتها</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٢. حين تقدم لك حماتك نصيحة تربوية للأولاد أو شؤون البيت تختلف معها:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q2"/> أستمع بأدب وشكر، ثم أتخذ القرار المناسب لبيتنا بهدوء</label>
+          <label><input type="radio" name="q2"/> أتحجج بالانشغال متهرباً من سماع رأيها ونصيحتها</label>
+          <label><input type="radio" name="q2"/> أجادلها بغضب وأرفض رأيها علناً معتبراً ذلك تدخلاً مرفوضاً</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٣. إحضار الهدايا أو اللمسات البسيطة لأم زوجتك عند زيارتها أو بالمناسبات:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q3"/> أحرص على تقديم هدايا ولفتات لطيفة تسعد قلبها بانتظام</label>
+          <label><input type="radio" name="q3"/> أقدم هدية فقط إذا ذكّرتني زوجتك أو طلبت مني ذلك</label>
+          <label><input type="radio" name="q3"/> لا أقدم لها أي هدايا معتبراً ذلك أمراً غير ضروري</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٤. عندما تلمس وجود سوء تفاهم أو خلاف بسيط بينك وبين حماتك، فإنك:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q4"/> أبادر بالصلح بتقديم لفتة كرم أو زيارة ودية تذيب الجفاء</label>
+          <label><input type="radio" name="q4"/> أصمت وأتجنب زيارتها أو التحدث معها لفترة طويلة</label>
+          <label><input type="radio" name="q4"/> أغضب وأضع زوجتك بالمنتصف مجبراً إياها على اختيار صفك</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 قراءة النتائج وتطوير صلتك العائلية</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">الأجوبة الأولى تدل على **ذكاء اجتماعي وصلة بر راقية وحكيمة**، والثانية تدل على **حاجة لمزيد من المبادرة والاهتمام**، والثالثة تدل على **جفاء عائلي وصراعات أصهار** تهدد استقرار بيتكما. ابدأ بالتحدي الأسبوعي فوراً.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>اختبار كسب قلب الحماة · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK: COMMUNICATIONS PLAN
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep))">
+    <div class="wb-badge">📝 ورقة خطة التواصل والتهادي للحماة</div>
+    <h2>مخطط الصلة والتهادي السنوي لأم الزوجة</h2>
+    <p>ضع خطة عملية واضحة لتنظيم زياراتك وهداياك ومكالماتك لأم زوجتك لإسعاد قلبها بانتظام</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px">
+    <div class="week-track" style="padding:12px 14px">
+      <h4>📅 مخطط التواصل والتهادي السنوي المقترح</h4>
+      <div class="wt-grid">
+        <div class="wt-row wt-header-row" style="grid-template-columns:120px 100px 1fr 100px;background:var(--emerald-primary)">
+          <div class="wt-cell">نوع الصلة / التهادي</div>
+          <div class="wt-cell">التكرار المقترح</div>
+          <div class="wt-cell">الفكرة والهدف السلوكي للزوج</div>
+          <div class="wt-cell">موافق؟</div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:120px 100px 1fr 100px">
+          <div class="wt-cell wt-day">المكالمة الهاتفية</div>
+          <div class="wt-cell">كل نهاية أسبوع</div>
+          <div class="wt-cell">مكالمة هاتفية قصيرة للاطمئنان على صحتها وأحوالها برحمة</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:120px 100px 1fr 100px">
+          <div class="wt-cell wt-day">الزيارة العائلية</div>
+          <div class="wt-cell">كل أسبوعين</div>
+          <div class="wt-cell">اصطحاب العائلة لزيارتها وتناول القهوة معها وإكرام مجلسها</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:120px 100px 1fr 100px">
+          <div class="wt-cell wt-day">هدايا المناسبات</div>
+          <div class="wt-cell">المواسم السنوية</div>
+          <div class="wt-cell">تقديم دهن عود أو شال أنيق بلونها المفضل في الأعياد</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:120px 100px 1fr 100px">
+          <div class="wt-cell wt-day">زيارات المفاجأة</div>
+          <div class="wt-cell">عشوائي</div>
+          <div class="wt-cell">إحضار حلوى أو فاكهة تحبها عند المرور عليها بالمساء بلطف</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wb-sections" style="margin-top:10px">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--emerald-primary)">١</div>
+          <h4>لفتة كرم بسيطة ستقوم بها هذا الأسبوع لكسب ود أم زوجتك وتأكيد محبتك لها كابن:</h4>
+        </div>
+        <div class="write-area wa-md"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>جدول صلة الحماة · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · WORKBOOK: LIMITS & PRIVATE
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep))">
+    <div class="wb-badge">📝 ورقة مراجعة الحدود والخصوصية</div>
+    <h2>تخطيط الحدود وحماية خصوصية وأوقات البيت</h2>
+    <p>حدد الحدود التي تود رسمها مع محيطك الاجتماعي والمهني لحفظ استقرار بيتك وراحة شريكة حياتك</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--emerald-primary)">١</div>
+          <h4>كيف ستدير تدخلات حماتك في قرارات البيت أو تربية أولادك بأدب ودون صدام مباشر؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--emerald-primary)">٢</div>
+          <h4>القواعد المتفق عليها مع زوجتك لحفظ كتمان وخصوصية أسرار وخلافات بيتكما عن الأهل:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--emerald-primary)">٣</div>
+          <h4>كيف ستمنع وضع زوجتك في فخ الوقوف بالمنتصف بينك وبين عائلتها وأمها عند أي سوء تفاهم؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>إدارة الحدود · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · 30-DAY CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep))">
+    <div class="wb-badge">🗓 تحدي كسب قلب الحماة</div>
+    <h2>تحدي ٣٠ يوماً لبناء الود مع أم زوجتك</h2>
+    <p>تصرفات وسلوكيات عائلية يومية وأسبوعية بسيطة للزوج لبناء الألفة وتوطيد المحبة والبر العائلي المتبادل</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="hmt-challenge">
+      <div class="hcd-day hcd-sp"><div class="hcd-num">١</div><div class="hcd-text">اتصال هاتفي للاطمئنان على صحتها</div></div>
+      <div class="hcd-day"><div class="hcd-num">٢</div><div class="hcd-text">تقبيل رأسها أو يدها عند اللقاء</div></div>
+      <div class="hcd-day"><div class="hcd-num">٣</div><div class="hcd-text">الثناء على تربيتها لزوجتك أمامها</div></div>
+      <div class="hcd-day hcd-sp2"><div class="hcd-num">٤</div><div class="hcd-text">إحضار علبة حلوى تحبها عند زيارتها</div></div>
+      
+      <div class="hcd-day"><div class="hcd-num">٥</div><div class="hcd-text">الاستماع لنصيحة تربوية منها بشكر وأدب</div></div>
+      <div class="hcd-day hcd-sp"><div class="hcd-num">٦</div><div class="hcd-text">تجنب الجدال أو معارضتها في حديث علني</div></div>
+      <div class="hcd-day"><div class="hcd-num">٧</div><div class="hcd-text">دعوتها لتناول وجبة غداء ببيتكم بلطف</div></div>
+      <div class="hcd-day hcd-sp2"><div class="hcd-num">٨</div><div class="hcd-text">كتمان خلاف عائلي عابر عن الأهل تماماً</div></div>
+
+      <div class="hcd-day hcd-sp2"><div class="hcd-num">٩</div><div class="hcd-text">إرسال رسالة شكر واتساب قصيرة ودافئة</div></div>
+      <div class="hcd-day"><div class="hcd-num">١٠</div><div class="hcd-text">تنسيق زيارة عائلية دورية مع الأولاد وزوجتك</div></div>
+      <div class="hcd-day hcd-sp"><div class="hcd-num">١١</div><div class="hcd-text">تقديم هدية دهن عود أو مسك مميز بمناسبة</div></div>
+      <div class="hcd-day"><div class="hcd-num">١٢</div><div class="hcd-text">الترحيب الحار والابتسامة عند قدومها لبيتكم</div></div>
+
+      <div class="hcd-day"><div class="hcd-num">١٣</div><div class="hcd-text">تجنب التذمر أو إظهار الضيق من اتصالاتها لزوجتك</div></div>
+      <div class="hcd-day hcd-sp2"><div class="hcd-num">١٤</div><div class="hcd-text">مساعدتها في شراء مستلزمات أو خدمة طبية</div></div>
+      <div class="hcd-day hcd-sp"><div class="hcd-num">١٥</div><div class="hcd-text">مدح مظهرها وذوقها الأنيق أمام العائلة</div></div>
+      <div class="hcd-day"><div class="hcd-num">١٦</div><div class="hcd-text">الدفاع عنها وتقديرها بظهر الغيب إذا ذكرت</div></div>
+
+      <div class="hcd-day hcd-sp"><div class="hcd-num">١٧</div><div class="hcd-text">اصطحاب باقة ورد جورى ناعمة مفاجئة لها</div></div>
+      <div class="hcd-day"><div class="hcd-num">١٨</div><div class="hcd-text">دعوة عائلتها وإكرام مجلسهم ببيتكم بابتسامة</div></div>
+      <div class="hcd-day hcd-sp2"><div class="hcd-num">١٩</div><div class="hcd-text">تجنب لوم زوجتك على خلاف عابر مع والدتها</div></div>
+      <div class="hcd-day"><div class="hcd-num">٢٠</div><div class="hcd-text">جلسة حوار دافئة مع حماتك وسماع ذكرياتها القديمة</div></div>
+
+      <div class="hcd-day hcd-sp2"><div class="hcd-num">٢١</div><div class="hcd-text">شكرها على مساندتها ودعمها الدائم لأسرتكم</div></div>
+      <div class="hcd-day"><div class="hcd-num">٢٢</div><div class="hcd-text">تقديم شال أو سجادة صلاة فاخرة كهدية بر</div></div>
+      <div class="hcd-day hcd-sp"><div class="hcd-num">٢٣</div><div class="hcd-text">الاطمئنان على أحوال صحتها هاتفياً بصدق</div></div>
+      <div class="hcd-day"><div class="hcd-num">٢٤</div><div class="hcd-text">إبداء السخاء والكرم المادي عند استضافتها بالمنزل</div></div>
+
+      <div class="hcd-day"><div class="hcd-num">٢٥</div><div class="hcd-text">تجنب مقاطعتها أو فرض رأيك بنبرة حادة معها</div></div>
+      <div class="hcd-day hcd-sp2"><div class="hcd-num">٢٦</div><div class="hcd-text">كتابة كرت شكر بخط يدك وتغليف هدية لقلبها</div></div>
+      <div class="hcd-day hcd-sp"><div class="hcd-num">٢٧</div><div class="hcd-text">التنسيق مع زوجتك لحل أي فجوة عابرة بالصلح</div></div>
+      <div class="hcd-day"><div class="hcd-num">٢٨</div><div class="hcd-text">سؤال زوجتك بلطف: «هل تسعد والدتكِ بمعاملتي لها؟»</div></div>
+    </div>
+    
+    <div class="hmt-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="hcd-day hcd-sp" style="padding:12px"><div class="hcd-num">٢٩</div><div class="hcd-text">كتابة رسالة شكر وتقدير لدورها العظيم بتنشئة زوجتك وإهدائها لها بجلسة خاصة</div></div>
+      <div class="hcd-day hcd-sp2" style="padding:12px;background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep));border-color:var(--emerald-deep)"><div class="hcd-num" style="color:white">٣٠</div><div class="hcd-text" style="color:white">الاحتفال بنجاح تحدي الألفة وتقديم هدية البر الكبرى 🌹</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>تحدي ٣٠ يوماً · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--emerald-primary),var(--emerald-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>خلاصة رحلة صلة وبر عائلة زوجتك</h2>
+    <p>التزام عائلي وأخلاقي مستدام لبناء علاقة انسجام وألفة قائمة على الاحترام</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--emerald-primary)">
+        <div class="sc-i">👵</div>
+        <h4>إكرام الحماة بالمعروف</h4>
+        <p>الاحترام الدائم، تقبيل الرأس عند اللقاء، وتجنب السخرية منها أو معارضتها بغضب بالعلن.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">🎁</div>
+        <h4>تهادٍ وصلة منظمة</h4>
+        <p>الاطمئنان الهاتفي الأسبوعي، تبادل هدايا الأعياد والمواسم، وتوفير الترحيب الحار لزيارتها بالمنزل.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--gold)">
+        <div class="sc-i">🛡️</div>
+        <h4>حفظ الحدود والستر</h4>
+        <p>إدارة التدخلات بلطف، التنسيق المالي والتربوي مع زوجتك سراً، وحفظ أسرار بيتكما عن الآخرين.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--emerald-primary)">
+      <div class="fq-mark" style="color:var(--emerald-light)">"</div>
+      <p style="color:var(--emerald-deep)">البيوت المستقرة هي التي يُبنى اتصالها العائلي بالذكاء والصلة والبر المتبادل للأصهار. إكرامك لأم زوجتك هو إكرام مباشر لزوجتك وصيانة لسلام بيتكما. حماتك على رأسك، تدم الألفة والسلام.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--emerald-deep)">🤝 تعهد وميثاق الصلة والبر العائلي</h4>
+      <p>أتعهد أنا الزوج أمام الله، بأن أكون خيراً لأهلي، صائناً لصلة وبر أم زوجتك (حماتي) بالاحترام والإكرام، حريصاً على تهاديها وصلتها الهاتفية والبدنية بالمعروف، ومستوعباً لتدخلاتها بالحكمة والرفق دون صدام، وجاعلاً بيتنا دار ألفة. وأسأل الله التوفيق. آمين.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج الباني / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | حماتي على رأسي</span><span>الخلاصة والميثاق · ص ١٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 18 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--emerald-primary),var(--gold),var(--teal-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(21, 128, 61, 0.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(200, 151, 58, 0.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(29, 196, 179, 0.2)"></div>
+      <div class="ty-heart-main" style="color:var(--emerald-primary);animation:none">👵</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--emerald-deep)">جزاكم الله خيراً</h2>
+    <p class="ty-sub">على اهتمامكم ببناء بيوت تسودها الألفة والبر وصلة الأرحام وإكرام الأصهار بالعدل والرحمة<br>صلتكم الطيبة لأهاليكم هي درع أمان عائلتكم واستثماركم الأبقى بالدنيا والآخرة</p>
+
+    <div class="ty-dua" style="background:var(--emerald-light);border-right:4px solid var(--emerald-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--emerald-deep)">اللهم بارك لنا في أهلينا وأصهارنا، واجعل المودة والرحمة والصلة شعار علاقاتنا العائلية، وألف بين قلوبنا، واجمعنا على طاعتك ورضاك. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في تقديم الإرشاد العائلي وتوعية المجتمع المسلم بأفضل الممارسات العلمية والمعاصرة وتطبيقات الهدي النبوي الشريف لبناء علاقات أسرية وزوجية آمنة ومستقرة.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شارك هذا الدليل مع معارفك المتزوجين لتساهم في نشر ثقافة البر وصلة الأرحام العائلية</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل حماتي على رأسي (فن التعامل مع أم الزوجة)» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

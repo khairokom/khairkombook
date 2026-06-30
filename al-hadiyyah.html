@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>الهدية طريقك إلى قلب زوجتك – خيركم</title>
+<meta name="description" content="دليل فن التهادي وبناء الألفة والمودة بين الزوجين – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: AL-HADIYYAH (GOLD & ROSE) ── */
+:root {
+  --gold-primary: #C8973A;
+  --gold-deep:    #9A701C;
+  --gold-light:   #F7E9CC;
+  --gold-ultra:   #FDF7EC;
+  --pink-primary: #D81B75;
+  --pink-light:   #FCE4F0;
+  --teal-primary: #1DBFB0;
+  --teal-deep:    #0F9E91;
+  --teal-light:   #D4F5F2;
+  
+  --r-gold:       #C8973A;
+  --r-gold-d:     #9A701C;
+  --r-gold-lt:    #F7E9CC;
+}
+
+/* Page covers and backgrounds */
+.gold-bg { background: linear-gradient(160deg, var(--gold-ultra) 0%, white 60%); }
+.gold-label { background: linear-gradient(135deg, var(--gold-primary), var(--gold-deep)); }
+.gold-num { color: rgba(200, 151, 58, 0.06); }
+.gold-quote { background: var(--gold-light); border-right: 4px solid var(--gold-primary); color: var(--gold-deep); }
+.gold-color { background: linear-gradient(135deg, var(--gold-light), white); border-bottom: 2px solid rgba(200, 151, 58, 0.2); }
+.badge-gold { background: linear-gradient(135deg, var(--gold-primary), var(--gold-deep)); }
+
+/* Custom components */
+.gift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.gift-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--gold-primary); display: flex; flex-direction: column; gap: 8px; }
+.gift-icon { font-size: 26px; }
+.gift-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.gift-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* gift lists */
+.gift-list { display: flex; flex-direction: column; gap: 10px; }
+.gift-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.gift-item-gold { border-right-color: var(--gold-primary); }
+.gift-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.gift-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.gift-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.gt-gold { background: var(--gold-light); color: var(--gold-deep); }
+.gt-pink { background: var(--pink-light); color: var(--pink-primary); }
+
+/* map visual */
+.gmap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0; }
+.gmap-card { border-radius: var(--r-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.gmap-flower { background: linear-gradient(135deg, #FFF0F2, #FCE4F0); border: 1.5px solid #FBCFE8; }
+.gmap-gold { background: linear-gradient(135deg, var(--gold-ultra), #FEF3CC); border: 1.5px solid #FCD34D; }
+.gmap-experience { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1.5px solid #BFDBFE; }
+.gmap-simple { background: linear-gradient(135deg, var(--teal-ul), #D4F5F2); border: 1.5px solid var(--teal-light); }
+.gmap-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: var(--dark); }
+.gmap-body { font-size: 11.5px; line-height: 1.6; color: var(--g700); }
+.gmap-body strong { display: block; color: var(--dark); margin-bottom: 2px; }
+.gmap-action { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 4px 8px; margin-top: 4px; display: inline-block; }
+.gma-flower { background: #FBCFE8; color: #BE185D; }
+.gma-gold { background: #FDE68A; color: #92400E; }
+.gma-experience { background: #BFDBFE; color: #1E3A8A; }
+.gma-simple { background: var(--teal-lt); color: var(--teal-d); }
+
+/* cover badges */
+.cv-gold-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-gb { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.gb1 { background: linear-gradient(135deg, var(--gold-primary), var(--gold-deep)); }
+.gb2 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.gb3 { background: linear-gradient(135deg, var(--pink-primary), #B01560); }
+
+/* 30 day challenge */
+.gift-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.gc-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.gc-num { font-size: 16px; font-weight: 900; color: var(--gold-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.gc-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.gc-sp { background: var(--gold-light); border-color: var(--gold-primary); }
+.gc-sp2 { background: var(--teal-ul); border-color: var(--teal-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#FDF7EC 0%,#FFFFFF 45%,var(--teal-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(200,151,58,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(29,191,176,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep));color:white;border-color:rgba(200, 151, 58, 0.3)">سلسلة بناء المحبة والود</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(200, 151, 58, 0.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(29,191,176,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(200,151,58,.35))">🎁</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">💛</div>
+        <div class="cv-coin c2" style="font-size:18px">💚</div>
+        <div class="cv-coin c3" style="font-size:20px">💖</div>
+        <div class="cv-coin c4" style="font-size:16px">✨</div>
+        <div class="cv-coin c5" style="font-size:18px">🌹</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:52px;background:linear-gradient(135deg,var(--gold-deep) 0%,var(--gold-primary) 50%,var(--teal-primary) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">الهدية طريقك لقلب زوجتك</h1>
+      <div style="font-family:var(--serif);font-size:26px;font-weight:700;color:var(--g700);margin:4px 0">دليل فن التهادي وبناء الألفة</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--gold-primary),var(--teal-primary))"></div>
+      <p class="cv-sub">أفكار مبتكرة، قواعد نفسية، وتخطيط عملي سنوي<br>لأزواج يسعون لترسيخ الود والرحمة عبر العطاء المتبادل</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-gold-badges">
+      <div class="cv-gb gb1">🎁 كرم العطاء</div>
+      <div class="cv-gb gb2">🌹 رسائل الود</div>
+      <div class="cv-gb gb3">💖 تهادوا تحابوا</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل المودة والتهادي · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">البركة النبوية في التآلف بالتهادي</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">🎁</div>
+      <h2>الهدية طريقك إلى قلب زوجتك</h2>
+      <p>الأثر الروحي والنفيس للهدية في بناء السكينة والمودة الأسرية</p>
+    </div>
+
+    <div class="hadith-box" style="background:var(--gold-light);border-color:rgba(200, 151, 58, 0.2)">
+      <div class="hadith-text" style="color:var(--gold-deep)">«تَهادُوا تَحابُّوا»</div>
+      <div class="hadith-src" style="color:var(--gold-deep)">النبي محمد ﷺ · رواه البخاري في الأدب المفرد</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--gold-primary)">
+      <p style="color:var(--gold-deep)">الهدية ليست مجرد قيمة مادية تُشترى بمال، بل هي رسالة غالية تسافر مباشرة من قلب الزوج لقلب زوجته لتقول: «أنا أفكر فيكِ، أقدّر تعبكِ، وأحبكِ». الهدية تزيل ترسبات الخلافات اليومية وتبني جسوراً من الألفة والدلال التي تبهج بيتك.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--gold-light);border-color:rgba(200,151,58,.2)">
+        <div class="tc-icon">🌹</div>
+        <h4 style="color:var(--gold-deep)">الأثر الوجداني</h4>
+        <p>الهدية تلمس قلب المرأة وتمنحها طمأنينة عالية بأنها حاضرة في ذهن زوجها وقلبه دائماً.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="tc-icon">🛠️</div>
+        <h4 style="color:var(--teal-d)">قواعد الاختيار</h4>
+        <p>فنون مراعاة اهتمامات الشريك، وتقديم الهدية بلطف وذكاء، واختيار التوقيت غير المتوقع.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--pink-light);border-color:rgba(216,27,117,.15)">
+        <div class="tc-icon">📜</div>
+        <h4 style="color:var(--pink-primary)">التخطيط السنوي</h4>
+        <p>تنظيم التواريخ والمناسبات وتجهيز الهدايا مسبقاً لتفادي النسيان والتقصير في حق شريكتك.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 ما الذي يقدمه لك هذا الدليل؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal" style="background:var(--gold-light);color:var(--gold-deep)">🌱</div><span>فهم فلسفة التهادي ومناسباته</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>اختبار لغة الهدايا لزوجتك</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>خطة التخطيط السنوي للمناسبات</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>أثر التهادي · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتويات رحلة العطاء والتهادي</h2>
+      <p>تفاصيل عملية لترسيخ الود بلمسات التهادي الذكية والمستدامة</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">البركة النبوية في التآلف بالتهادي</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">الأثر النفسي للهدية في قلب المرأة</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold-primary)"></span>الفصل الأول: الأثر والرمزية للهدية</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold-primary)">الفصل ١</span><span class="te-name">لماذا تسعد المرأة بالهدية؟ البعد الرمزي</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold-primary)">الفصل ١</span><span class="te-name">عندما لا تكون القيمة بالمال: هدايا المشاعر</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal)"></span>الفصل الثاني: قواعد وفنون التهادي</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">كيف تكتشف اهتمامات زوجتك وتختار الهدية؟</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">فن التقديم: اللف، البطاقة، الكلمة المرافقة</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">توقيت الهدية: هدايا المناسبات وهدايا المفاجأة</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--pink-primary)"></span>الفصل الثالث: أفكار وتطبيقات عملية</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--pink-primary)">الفصل ٣</span><span class="te-name">أفكار هدايا لكل الميزانيات (المعنوية والعملية)</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--pink-primary)">الفصل ٣</span><span class="te-name">خطة صناعة هدايا يدوية أو ذكريات مشتركة</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold-deep)"></span>التمارين والتخطيط</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: خارطة الهدايا الزوجية</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+          <div class="toc-entry"><span class="te-name">اختبار: ما هي لغة الهدايا المفضلة لزوجتك؟</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">جدول التخطيط السنوي للمناسبات والهدايا</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة فحص ومتابعة ميزانية التهادي</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي التهادي والعطاء اليومي (30 يوماً)</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق الكرم الزوجي</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء البركة والزيادة</span><span class="te-dots"></span><span class="te-pg">١٨</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · PSYCHOLOGY OF THE GIFT
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--gold-primary),var(--pink-primary),var(--teal-primary))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--gold-primary)">أثر الهدية</div>
+    <h2 class="intro-h2">الأثر النفسي للهدية في قلب المرأة</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(200, 151, 58, 0.2)">
+      <div class="iqb-mark" style="color:var(--gold-light)">"</div>
+      <p style="color:var(--gold-deep)">إن فرحة الزوجة بالهدية لا تنبع من قيمتها في متاجر البيع، بل من قيمة الوقت والتفكير والتعب الذي بذله الزوج ليختار شيئاً يسعدها. الهدية هي تجسيد مادي للحب الصامت.</p>
+    </div>
+
+    <p class="intro-para">تساعد الهدية على محو أثر الخلافات وتراكمات الأيام الصعبة. فعندما يقدم الزوج هدية مفاجئة لزوجته، يرسل لها إشارة طمأنينة قوية بأن «كل خلافاتنا عابرة، وحبي لك وتقديري لوجودك في حياتي هو الثابت الأكبر».</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--gold-light);border-color:rgba(200,151,58,.2)">
+        <div class="isr-num" style="color:var(--gold-deep)">التقدير</div>
+        <div class="isr-txt">تُشعر الزوجة بأن تعبها اليومي مقدر ومحترم من شريك حياتها.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--pink-light);border-color:rgba(216,27,117,.15)">
+        <div class="isr-num" style="color:var(--pink-primary)">المفاجأة</div>
+        <div class="isr-txt">تكسر جمود ورتابة الروتين وتجلب بهجة غير متوقعة لليوم.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="isr-num" style="color:var(--teal-d)">التقارب</div>
+        <div class="isr-txt">تبني لغة خاصة للألفة وتحفز مشاعر المودة النبوية المتبادلة.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">الهدية مهارة اجتماعية راقية، والكرم المالي والعاطفي هما جناحا الزواج الناجح السعيد. هذا الدليل سيوضح لك بالتجربة كيف تجعل من التهادي فناً يومياً وأداة لدوام الحب والاستقرار في بيتك.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--gold-primary)">
+      <div class="ip-icon">🎁</div>
+      <p style="color:var(--gold-deep)">وعد منصة خيركم: الالتزام بتعلم وتقديم الهدايا البسيطة لزوجتك وفق هذا الدليل سيجعلها تشعر بفيض من الأمان والحب، ينعكس دفئاً وسعادة على بيتك وأبنائك.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الأثر النفسي · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg gold-bg">
+  <div class="ch-cover-num gold-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label gold-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--gold-deep)">الأثر والرمزية للهدية</h2>
+    <p class="ch-cover-quote gold-quote">«ليست الهدية ما يوضع في صندوق، بل الحب والتفكير المكتوب في قلب المهدي»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ الرمزية النفسية للهدية في عقل وقلب المرأة</div>
+        <div class="cco-item">✓ كيف تحول الهدية البسيطة لرسالة حب عاطفية عميقة</div>
+        <div class="cco-item">✓ هدايا المشاعر: عندما يتفوق المعنى على القيمة المالية</div>
+        <div class="cco-item">✓ تمرين تحليل رغبات زوجتك واهتماماتها الخاصة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header gold-color">
+    <span class="ch-badge badge-gold">الفصل الأول</span>
+    <span class="ch-title-sm">رمزية الهدية وهدايا المشاعر المعنوية</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">البعد الرمزي للهدية لدى الزوجة</h3>
+    <p class="body-p">تترجم المرأة الهدية بطريقة وجدانية عميقة. فالهدية بالنسبة لها تعني: «أنا لست وحدي، شريك حياتي يتذكرني ويفكر في إسعادي حتى وهو بعيد عني». لذلك، يغيب الفرح عن الهدية إذا قُدمت بشكل واجب بارد أو خالٍ من المشاعر.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ تقديم يقلل من أثر الهدية</div>
+        <div class="comp-items">
+          <div class="comp-item">شراء الهدية على عجل دون مراعاة لذوقها الخاص.</div>
+          <div class="comp-item">رميها على الطاولة دون تغليف أو كلمة حب حانية مرافقة.</div>
+          <div class="comp-item">التذكير المستمر بقيمتها المالية أو التمنن بها لاحقاً.</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right" style="background:var(--gold-light);border-color:rgba(200,151,58,.2)">
+        <div class="comp-title" style="color:var(--gold-deep)">✅ تقديم يزيد من روعة الهدية</div>
+        <div class="comp-items">
+          <div class="comp-item" style="background:white;color:var(--gold-deep)">اختيار شيء يعبر عن اهتمام أو رغبة صرحت بها سابقاً.</div>
+          <div class="comp-item" style="background:white;color:var(--gold-deep)">تغليفها بلونها المفضل مع بطاقة مكتوبة بخط يدك.</div>
+          <div class="comp-item" style="background:white;color:var(--gold-deep)">تقديمها مع نظرة حب وعناق دافئ وكلمة شكر صادقة.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">هدايا المشاعر: عندما يتفوق المعنى</h3>
+    <p class="body-p">هناك هدايا لا تكلف مالاً ولكنها تزن الكثير في ميزان الألفة، مثل: كتابة رسالة ورقية تصف فيها خصال زوجتك الطيبة التي تحبها، أو صناعة ألبوم صور يضم أجمل لحظاتكما معاً، أو تخصيص يوم لراحتها التامة وتدليلها بالمنزل.</p>
+
+    <div class="callout teal-callout" style="background:var(--gold-ultra);border-color:rgba(200,151,58,.2)">
+      <div class="callout-ic">📢</div>
+      <div class="callout-txt" style="color:var(--gold-deep)"><strong>قاعدة التهادي:</strong> الهدية البسيطة المغلفة بالحب والتقدير تعيش في ذاكرة المرأة وتملأ قلبها بالرضا لشهور، بينما الهدية الباهظة الخالية من الاهتمام تُنسى سريعاً.</div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تأمل ذاتي للزوج: ذوق شريكتك</h4>
+      <p>ما هو اللون المفضل لزوجتك؟ وما هو الشيء البسيط الذي يسعدها دائماً حين تحضره معك للمنزل؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">فنون وقواعد التهادي الزوجي</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«التغليف والبطاقة والكلمة الحنونة تمثل نصف الهدية، وتقديمها في وقت غير متوقع يضاعف قيمتها عاطفياً»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ كيف تكتشف لغة الهدايا والاهتمامات لزوجتك بذكاء</div>
+        <div class="cco-item">✓ قواعد لف وتزيين وكتابة كروت الهدايا المؤثرة</div>
+        <div class="cco-item">✓ توقيت الهدية المناسب: فن المفاجأة وهدايا المناسبات</div>
+        <div class="cco-item">✓ تمرين عملي لكتابة رسالة تقدير مرافقة للهدية</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">فنون اختيار الهدية وصياغة الرسائل</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">كيف تكتشف ما تسعد به زوجتك؟</h3>
+    <p class="body-p">الزوج المحب هو مستمع حذر. دون ملاحظاتك حين تبدي زوجتك إعجابها بشيء ما أثناء تسوقكما، أو حين تثني على ذوق صديقتها في قطعة ما. احتفظ بقائمة سرية في هاتفك للأفكار لتلجأ لها عند اختيار الهدايا.</p>
+
+    <div class="callout teal-callout">
+      <div class="callout-ic">🎯</div>
+      <div class="callout-txt"><strong>قاعدة البطاقة المرافقة:</strong> لا تقدم هدية أبداً دون بطاقة مكتوبة بخط يدك. اكتب كلمات شكر صادقة وخصصها لزوجتك (مثل: «شكراً لكونكِ النور في بيتي»، «أحبكِ اليوم أكثر من الأمس»). الكلمات تعيش وتُقرأ مراراً.</div>
+    </div>
+
+    <h3 class="section-title">ثلاث قواعد ذهبية للتهادي الناجح</h3>
+
+    <div class="deposits-detailed">
+      <div class="dd-item" style="border-right-color:var(--gold-primary)">
+        <div class="dd-num" style="color:var(--gold-light)">٠١</div>
+        <div class="dd-icon">🎀</div>
+        <div class="dd-content">
+          <h4>التغليف الأنيق والزينة</h4>
+          <p>التغليف الجميل يثير فضول الزوجة ويوصل لها اهتمامك بالتفاصيل. حتى لو كانت الهدية بسيطة، تغليفها بأناقة مع شريطة حريرية يرفع قيمتها كثيراً.</p>
+        </div>
+      </div>
+
+      <div class="dd-item" style="border-right-color:var(--teal-primary)">
+        <div class="dd-num" style="color:var(--teal-lt)">٠٢</div>
+        <div class="dd-icon">🕊️</div>
+        <div class="dd-content">
+          <h4>الكلمات المرافقة للتقديم</h4>
+          <p>تجنب تقديمها بصمت. انظر لعينيها، قبّل يدها وقل كلمات تعبر عن امتنانك لوجودها، مثل: «هذه الهدية تعبير بسيط عن امتناني لتعبك ولحبك».</p>
+        </div>
+      </div>
+
+      <div class="dd-item" style="border-right-color:var(--gold-primary)">
+        <div class="dd-num" style="color:var(--gold-light)">٠٣</div>
+        <div class="dd-icon">✨</div>
+        <div class="dd-content">
+          <h4>المفاجأة وتوقيت التقديم</h4>
+          <p>أجمل الهدايا هي التي تأتي بدون مناسبة (يوم عادي). فاجئها بوردة عند عودتك من العمل، أو اترك لها هدية صغيرة على وسادتها صباحاً لتسعد يومها.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الفصل الثاني · ص ٨</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 2 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">هدايا المناسبات مقابل هدايا المفاجأة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">التوازن بين هدايا التواريخ والمفاجآت</h3>
+    <p class="body-p">تحتاج الحياة الزوجية لكلا النوعين من الهدايا. هدايا المناسبات (عيد الفطر، ذكرى الزواج، ميلاد الزوجة) تعبر عن الالتزام والوفاء بالذكريات المشتركة، بينما هدايا المفاجأة تعبر عن تدفق العاطفة التلقائي المستمر.</p>
+
+    <div class="science-box" style="background:var(--gold-ultra);border-color:rgba(200,151,58,.2)">
+      <div class="sb-icon">💛</div>
+      <div class="sb-content">
+        <h4 style="color:var(--gold-deep)">الأثر الكيميائي لهدايا المفاجأة</h4>
+        <p style="color:var(--gold-deep)">تثبت الدراسات النفسية أن هدايا المفاجأة (بدون مناسبة معلنة) تطلق جرعات أعلى من الدوبامين والأوكسيتوسين في عقل المتلقي لأنها غير متوقعة. هذه الجرعة تقوي مشاعر الحب والارتباط وتزيل مشاعر الضيق والتعب فوراً.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">التخطيط المسبق للهدايا السنوية</h3>
+    <p class="body-p">النسيان هو أحد أكبر أسباب خيبة الأمل للزوجة في المناسبات. الزوج الذكي لا يعتمد على ذاكرته، بل يضع تذكيرات مسبقة على هاتفه (قبل المناسبة بأسبوع) لتجهيز الهدية واختيارها برواق وعناية.</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تمرين تطبيقي للزوج: صياغة كرت الهدية</h4>
+      <p>اكتب مسودة لرسالة قصيرة ومؤثرة تود كتابتها على كرت هدية زوجتك القادمة:</p>
+      <div class="write-lines"><div></div><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الفصل الثاني · ص ٩</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold-deep)">أفكار وتطبيقات التهادي العملية</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold-primary);color:var(--gold-deep)">«الكرم الزوجي هو استثمار في دفء عائلتك ومستقبل بيتك، والهدية المبتكرة تصنع بهجة استثنائية»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ أفكار هدايا مبتكرة ومناسبة لكل الميزانيات المالية</div>
+        <div class="cco-item">✓ كيف تصنع هدايا معنوية يدوية تؤثر في وجدان شريكتك</div>
+        <div class="cco-item">✓ خطة التهادي المتبادل السنوية وجدول المناسبات</div>
+        <div class="cco-item">✓ تمرين وضع ميزانية التهادي والأفكار المقترحة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">أفكار هدايا تناسب كل الميزانيات</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">التهادي الذكي والميزانية المتوازنة</h3>
+    <p class="body-p">لا تشترط الهدية ميزانية باهظة لتؤدي دورها. الكرم ذوق واهتمام. إليك تصنيفاً لأفكار هدايا مبتكرة تناسب مختلف الميزانيات وتلبي رغبات القوارير المتنوعة:</p>
+
+    <div class="nature-grid">
+      <div class="nature-card" style="border-right-color:var(--gold-primary)">
+        <div class="nature-icon">🌹</div>
+        <h4>١. الهدايا البسيطة والعفوية</h4>
+        <p>وردة مفاجئة عند العودة، قطعة حلوى أو شوكولاتة تفضلها، كتاب تحب قراءته، أو كوب مخصص يحمل عبارة لطيفة.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--teal-primary)">
+        <div class="nature-icon">💌</div>
+        <h4>٢. الهدايا المعنوية العميقة</h4>
+        <p>رسالة بخط اليد تعبر عن امتنانك، ألبوم يضم صور رحلاتكما المشتركة، أو التعهد بيوم كامل لتلبية طلباتها وراحتها.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--gold-primary)">
+        <div class="nature-icon">💎</div>
+        <h4>٣. الهدايا الشخصية الفاخرة</h4>
+        <p>قطعة مجوهرات فضية أو ذهبية، عطرها المفضل الفاخر، أو قطعة ملابس أو حقيبة كانت تود شراءها سابقاً.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--pink-primary)">
+        <div class="nature-icon">✈️</div>
+        <h4>٤. هدايا التجارب والذكريات</h4>
+        <p>دعوة لعشاء رومانسي في مطعم جديد، تذاكر لرحلة قصيرة معاً، أو يوم استرخاء كامل في سبا لتخفيف تعبها.</p>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:10px">
+      <div class="tip-ic">⭐</div>
+      <div><strong>قاعدة خيركم الذهبية:</strong> الهدية هي عنوان الكرم والوفاء. التهادي المستمر والمنظم يبقي شعلة الحب متقدة، ويمنع الفتور من التسرب لعلاقتكما الزوجية.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الفصل الثالث · ص ١١</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · INFOGRAPHIC: GIFT MAP
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink" style="background:linear-gradient(135deg,var(--gold-deep),var(--gold-primary))">
+    <div class="info-badge info-badge-pink" style="background:rgba(255,255,255,.2)">خارطة التهادي والمحبة</div>
+    <h2>خارطة الهدايا الزوجية المبتكرة</h2>
+    <p>دليلك البصري لاختيار وتقديم الهدية المناسبة لزوجتك لإسعاد قلبها</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px">
+    <div class="gmap-grid">
+      <!-- Flower -->
+      <div class="gmap-card gmap-flower">
+        <div class="gmap-header">🌹 هدايا الطبيعة والأنوثة</div>
+        <div class="gmap-body">
+          <strong>النوع:</strong> باقات الورد المنسقة، النباتات المنزلية اللطيفة، العطور الزكية الصيفية.
+          <strong>المناسبة:</strong> العودة من السفر، الصلح بعد خلاف، أو يوم عادي لتقديم الحب.
+        </div>
+        <div class="gmap-action gma-flower">🎁 الفكرة: باقة ورد ناعمة مع كرت دافئ</div>
+      </div>
+
+      <!-- Gold -->
+      <div class="gmap-card gmap-gold">
+        <div class="gmap-header">💎 هدايا القيمة والذكرى</div>
+        <div class="gmap-body">
+          <strong>النوع:</strong> قطعة ذهب أو فضة منسقة، ساعات يد فاخرة، أو أجهزة الكترونية تسهل مهامها.
+          <strong>المناسبة:</strong> ذكرى الزواج السنوية، أعياد الفطر والأضحى، أو ميلاد زوجتك.
+        </div>
+        <div class="gmap-action gma-gold">🎁 الفكرة: إسوارة فضية أو خاتم أنيق</div>
+      </div>
+
+      <!-- Experience -->
+      <div class="gmap-card gmap-experience">
+        <div class="gmap-header">✈️ هدايا الأنشطة والتجارب</div>
+        <div class="gmap-body">
+          <strong>النوع:</strong> رحلة عائلية قصيرة، حجز ليلة بالفندق للزوجين، أو التسجيل بدورة تحبها.
+          <strong>المناسبة:</strong> بعد تجاوز فترة امتحانات الأولاد، أو ضغوطات عمل شاقة لكما.
+        </div>
+        <div class="gmap-action gma-experience">🎁 الفكرة: حجز عشاء رومانسي مميز</div>
+      </div>
+
+      <!-- Simple -->
+      <div class="gmap-card gmap-simple">
+        <div class="gmap-header">🍪 هدايا التفاصيل اليومية</div>
+        <div class="gmap-body">
+          <strong>النوع:</strong> نوع الحلوى والشوكولاتة المفضل لديها، كتاب تحب قراءته، أو كوب مبتكر.
+          <strong>المناسبة:</strong> نهاية أسبوع شاقة بالمنزل، أو إيماءة تقدير لجهودها المعتادة.
+        </div>
+        <div class="gmap-action gma-simple">🎁 الفكرة: شوكولاتة فاخرة مع كوب شاي</div>
+      </div>
+    </div>
+
+    <div class="gottman-rule" style="margin-top:10px">
+      <div class="gr-icon">⭐</div>
+      <div class="gr-content" style="color:var(--gold-deep)">
+        <strong>سر النجاح:</strong> وازن بين الهدايا المعنوية والمادية والتجريبية. الانسجام والود يُصنع بالاهتمام المستمر والتجديد والحرص على إسعاد شريكة عمرك بلمسات رقيقة.
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الإنفوجرافيك · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · WORKBOOK: QUIZ
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">
+    <div class="wb-badge">📝 اختبار لغة الهدايا للزوجة</div>
+    <h2>ما هي لغة الهدايا المفضلة لزوجتك؟</h2>
+    <p>أجب عن الأسئلة بناءً على تلميحات ورغبات زوجتك لمعرفة أكثر الهدايا تأثيراً في قلبها</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="quiz-grid">
+      <div class="quiz-q">
+        <div class="quiz-qt">١. عندما تمر زوجتك بمناسبة سعيدة أو تنجز عملاً، فإنها تسعد بـ:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q1"/> قطعة مجوهرات أو عطر فاخر</label>
+          <label><input type="radio" name="q1"/> باقة ورد منسقة مع كرت حب</label>
+          <label><input type="radio" name="q1"/> الخروج معاً لتناول عشاء مميز</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٢. ما هو الشيء الذي تحتفظ به زوجتك بعناية كبيرة لسنوات؟</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q2"/> الهدايا الثمينة والفاخرة</label>
+          <label><input type="radio" name="q2"/> الرسائل الورقية والكروت والورد المجفف</label>
+          <label><input type="radio" name="q2"/> تذاكر الرحلات وصور المناسبات المشتركة</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٣. حين تشتكي زوجتك من تعب وضغوط العمل والمنزل، فإن أفضل هدية لها هي:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q3"/> شراء شيء ملموس يبهجها بالمنزل</label>
+          <label><input type="radio" name="q3"/> كلمة حب حانية ووردة بسيطة تقديرية</label>
+          <label><input type="radio" name="q3"/> حجز يوم استرخاء بالسبا أو سفرة قصيرة</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٤. نوع الهدايا التي تلمح بها زوجتك أو تثني عليها دائماً:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q4"/> الملابس والحقائب والمجوهرات الشخصية</label>
+          <label><input type="radio" name="q4"/> الورد والشوكولاتة واللمسات المعنوية</label>
+          <label><input type="radio" name="q4"/> السفر والأنشطة المشتركة وتغيير الجو</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 كيف تقرأ لغتها؟</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">الأجوبة الأولى تدل على لغة **«الهدايا العينية الفاخرة»**، والأجوبة الثانية تدل على لغة **«الهدايا المعنوية والرمزية»**، والأجوبة الثالثة تدل على لغة **«هدايا التجارب والأنشطة المشتركة»**. احرص على تلبية اللغة الأكثر تأثيراً لديها.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>اختبار لغة الهدايا · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK: ANNUAL PLANNER
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">
+    <div class="wb-badge">📝 جدول التخطيط السنوي للمناسبات</div>
+    <h2>مخطط التهادي والمناسبات السنوي للزوج</h2>
+    <p>املأ هذا الجدول بالتواريخ والمناسبات الهامة لأسرتكما، واكتب الفكرة المقترحة لكل مناسبة</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px">
+    <div class="week-track" style="padding:12px 14px">
+      <h4>📅 التواريخ والمناسبات الهامة للزوجين</h4>
+      <div class="wt-grid">
+        <div class="wt-row wt-header-row" style="grid-template-columns:100px 100px 1fr 100px;background:var(--gold-primary)">
+          <div class="wt-cell">المناسبة</div>
+          <div class="wt-cell">التاريخ</div>
+          <div class="wt-cell">فكرة الهدية المقترحة</div>
+          <div class="wt-cell">تم التجهيز؟</div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:100px 100px 1fr 100px">
+          <div class="wt-cell wt-day">عيد الفطر</div>
+          <div class="wt-cell">١ شوال</div>
+          <div class="wt-cell">قطعة عطر مفضل مع كرت شكر</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:100px 100px 1fr 100px">
+          <div class="wt-cell wt-day">ذكرى الزواج</div>
+          <div class="wt-cell"><div class="wdf-line" style="width:60px"></div></div>
+          <div class="wt-cell">عشاء رومانسي وحجز ليلة بالفندق</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:100px 100px 1fr 100px">
+          <div class="wt-cell wt-day">ميلاد الزوجة</div>
+          <div class="wt-cell"><div class="wdf-line" style="width:60px"></div></div>
+          <div class="wt-cell">قطعة مجوهرات فضية مع باقة ورد</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:100px 100px 1fr 100px">
+          <div class="wt-cell wt-day">عيد الأضحى</div>
+          <div class="wt-cell">١٠ ذو الحجة</div>
+          <div class="wt-cell">هدية بسيطة وحلوى تحبها الأسرة</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+        <div class="wt-row" style="grid-template-columns:100px 100px 1fr 100px">
+          <div class="wt-cell wt-day">نجاح أو إنجاز</div>
+          <div class="wt-cell">عشوائي</div>
+          <div class="wt-cell">رسالة تقدير ووردة للثناء على تعبها</div>
+          <div class="wt-cell"><div class="wt-check"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wb-sections" style="margin-top:10px">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--gold-primary)">١</div>
+          <h4>ثلاث أفكار لهدايا «مفاجأة» تود تقديمها لزوجتك هذا العام دون مناسبة:</h4>
+        </div>
+        <div class="write-area wa-md"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>جدول المناسبات · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · WORKBOOK: BUDGET & PLANNING
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">
+    <div class="wb-badge">📝 ميزانية وتجهيز الهدايا</div>
+    <h2>ورقة تخطيط ميزانية وأفكار التهادي</h2>
+    <p>ضع خطة مالية واضحة مسبقاً لتضمن القدرة على التهادي بانتظام دون إرهاق لميزانيتك العائلية</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--gold-primary)">١</div>
+          <h4>الميزانية السنوية التقريبية المخصصة للهدايا وكيفية ادخارها شهرياً:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--gold-primary)">٢</div>
+          <h4>قائمة المحلات أو المواقع المفضلة لزوجتك والتي تود الشراء منها:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--gold-primary)">٣</div>
+          <h4>كيف ستتجنب فخ نسيان التواريخ الهامة؟ ما هي خطة التنبيهات لديك؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>ميزانية التهادي · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · 30-DAY CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">
+    <div class="wb-badge">🗓 تحدي التهادي والعطاء</div>
+    <h2>تحدي ٣٠ يوماً لترسيخ الود بالتهادي</h2>
+    <p>خطوات عملية بسيطة وأفكار تهادي يومية تملأ بيتك مودة ورحمة ودفئاً وسكينة</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="gift-challenge">
+      <div class="gc-day gc-sp"><div class="gc-num">١</div><div class="gc-text">وردة مفاجئة عند عودتك بالمساء</div></div>
+      <div class="gc-day"><div class="gc-num">٢</div><div class="gc-text">شوكولاتة تفضلها مع كوب قهوة</div></div>
+      <div class="gc-day"><div class="gc-num">٣</div><div class="gc-text">كرت شكر بخط يدك على السرير</div></div>
+      <div class="gc-day gc-sp2"><div class="gc-num">٤</div><div class="gc-text">شراء كتاب كانت تود قراءته</div></div>
+      
+      <div class="gc-day"><div class="gc-num">٥</div><div class="gc-text">صنع فطور وإحضاره لسريرها صباحاً</div></div>
+      <div class="gc-day gc-sp"><div class="gc-num">٦</div><div class="gc-text">نبتة منزلية صغيرة لشرفة البيت</div></div>
+      <div class="gc-day"><div class="gc-num">٧</div><div class="gc-text">إرسال كود خصم لمتجر تحبه</div></div>
+      <div class="gc-day gc-sp2"><div class="gc-num">٨</div><div class="gc-text">حلوى من مخبزها المفضل بالمساء</div></div>
+
+      <div class="gc-day gc-sp2"><div class="gc-num">٩</div><div class="gc-text">عطر منزلي مهدئ برائحة الخزامى</div></div>
+      <div class="gc-day"><div class="gc-num">١٠</div><div class="gc-text">تجهيز ألبوم صور صغير لذكرياتكما</div></div>
+      <div class="gc-day gc-sp"><div class="gc-num">١١</div><div class="gc-text">زيت مساج برائحة عطرية لطيفة</div></div>
+      <div class="gc-day"><div class="gc-num">١٢</div><div class="gc-text">شراء قطعة ملابس كانت تلمح لها</div></div>
+
+      <div class="gc-day"><div class="gc-num">١٣</div><div class="gc-text">كوب يحمل عبارة حب مخصصة لها</div></div>
+      <div class="gc-day gc-sp2"><div class="gc-num">١٤</div><div class="gc-text">تذكرة ليوم استرخاء كامل بالسبا</div></div>
+      <div class="gc-day gc-sp"><div class="gc-num">١٥</div><div class="gc-text">شراء إكسسوار بسيط ومميز لهاتفها</div></div>
+      <div class="gc-day"><div class="gc-num">١٦</div><div class="gc-text">علبة شاي بنكهات تفضلها وجديدة</div></div>
+
+      <div class="gc-day gc-sp"><div class="gc-num">١٧</div><div class="gc-text">سلة هدايا تحوي مستحضرات العناية</div></div>
+      <div class="gc-day"><div class="gc-num">١٨</div><div class="gc-text">كتابة قصيدة أو كلمات مديح صادقة</div></div>
+      <div class="gc-day gc-sp2"><div class="gc-num">١٩</div><div class="gc-text">دعوة عشاء بمطعمها المفضل</div></div>
+      <div class="gc-day"><div class="gc-num">٢٠</div><div class="gc-text">شمعة معطرة بأريج الورد والياسمين</div></div>
+
+      <div class="gc-day gc-sp2"><div class="gc-num">٢١</div><div class="gc-text">شراء مستلزم تجميلي تحبه وتثني عليه</div></div>
+      <div class="gc-day"><div class="gc-num">٢٢</div><div class="gc-text">باقة ورد جوري أحمر مفاجئة</div></div>
+      <div class="gc-day gc-sp"><div class="gc-num">٢٣</div><div class="gc-text">رسالة حب طويلة في منتصف النهار</div></div>
+      <div class="gc-day"><div class="gc-num">٢٤</div><div class="gc-text">شراء زينة مبتكرة للمطبخ أو الصالة</div></div>
+
+      <div class="gc-day"><div class="gc-num">٢٥</div><div class="gc-text">حقيبة مكياج أو حقيبة يد لطيفة</div></div>
+      <div class="gc-day gc-sp2"><div class="gc-num">٢٦</div><div class="gc-text">حجز رحلة سفر قصيرة للزوجين</div></div>
+      <div class="gc-day gc-sp"><div class="gc-num">٢٧</div><div class="gc-text">تقديم علبة حلوى شرقية فاخرة</div></div>
+      <div class="gc-day"><div class="gc-num">٢٨</div><div class="gc-text">قلادة فضية بسيطة تحمل أول حرف</div></div>
+    </div>
+    
+    <div class="gift-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="gc-day gc-sp" style="padding:12px"><div class="gc-num">٢٩</div><div class="gc-text">كتابة عهد المحبة والكرم للعام القادم بكرت فاخر</div></div>
+      <div class="gc-day gc-sp2" style="padding:12px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep));border-color:var(--gold-deep)"><div class="gc-num" style="color:white">٣٠</div><div class="gc-text" style="color:white">الاحتفال بنجاح تحدي التهادي بتقديم قطعة مجوهرات مميزة 💍</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>تحدي ٣٠ يوماً · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>خلاصة رحلة الكرم والتهادي الزوجي</h2>
+    <p>عهد المودة الدائمة والكرم والتهادي لإسعاد شريكة الحياة</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--gold-primary)">
+        <div class="sc-i">🎁</div>
+        <h4>العطاء المستمر</h4>
+        <p>التهادي بانتظام وبساطة يرسخ الأمان العاطفي ويشعر الزوجة بمحبتك الحية المتجددة.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">🌹</div>
+        <h4>فن اللمسة الدافئة</h4>
+        <p>تغليف الهدية، كتابة كرت الحب المنسق، والتقديم بنظرة وابتسامة دافئة هي سر الهدية.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--pink-primary)">
+        <div class="sc-i">📅</div>
+        <h4>التخطيط والوفاء بالذكريات</h4>
+        <p>عدم إهمال التواريخ والمناسبات الهامة، والاستعداد لها مسبقاً يعبر عن التزام حقيقي بمشروع الزواج.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--gold-primary)">
+      <div class="fq-mark" style="color:var(--gold-light)">"</div>
+      <p style="color:var(--gold-deep)">الهدية هي مفتاح القلوب، والبيوت تزهر وتستقر بالكرم العاطفي والمادي المتبادل. تهادوا بوعي وحب، تدم بيوتكم عامرة بالسلام والرحمة والمودة.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--gold-deep)">🤝 تعهد وميثاق الكرم والتهادي الزوجي</h4>
+      <p>أتعهد أنا الزوج أمام الله، بأن أكون خيراً لأهلي، كريماً في عطائي المادي والعاطفي، حريصاً على إدخال السرور لقلب زوجتي بلمسات التهادي المنظمة والعفوية، وحفظ ذكرياتنا ومناسباتنا السنوية بالتقدير والوفاء. وأسأل الله البركة والمودة لبيتنا. آمين.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج الباني / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الهدية لقلب زوجتك</span><span>الخلاصة والميثاق · ص ١٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 18 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--gold-primary),var(--pink-primary),var(--teal-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(200, 151, 58, 0.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(216, 27, 117, 0.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(29, 196, 179, 0.2)"></div>
+      <div class="ty-heart-main" style="color:var(--gold-primary);animation:none">🎁</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--gold-deep)">جزاكم الله خيراً</h2>
+    <p class="ty-sub">على اهتمامكم بنشر المودة والرحمة الزوجية بالتهادي وتطبيق الهدي النبوي الشريف<br>بيوتكم هي واحات سكينة واستقرار بمحبتكم الواعية</p>
+
+    <div class="ty-dua" style="background:var(--gold-light);border-right:4px solid var(--gold-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--gold-deep)">اللهم بارك لنا في أزواجنا وأموالنا، واجعلنا من الكرماء في بيوتنا بالقول والعمل، وألف بين قلوبنا، واجمع شملنا على المودة والرحمة والسكينة. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في توجيه وإرشاد الأسرة المسلمة بأفضل الممارسات العلمية المعاصرة وتطبيقات الهدي النبوي لتطوير العلاقات الزوجية والأسرية وبناء بيوت مطمئنة ومزدهرة.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شارك هذا الدليل مع أصدقائك المتزوجين لتساهم في نشر ثقافة التهادي والمحبة العائلية</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل الهدية طريقك لقلب زوجتك» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

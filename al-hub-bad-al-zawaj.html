@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>الحب بعد الزواج – خيركم</title>
+<meta name="description" content="دليل إشعال العاطفة وبناء المودة المستدامة وتجديد مشاعر الحب بين الزوجين – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: AL-HUB BAD AL-ZAWAJ (ROSE & CORAL) ── */
+:root {
+  --rose-primary:  #E06A83;
+  --rose-deep:     #B83C55;
+  --rose-light:    #FFF0F2;
+  --rose-ultra:    #FFF8F9;
+  --teal-primary:  #1DBFB0;
+  --teal-deep:     #0F9E91;
+  --teal-light:    #D4F5F2;
+  --gold-primary:  #C8973A;
+  --gold-deep:     #9A701C;
+  --gold-light:    #F7E9CC;
+  --gold-ultra:    #FDF7EC;
+  
+  --r-rose:        #E06A83;
+  --r-rose-d:      #B83C55;
+  --r-rose-lt:     #FFF0F2;
+}
+
+/* Page covers and backgrounds */
+.rose-bg { background: linear-gradient(160deg, var(--rose-ultra) 0%, white 60%); }
+.rose-label { background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep)); }
+.rose-num { color: rgba(224, 106, 131, 0.05); }
+.rose-quote { background: var(--rose-light); border-right: 4px solid var(--rose-primary); color: var(--rose-deep); }
+.rose-color { background: linear-gradient(135deg, var(--rose-light), white); border-bottom: 2px solid rgba(224, 106, 131, 0.2); }
+.badge-rose { background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep)); }
+
+/* Custom components */
+.love-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.love-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--rose-primary); display: flex; flex-direction: column; gap: 8px; }
+.love-icon { font-size: 26px; }
+.love-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.love-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* list style */
+.love-list { display: flex; flex-direction: column; gap: 10px; }
+.love-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.love-item-gold { border-right-color: var(--gold-primary); }
+.love-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.love-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.love-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.lt-rose { background: var(--rose-light); color: var(--rose-deep); }
+.lt-gold { background: var(--gold-light); color: var(--gold-deep); }
+
+/* tree visual */
+.tree-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.tree-card { border-radius: var(--r-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.tree-roots { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1.5px solid #BFDBFE; }
+.tree-trunk { background: linear-gradient(135deg, var(--gold-ultra), #FEF3CC); border: 1.5px solid #FCD34D; }
+.tree-leaves { background: linear-gradient(135deg, var(--rose-light), #FBCFE8); border: 1.5px solid #FBCFE8; }
+.tree-fruits { background: linear-gradient(135deg, var(--teal-ul), #D4F5F2); border: 1.5px solid var(--teal-light); }
+.tree-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: var(--dark); }
+.tree-body { font-size: 11.5px; line-height: 1.6; color: var(--g700); }
+.tree-body strong { display: block; color: var(--dark); margin-bottom: 2px; }
+.tree-action { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 4px 8px; margin-top: 4px; display: inline-block; }
+.ta-roots { background: #BFDBFE; color: #1E3A8A; }
+.ta-trunk { background: #FDE68A; color: #92400E; }
+.ta-leaves { background: #FBCFE8; color: #B83C55; }
+.ta-fruits { background: var(--teal-lt); color: var(--teal-d); }
+
+/* cover badges */
+.cv-love-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-lb { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.lb1 { background: linear-gradient(135deg, var(--rose-primary), var(--rose-deep)); }
+.lb2 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.lb3 { background: linear-gradient(135deg, var(--gold), #A07000); }
+
+/* 30 day love challenge */
+.love-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.lcd-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.lcd-num { font-size: 16px; font-weight: 900; color: var(--rose-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.lcd-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.lcd-sp { background: var(--rose-light); border-color: var(--rose-primary); }
+.lcd-sp2 { background: var(--teal-ul); border-color: var(--teal-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#FFF8F9 0%,#FFFFFF 45%,var(--gold-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(224,106,131,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(29,191,176,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep));color:white;border-color:rgba(224, 106, 131, 0.3)">سلسلة بناء المودة الزوجية</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(224, 106, 131, 0.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(200,151,58,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(224,106,131,.35))">💞</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">💖</div>
+        <div class="cv-coin c2" style="font-size:18px">💚</div>
+        <div class="cv-coin c3" style="font-size:20px">💛</div>
+        <div class="cv-coin c4" style="font-size:16px">✨</div>
+        <div class="cv-coin c5" style="font-size:18px">🌹</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:52px;background:linear-gradient(135deg,var(--rose-deep) 0%,var(--rose-primary) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">الحب بعد الزواج</h1>
+      <div style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--g700);margin:4px 0">دليل إشعال المودة وتجديد العاطفة</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--rose-primary),var(--gold))"></div>
+      <p class="cv-sub">دليل إرشادي وأوراق عمل عملية للزوجين لتنمية مشاعر الحب<br>وإعادة دفء البدايات وكسر الفتور ومواجهة مصاعب الحياة معاً</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-love-badges">
+      <div class="cv-lb lb1">💞 مودة متجددة</div>
+      <div class="cv-lb lb2">🤝 اتصال عاطفي</div>
+      <div class="cv-lb lb3">🌱 أمان وسكينة</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل المودة والرحمة · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep))">النهج القرآني في المودة والرحمة</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">💞</div>
+      <h2>الحب بعد الزواج</h2>
+      <p>بناء مشاعر الحب الواعية ورعايتها لتستمر وتزدهر طوال العمر</p>
+    </div>
+
+    <div class="hadith-box" style="background:var(--rose-light);border-color:rgba(224, 106, 131, 0.2)">
+      <div class="hadith-text" style="color:var(--rose-deep)">«وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ»</div>
+      <div class="hadith-src" style="color:var(--rose-deep)">القرآن الكريم · سورة الروم (آية ٢١)</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--rose-primary)">
+      <p style="color:var(--rose-deep)">الحب قبل الزواج قد يكون انجذاباً عاطفياً مؤقتاً، بينما الحب الحقيقي والناضج هو الذي يُبنى وينمو بعد عقد الزواج. إنه السكن والرحمة، وهو ثمرة العناية اليومية والاهتمام بالتفاصيل وحماية العلاقة من روتين الأيام وضغوط ومشاغل الحياة.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--rose-ultra);border-color:var(--rose-light)">
+        <div class="tc-icon">🌹</div>
+        <h4 style="color:var(--rose-deep)">المودة والرحمة</h4>
+        <p>تنمية تبادل الكلمات الجميلة واللمسة الحانية والأفعال التي تبرز المحبة يومياً بصدق.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="tc-icon">🔄</div>
+        <h4 style="color:var(--gold)">التجديد العاطفي</h4>
+        <p>مواجهة البرود والفتور الزوجي بأفكار مبتكرة وأنشطة مشتركة تعيد روح البدايات الدافئة.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="tc-icon">🤝</div>
+        <h4 style="color:var(--teal-d)">اتصال حميم متين</h4>
+        <p>تعزيز لغات الحب المشتركة وحضور الذهن والجسد لبناء ترابط عاطفي قوي لا يتأثر بالأزمات.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 ما الذي يقدمه لك هذا الدليل؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal" style="background:var(--rose-light);color:var(--rose-deep)">🌱</div><span>فهم مراحل تطور الحب بعد الزواج</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>اختبار مدى قوة الاتصال العاطفي بينكما</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>تحدي تجديد مشاعر الحب العاطفي</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>المنهج والمودة · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتويات رحلة المودة والرحمة</h2>
+      <p>تفاصيل عملية لإشعال مشاعر الحب وتجديد الألفة والترابط الزوجي</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--rose-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">النهج القرآني في المودة والرحمة وتآلف القلوب</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">الحب كفعل وممارسة يومية وليس مجرد مشاعر عابرة</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--rose-primary)"></span>الفصل الأول: تطور ومفهوم مشاعر الحب</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--rose-primary)">الفصل ١</span><span class="te-name">الفرق بين الانجذاب الأول وحب الارتباط العميق بعد الزواج</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--rose-primary)">الفصل ١</span><span class="te-name">مراحل الحب الزوجي وكيف تعبران عقبة الفتور الأولى؟</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal)"></span>الفصل الثاني: لغات التعبير وتنمية القرب</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">تطبيقات لغات الحب الخمس في التفاصيل اليومية بالمنزل</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">اللمسة الحانية وعناق الـ ٦ ثواني: أثر الأوكسيتوسين</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">الحديث الوجداني وبناء خارطة حب متجددة لشريكك</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold)"></span>الفصل الثالث: التجديد ومواجهة البرود</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">كيف تحميان حبكما من روتين الأبناء ومشاغل الحياة؟</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">أنشطة وتجارب رومانسية جديدة لإعادة شغف البدايات</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--rose-deep)"></span>التمارين والتطبيقات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: شجرة المودة والرحمة الزوجية</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+          <div class="toc-entry"><span class="te-name">اختبار: هل علاقتكما تنبض بالحب والاتصال العاطفي؟</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة عمل خطة التجديد الرومانسي والأنشطة المشتركة</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي تجديد مشاعر الحب العاطفي (30 يوماً) للزوجين</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق المودة والمحبة الدائمة للتوقيع</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء التأليف بين القلوب والبركة</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · WHY LOVE AFTER MARRIAGE
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--rose-primary),var(--gold-primary),var(--teal-primary))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--rose-primary)">جوهر الحب</div>
+    <h2 class="intro-h2">الحب كفعل وممارسة يومية واعية</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(224,106,131,.2)">
+      <div class="iqb-mark" style="color:var(--rose-light)">"</div>
+      <p style="color:var(--rose-deep)">إن الحب ليس مجرد شعور دافئ يزور قلوبنا بالصدفة، بل هو قرار واعٍ وعمل يومي متواصل. الحب بعد الزواج يُبنى بأكواب الشاي المشتركة، بلمسة دافئة عند التعب، وبكلمة تقدير حانية تبدد عناء اليوم.</p>
+    </div>
+
+    <p class="intro-para">يشتكي الكثير من الأزواج من برود المشاعر أو تلاشي شغف البدايات بعد سنوات من الزواج. الحقيقة هي أن الحب لا يموت بسبب مرور الزمن، بل يموت بسبب الإهمال وغياب التغذية اليومية للمشاعر والوقوع في فخ الروتين القاتل.</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--rose-light);border-color:rgba(224,106,131,.2)">
+        <div class="isr-num" style="color:var(--rose-deep)">العناية</div>
+        <div class="isr-txt">رعاية مشاعر شريكك وحفظ كرامته يومياً تنبت وداً لا ينطفئ.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="isr-num" style="color:var(--gold)">التجديد</div>
+        <div class="isr-txt">كسر رتابة الأيام بأنشطة وتجارب مشتركة تعيد الحيوية لبيتكما.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="isr-num" style="color:var(--teal-d)">الأمان</div>
+        <div class="isr-txt">تأكيد المحبة والتحقق من المشاعر يمنح أسرتكما سكينة تامة.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">أولى الناس بمشاعرك واهتمامك ورومانسيتك هي زوجتك. دليل خيركم هذا صُمم ليكون مرشداً عملياً لكما لإعادة إشعال المودة ورعاية شجرة الحب بعد الزواج لتستمر وتزدهر طوال العمر.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--rose-primary)">
+      <div class="ip-icon">💞</div>
+      <p style="color:var(--rose-deep)">وعد منصة خيركم: تطبيقكما المشترك لخطوات وتحديات هذا الدليل سيعيد كيمياء الحب والترابط الحار لبيتكما، ويقرب قلوبكما أكثر من أي وقت مضى.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>جوهر الحب · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg rose-bg">
+  <div class="ch-cover-num rose-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label rose-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--rose-deep)">تطور ومفهوم مشاعر الحب</h2>
+    <p class="ch-cover-quote rose-quote">«الحب الناضج يبدأ عندما يخفت الانجذاب الأول وتشرق شمس العشرة والرحمة والمودة اليومية»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ الفرق السيكولوجي بين حب البدايات وحب الارتباط العميق المستقر</div>
+        <div class="cco-item">✓ مراحل الحب الزوجي الأربعة وكيفية عبور عقبات الفتور</div>
+        <div class="cco-item">✓ بناء الألفة والمودة المشتركة وتفادي فخ الروتين اليومي</div>
+        <div class="cco-item">✓ تمرين مراجعة ذكريات البدايات وإعادة الاتصال العاطفي</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header rose-color">
+    <span class="ch-badge badge-rose">الفصل الأول</span>
+    <span class="ch-title-sm">تطور الحب الزوجي وعبور عقبة الفتور</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">من الانجذاب الأول إلى الارتباط العميق</h3>
+    <p class="body-p">يمر الحب الزوجي بمراحل نمو طبيعية. فالانجذاب الكيميائي الأول (حب البدايات) يتلاشى تدريجياً بعد الزواج ليحل محله حب الارتباط العميق القائم على السكن، المودة، والرحمة. هذا التحول طبيعي ولا يعني تراجع الحب بل نضجه.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ سلوكيات تسرع الفتور والبرود</div>
+        <div class="comp-items">
+          <div class="comp-item">الاستسلام لروتين الأيام وعدم المبادرة بأي لفتة عاطفية متجددة.</div>
+          <div class="comp-item">اقتصار الأحاديث المشتركة على طلبات المنزل ومشاكل الأبناء ومصاريف الحياة.</div>
+          <div class="comp-item">إهمال لغات الحب الخاصة بشريكك وتجاهل لمسات التلامس اليومية.</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right" style="background:var(--rose-light);border-color:rgba(224,106,131,.2)">
+        <div class="comp-title" style="color:var(--rose-deep)">✅ ممارسات تغذي الحب والانسجام</div>
+        <div class="comp-items">
+          <div class="comp-item" style="background:white;color:var(--rose-deep)">تخصيص وقت حوار وجداني يومي للحديث عن مشاعركما وأحلامكما.</div>
+          <div class="comp-item" style="background:white;color:var(--rose-deep)">إحياء عادات التقارب الجسدي اليومية (العناق والقبلة العفوية).</div>
+          <div class="comp-item" style="background:white;color:var(--rose-deep)">التخطيط لأنشطة وتجارب ترفيهية مشتركة جديدة ومرحة معاً.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">كيف تعبران عقبة الفتور الأولى؟</h3>
+    <p class="body-p">حين يتسرب الفتور لعلاقتكما، لا تصمتا أو تستسلما للجفاء. المبادرة بالحديث المفتوح واللطيف وقول: «أنا أفتقد دفء علاقتنا، دعنا نفعل شيئاً نجدد به محبتنا» يفتح الأبواب لإعادة البناء بنضج واهتمام متبادل.</p>
+
+    <div class="callout teal-callout" style="background:var(--rose-ultra);border-color:rgba(224,106,131,.2)">
+      <div class="callout-ic">📢</div>
+      <div class="callout-txt" style="color:var(--rose-deep)"><strong>قاعدة المودة:</strong> شجرة الحب بعد الزواج تحتاج لسقاية يومية بالكلمة الحنونة واللمسة الحانية والمبادرة اللطيفة. الإهمال يذبلها والاهتمام يزهرها طوال العمر.</div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تأمل ذاتي للزوجين: استعادة البدايات</h4>
+      <p>ما هو أكثر موقف أو ذكرى دافئة جمعتكما في بداية زواجكما وتودان استعادتها اليوم؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">لغات التعبير العاطفي وتنمية القرب</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«التلامس والكلمة الحنونة هما لغتا الاتصال العاطفي الأسرع، والحرص عليهما يومياً يبني حصناً متيناً للألفة»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ تطبيقات لغات الحب الخمس في بناء الألفة بعد الزواج</div>
+        <div class="cco-item">✓ الأثر العلمي والنفيس لعناق الـ ٦ ثواني واللمسة الحانية</div>
+        <div class="cco-item">✓ صياغة خارطة حب متجددة وفهم اهتمامات شريك حياتك</div>
+        <div class="cco-item">✓ تمرين صياغة «رسالة الحب والتقدير الأسبوعية» المتبادلة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">اللمسة الحانية وأثر الأوكسيتوسين العلمي</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">التلامس الجسدي العفوي وأثره النفسي</h3>
+    <p class="body-p">التلامس العفوي غير المرتبط بالعلاقة الحميمة مباشرة (كالعناق، الربت على الكتف، إمساك اليدين) يمثل وسيلة قوية للتعبير عن الحب والأمان المتبادل. الزوج الراقي يحرص على جعل جسده مصدراً للدفء والطمأنينة لزوجته دائماً.</p>
+
+    <div class="callout teal-callout">
+      <div class="callout-ic">🎯</div>
+      <div class="callout-txt"><strong>عناق الـ ٦ ثواني:</strong> تثبت الدراسات النفسية أن العناق المتواصل لست ثوانٍ على الأقل يحفز إفراز هرمون الأوكسيتوسين (هرمون الارتباط والترابط العائلي) في جسم الزوجين. هذا التلامس البسيط يهدئ ضربات القلب، يزيل هرمونات القلق والتوتر، ويبني رابطاً عاطفياً وثيقاً في لحظات.</div>
+    </div>
+
+    <h3 class="section-title">ثلاث خطوات لتنمية الألفة والاتصال اليومي</h3>
+
+    <div class="love-grid">
+      <div class="love-card" style="border-right-color:var(--rose-primary)">
+        <div class="love-icon">🌅</div>
+        <h4>١. وداع واستقبال بابتسامة وقبلة</h4>
+        <p>التزام البدء والإنهاء لليوم بابتسامة وقبلة وعناق عابر. هذا السلوك البسيط يحدد المزاج العاطفي للبيت بالكامل.</p>
+      </div>
+
+      <div class="love-card" style="border-right-color:var(--teal-primary)">
+        <div class="love-icon">💬</div>
+        <h4>٢. كلمات الامتنان اليومية الصريحة</h4>
+        <p>التعبير عن الشكر والثناء لجهود شريكك (مثل: «أنا ممتن لوجودكِ بجانبي»، «طعامكِ رائع اليوم يا حبيبتي»).</p>
+      </div>
+
+      <div class="love-card" style="border-right-color:var(--gold-primary)">
+        <div class="love-icon">📲</div>
+        <h4>٣. رسائل الاتصال في منتصف النهار</h4>
+        <p>رسالة عابرة ولطيفة وقت عملك «أفكر فيكِ»، «أشتاق لجلستنا بالمساء». إيماءة الاهتمام تبقي الاتصال متقداً طوال اليوم.</p>
+      </div>
+
+      <div class="love-card" style="border-right-color:var(--rose-deep)">
+        <div class="love-icon">🤝</div>
+        <h4>٤. مساعدة عملية تخفف العبء</h4>
+        <p>المشاركة بمهام المنزل كغسل الأطباق أو ترتيب ركن، تعبيراً عن حب ملموس وتقدير حقيقي لراحتها وتعبها.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>الفصل الثاني · ص ٨</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 2 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">بناء خارطة الحب وفهم اهتمامات الشريك</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">ما هي خارطة الحب الزوجية؟</h3>
+    <p class="body-p">خارطة الحب (Love Map) هي المساحة المعرفية في عقلك المخصصة لفهم تفاصيل حياة شريكك: مخاوفه الحالية، أهدافه هذا العام، أصدقاؤه المفضلون، والأشياء التي تجلب له السعادة والراحة. تحديث هذه الخارطة بالأسئلة والإنصات المستمر يبقي حبكما حياً ومرتبكاً بالواقع.</p>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">🧩</div>
+      <h4>تمرين تطبيقي للزوجين: تحديث خارطة الحب</h4>
+      <p>ليطرح كل منكما على الآخر سؤالاً واحداً واستمعا للإجابة باهتمام كامل (مثال: «ما هو أكبر تحدٍ يواجهك في عملك أو حياتك هذا الأسبوع؟»، «كيف أستطيع دعمك عاطفياً اليوم؟»):</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+
+    <div class="tip-box" style="margin-top:10px">
+      <div class="tip-ic">💡</div>
+      <div><strong>نصيحة خيركم:</strong> لا تفترض أنك تعرف كل شيء عن شريك حياتك. فالناس يتغيرون وتتطور اهتماماتهم ومخاوفهم مع مرور السنوات. الاستماع الدائم والاهتمام المفتوح بالأسئلة يحمي تقاربكما العاطفي والفكري.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>الفصل الثاني · ص ٩</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold-primary),var(--gold-deep))">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold-deep)">التجديد العاطفي ومواجهة الفتور</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold-primary);color:var(--gold-deep)">«مواجهة الفتور والبرود تتطلب قراراً شجاعاً بالكسر للروتين، وإدخال تجديد وألوان ومفاجآت لحياتكما المشتركة»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ كيفية حماية مشاعر المحبة من روتين الأبناء ومشاغل الحياة المهنية</div>
+        <div class="cco-item">✓ أفكار وتجارب وأنشطة ترفيهية متجددة لإعادة شغف الألفة الباكر</div>
+        <div class="cco-item">✓ وضع خطة «الموعد الأسبوعي المقدس» للزوجين وتنظيم الأوقات</div>
+        <div class="cco-item">✓ تمرين التخطيط لرحلة أو تجربة جديدة للزوجين هذا الشهر</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">حماية الحب من روتين الأبناء ومشاغل الحياة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">روتين الأبناء ودوامة المسؤوليات</h3>
+    <p class="body-p">حين يرزق الزوجان بأطفال، ينجرف الاهتمام تدريجياً بالكامل نحو رعايتهم ومستقبلهم الدراسي والمالي، وتتحول العلاقة الزوجية لمجرد «شراكة إدارية وتربوية» باردة. حماية الحب تتطلب إدراك أن علاقتكما الزوجية هي الأساس الذي يقوم عليه استقرار الأبناء أنفسهم.</p>
+
+    <div class="prio-list">
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--rose-primary)">
+        <div class="contain-icon">📅</div>
+        <div class="prio-content">
+          <h5>١. الموعد الأسبوعي المقدس للزوجين (Date Night)</h5>
+          <p>تخصيص ليلة أو خروج أسبوعي ثابت للزوجين فقط دون اصطحاب الأطفال، للحديث والمرح واستعادة روح الصداقة والاهتمام المشترك. هذا الموعد يجب حمايته من التأجيل.</p>
+          <span class="prio-tag pt-gold" style="background:var(--rose-light);color:var(--rose-deep)">سهرة خاصة</span>
+        </div>
+      </div>
+
+      <div class="prio-item" style="border-right-color:var(--teal-primary)">
+        <div class="contain-icon">✈️</div>
+        <div class="prio-content">
+          <h5>٢. السفر أو الرحلات القصيرة للزوجين</h5>
+          <p>السفر أو قضاء عطلة نهاية أسبوع بالفندق معاً لليلتين بمفردكما مرة أو مرتين بالعام. تغيير البيئة الجغرافية والتحلل من أعباء المنزل يطلق كيمياء الألفة والتجدد فوراً.</p>
+          <span class="prio-tag pt-teal">كسر الروتين</span>
+        </div>
+      </div>
+
+      <div class="prio-item prio-item-gold" style="border-right-color:var(--rose-primary)">
+        <div class="contain-icon">💭</div>
+        <div class="prio-content">
+          <h5>٣. مشاركة أحلام وأهداف المستقبل المشترك</h5>
+          <p>الجلوس للحديث عن المستقبل، والأماكن التي تودان زيارتها، والتخطيط لمشاريع الأسرة أو عمل خيري تقومان به معاً. مشاركة الأحلام تبني رابطاً وجدانياً لا يتأثر بالزمن.</p>
+          <span class="prio-tag pt-gold" style="background:var(--rose-light);color:var(--rose-deep)">أحلام مشتركة</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>الفصل الثالث · ص ١١</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · INFOGRAPHIC: TREE OF LOVE
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink" style="background:linear-gradient(135deg,var(--rose-deep),var(--rose-primary))">
+    <div class="info-badge info-badge-pink" style="background:rgba(255,255,255,.2)">شجرة المودة والرحمة</div>
+    <h2>شجرة المودة والرحمة الزوجية</h2>
+    <p>البناء العضوي لرعاية وتغذية مشاعر الحب العاطفي بعد الزواج لضمان حياة زوجية مزدهرة ومثمرة طوال العمر</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px">
+    <div class="tree-wrap">
+      <!-- Roots -->
+      <div class="tree-card tree-roots">
+        <div class="tree-header">🌱 الجذور: الأمان والاحترام</div>
+        <div class="tree-body">
+          <strong>الأساس:</strong> صون الكرامة، الالتزام بالعهود، والأمان المالي والنفسي.
+          <strong>الأثر:</strong> يمنح الشجرة الثبات أمام عواصف الخلافات وضغوط الحياة المتكررة.
+        </div>
+        <div class="tree-action ta-roots">🔒 الأساس: حفظ الكرامة والخصوصية</div>
+      </div>
+
+      <!-- Trunk -->
+      <div class="tree-card tree-trunk">
+        <div class="tree-header">🪵 الجذع: الاتصال والحوار</div>
+        <div class="tree-body">
+          <strong>الأساس:</strong> الاستماع الفعال، الشورى الزوجية، وحوار الدقائق العشر اليومي.
+          <strong>الأثر:</strong> يبني لغة تواصل وتفاهم فكري وعاطفي راقٍ يمنع الفجوات والصمت.
+        </div>
+        <div class="tree-action ta-trunk">🔒 الجذع: حوار الاهتمام اليومي</div>
+      </div>
+
+      <!-- Leaves -->
+      <div class="tree-card tree-leaves">
+        <div class="tree-header">🌸 الأوراق: لغات الحب واللمس</div>
+        <div class="tree-body">
+          <strong>الأساس:</strong> التعبير اللفظي بالمديح، العناق اليومي، اللمسات الحانية، والقبلة العفوية.
+          <strong>الأثر:</strong> يطلق هرمونات الأوكسيتوسين والألفة ويعيد دفء المشاعر والجاذبية للبيت.
+        </div>
+        <div class="tree-action ta-leaves">🔒 الأوراق: عناق الـ ٦ ثواني اليومي</div>
+      </div>
+
+      <!-- Fruits -->
+      <div class="tree-card tree-fruits">
+        <div class="tree-header">🍎 الثمار: التجديد والأنشطة</div>
+        <div class="tree-body">
+          <strong>الأساس:</strong> الموعد الأسبوعي المقدس، السفر المشترك، ومشاركة الأحلام والألعاب.
+          <strong>الأثر:</strong> يكسر رتابة الروتين، يجدد شغف البدايات، ويمنح الأسرة بهجة دائمة.
+        </div>
+        <div class="tree-action ta-fruits">🔒 الثمار: التخطيط لنشاط جديد شهرياً</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>الإنفوجرافيك · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · WORKBOOK: QUIZ
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep))">
+    <div class="wb-badge">📝 اختبار اتصال المودة والرحمة</div>
+    <h2>هل علاقتكما تنبض بالحب والاتصال العاطفي؟</h2>
+    <p>أجب عن الأسئلة بصدق تام لتقييم مدى تدفق مشاعر المودة والاهتمام والاتصال ببيتكما</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="quiz-grid">
+      <div class="quiz-q">
+        <div class="quiz-qt">١. التعبير اللفظي الصريح عن الحب والتقدير (مثل: أنا أحبكِ، شكراً لتعبكِ):</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q1"/> نقوله لبعضنا يومياً وبتلقائية</label>
+          <label><input type="radio" name="q1"/> نقوله فقط في المناسبات أو الخروج الخاص</label>
+          <label><input type="radio" name="q1"/> نادراً ما نقوله أو نسينا التعبير اللفظي</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٢. التلامس الجسدي العفوي (العناق عند الاستقبال، إمساك اليدين بالمنزل):</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q2"/> جزء أساسي وثابت من يومنا وتلقائي</label>
+          <label><input type="radio" name="q2"/> يحدث أحياناً وبشكل سريع أو وداعي عابر</label>
+          <label><input type="radio" name="q2"/> يقتصر فقط على العلاقة الحميمة ونادراً ما يحدث عفوياً</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٣. عندما تجلسان معاً في الصالة أو غرفة النوم بالمساء:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q3"/> نتحدث ونتبادل الضحكات باهتمام كامل وحضور</label>
+          <label><input type="radio" name="q3"/> يتصفح كل منا هاتفه صامتاً مع وجود تواصل بسيط</label>
+          <label><input type="radio" name="q3"/> نادراً ما نجلس معاً منشغلين بالعمل أو الأطفال بالكامل</label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="quiz-qt">٤. التجديد العاطفي والأنشطة والرحلات المشتركة للزوجين بمفردهما:</div>
+        <div class="quiz-ans">
+          <label><input type="radio" name="q4"/> نحرص على موعد أسبوعي أو رحلة سنوية بانتظام</label>
+          <label><input type="radio" name="q4"/> نقوم بها بشكل عشوائي وغير مخطط له مسبقاً</label>
+          <label><input type="radio" name="q4"/> لا توجد أنشطة أو خروج خاص للزوجين بمفردهما أبداً</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box" style="padding:14px 18px">
+      <h4>💡 قراءة النتائج وبدء التجديد</h4>
+      <p style="margin-bottom:0;font-size:12.5px;line-height:1.7">الأجوبة الأولى تدل على **اتصال عاطفي حي وقوي**، والثانية تدل على **وجود فتور يحتاج للانتباه والرعاية**، والثالثة تدل على **برود وجفاف عاطفي شديد** يتطلب التدخل الفوري وتطبيق تحدي الـ 30 يوماً بهمة وجدية كاملة.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>اختبار المودة · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK: RENEWAL PLAN
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep))">
+    <div class="wb-badge">📝 ورقة عمل خطة التجديد الرومانسي</div>
+    <h2>خطة التجديد العاطفي والأنشطة المشتركة</h2>
+    <p>اجلسا معاً في جلسة هادئة ومبتسمة لوضع القواعد والخطط الجديدة لتجديد كيمياء الحب والتقارب بينكما</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--rose-primary)">١</div>
+          <h4>الموعد الأسبوعي المقدس للزوجين (اليوم، الساعة، الأماكن المفضلة للخروج):</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--rose-primary)">٢</div>
+          <h4>تجربة جديدة أو سفرة قصيرة نود القيام بها معاً بمفردنا هذا الموسم لكسر الروتين:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--rose-primary)">٣</div>
+          <h4>لغات الحب والاهتمام اليومي البسيط التي يلتزم كل منا بتقديمها للآخر بانتظام:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>خطة التجديد · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · 30-DAY CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink" style="background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep))">
+    <div class="wb-badge">🗓 تحدي تجديد مشاعر الحب</div>
+    <h2>تحدي ٣٠ يوماً لإشعال وتجديد الحب</h2>
+    <p>تصرفات وسلوكيات عاطفية بسيطة للزوجين تعيد دفء مشاعر الألفة والجاذبية وأمان العشرة اليومية لبيتكما</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="love-challenge">
+      <div class="lcd-day lcd-sp"><div class="lcd-num">١</div><div class="lcd-text">عناق دافئ لـ ٦ ثواني بالصباح</div></div>
+      <div class="lcd-day"><div class="lcd-num">٢</div><div class="lcd-text">قول «أحبكِ» بصدق ونظرة تلاقي</div></div>
+      <div class="lcd-day"><div class="lcd-num">٣</div><div class="lcd-text">شرب كوب شاي متبادل بهدوء بالمنزل</div></div>
+      <div class="lcd-day lcd-sp2"><div class="lcd-num">٤</div><div class="lcd-text">رسالة شوق لطيفة في وسط النهار</div></div>
+      
+      <div class="lcd-day"><div class="lcd-num">٥</div><div class="lcd-text">جلسة تدليك للكتف أو الظهر مهدئة</div></div>
+      <div class="lcd-day lcd-sp"><div class="lcd-num">٦</div><div class="lcd-text">تقديم شوكولاتة أو وردة مفاجئة</div></div>
+      <div class="lcd-day"><div class="lcd-num">٧</div><div class="lcd-text">المشي معاً لـ ٢٠ دقيقة بالمساء</div></div>
+      <div class="lcd-day lcd-sp2"><div class="lcd-num">٨</div><div class="lcd-text">شكر الشريك على كفاحه أو عمله اليومي</div></div>
+
+      <div class="lcd-day lcd-sp2"><div class="lcd-num">٩</div><div class="lcd-text">تصفح صور ذكريات البدايات الزوجية</div></div>
+      <div class="lcd-day"><div class="lcd-num">١٠</div><div class="lcd-text">إعداد عشاء رومانسي مشترك بالمنزل</div></div>
+      <div class="lcd-day lcd-sp"><div class="lcd-num">١١</div><div class="lcd-text">تجنب العتاب واللوم تماماً طوال اليوم</div></div>
+      <div class="lcd-day"><div class="lcd-num">١٢</div><div class="lcd-text">إلغاء الهواتف وساعة اتصال بالعينين</div></div>
+
+      <div class="lcd-day"><div class="lcd-num">١٣</div><div class="lcd-text">كتابة ورقة ورقية بـ ٥ خصال تميزه</div></div>
+      <div class="lcd-day lcd-sp2"><div class="lcd-num">١٤</div><div class="lcd-text">مشاركة هواية أو رياضة يفضلها الآخر</div></div>
+      <div class="lcd-day lcd-sp"><div class="lcd-num">١٥</div><div class="lcd-text">الخروج لموعد Date Night هادئ للزوجين</div></div>
+      <div class="lcd-day"><div class="lcd-num">١٦</div><div class="lcd-text">صلاة قيام الليل جماعة والدعاء معاً</div></div>
+
+      <div class="lcd-day lcd-sp"><div class="lcd-num">١٧</div><div class="lcd-text">رسالة امتنان متبادلة بالواتساب دافئة</div></div>
+      <div class="lcd-day"><div class="lcd-num">١٨</div><div class="lcd-text">تنسيق فطور بالمنزل وإحضاره للسرير</div></div>
+      <div class="lcd-day lcd-sp2"><div class="lcd-num">١٩</div><div class="lcd-text">تحديث خارطة الحب بـ ٣ أسئلة مفتوحة</div></div>
+      <div class="lcd-day"><div class="lcd-num">٢٠</div><div class="lcd-text">تقديم هدية بسيطة ومبتكرة دون مناسبة</div></div>
+
+      <div class="lcd-day lcd-sp2"><div class="lcd-num">٢١</div><div class="lcd-text">المساعدة بمهام المنزل كغسل الأطباق</div></div>
+      <div class="lcd-day"><div class="lcd-num">٢٢</div><div class="lcd-text">مشاركة أحلام وأهداف عائلية للمستقبل</div></div>
+      <div class="lcd-day lcd-sp"><div class="lcd-num">٢٣</div><div class="lcd-text">التحدث بنبرة صوت ناعمة ومنخفضة بالمنزل</div></div>
+      <div class="lcd-day"><div class="lcd-num">٢٤</div><div class="lcd-text">تبادل المسامحة والاعتذار عن خلاف قديم</div></div>
+
+      <div class="lcd-day"><div class="lcd-num">٢٥</div><div class="lcd-text">الخروج لنزهة أو تجربة ترفيهية مبتكرة معاً</div></div>
+      <div class="lcd-day lcd-sp2"><div class="lcd-num">٢٦</div><div class="lcd-text">شراء عطر تحب أن تشمه على شريكك</div></div>
+      <div class="lcd-day lcd-sp"><div class="lcd-num">٢٧</div><div class="lcd-text">ترك رسالة حب صغيرة في حقيبته أو جيبه</div></div>
+      <div class="lcd-day"><div class="lcd-num">٢٨</div><div class="lcd-text">سؤال شريكك: «كيف تشعر بمحبتي لك اليوم؟»</div></div>
+    </div>
+    
+    <div class="love-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="lcd-day lcd-sp" style="padding:12px"><div class="rcd-num">٢٩</div><div class="rcd-text">جلسة حوار دافئة وطويلة لتلخيص رحلتكما والتعبير عن التقدير المشترك لسنواتكما</div></div>
+      <div class="lcd-day lcd-sp2" style="padding:12px;background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep));border-color:var(--rose-deep)"><div class="rcd-num" style="color:white">٣٠</div><div class="rcd-text" style="color:white">الاحتفال بنجاح تحدي الحب بتقديم باقة ورد وعقد ميثاق المودة الدائمة 🌹</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>تحدي ٣٠ يوماً · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--rose-primary),var(--rose-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>خلاصة رحلة المودة والمحبة المتجددة</h2>
+    <p>التزام عاطفي وسلوكي يومي واعٍ لرعاية وتجديد مشاعر الحب بين الشريكين</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--rose-primary)">
+        <div class="sc-i">💞</div>
+        <h4>عناية وتغذية يومية</h4>
+        <p>الالتزام بلغات الحب، المديح اللفظي الصريح، واللمسة الحانية وعناق التلاقي اليومي بوعي.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">🔄</div>
+        <h4>تجديد وكسر للروتين</h4>
+        <p>التخطيط للموعد الأسبوعي المقدس، السفر المشترك، وإدخال مفاجآت وألوان تبهج علاقتكما.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--gold)">
+        <div class="sc-i">🏡</div>
+        <h4>أمان وسكينة منزلية</h4>
+        <p>بناء اتصال وجداني حميم وقوي يمنع حدوث الجفاء والصمت ويضمن بيتاً مطمئناً وسعيداً.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--rose-primary)">
+      <div class="fq-mark" style="color:var(--rose-light)">"</div>
+      <p style="color:var(--rose-deep)">البيوت الناجحة والسعيدة لا يزورها الحب والانسجام صدفة، بل يقودها أزواج يملكون الوعي لرعاية وتغذية عواطفهم اليومية. تحابا وتجددا عاطفياً، تدم لكما مودة زواجكما وسلامه.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--rose-deep)">🤝 تعهد وميثاق المودة والمحبة الزوجية</h4>
+      <p>نتعهد نحن الزوجين أمام الله، بأن نرعى شجرة حبنا بالتغذية اليومية بالكلمة الطيبة واللمسة الحانية والاهتمام، ونحمي علاقتنا من روتين الأيام وضغوطها بالتجديد والمرح والأنشطة المشتركة، ونجعل بيتنا واحة أمان. وأسأل الله التوفيق. آمين.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج المحب / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | الحب بعد الزواج</span><span>الخلاصة والميثاق · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--rose-primary),var(--gold),var(--teal-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(224, 106, 131, 0.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(200, 151, 58, 0.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(29, 196, 179, 0.2)"></div>
+      <div class="ty-heart-main" style="color:var(--rose-primary);animation:none">💞</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--rose-deep)">جزاكم الله خيراً</h2>
+    <p class="ty-sub">على اهتمامكم ببناء بيوت تسودها المودة والرحمة وتطبيق المعاشرة بالمعروف وتجديد مشاعر الحب<br>محبتكم الواعية هي درع أمان عائلتكم واستثماركم الأبقى بالدنيا والآخرة</p>
+
+    <div class="ty-dua" style="background:var(--rose-light);border-right:4px solid var(--rose-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--rose-deep)">اللهم ألّف بين قلوبنا، وأصلح ذات بيننا، واهدنا سبل السلام، واجعل المودة والرحمة والسكن شعار بيوتنا، وبارك لنا في أزواجنا وذرياتنا. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في تقديم التوعية والإرشاد الأسري والزوجي المبني على الهدي النبوي الشريف والتطبيقات العلمية والنفسية المعاصرة لبناء بيوت مطمئنة ومستقرة ومزدهرة.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شارك هذا الدليل مع معارفك المتزوجين لتساهم في نشر ثقافة المودة والرحمة الأسرية</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل الحب بعد الزواج (إشعال المودة وتجديد العاطفة)» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

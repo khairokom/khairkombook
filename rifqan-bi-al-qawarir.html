@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>رفقاً بالقوارير – خيركم</title>
+<meta name="description" content="دليل الاحتواء العاطفي وفهم مشاعر الزوجة لبناء أسرة مطمئنة – من خيركم"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="book-v2.css"/>
+<style>
+/* ── CUSTOM THEME: RIFQAN BI AL-QAWARIR ── */
+:root {
+  --pink-primary: #E06A83;
+  --pink-deep:    #B83C55;
+  --pink-light:   #FFF0F2;
+  --rose-ultra:   #FFF6F7;
+  --teal-primary: #1DBFB0;
+  --teal-deep:    #0F9E91;
+  --teal-light:   #D4F5F2;
+  --gold:         #C8973A;
+  --gold-light:   #F7E9CC;
+  --gold-ultra:   #FDF7EC;
+  
+  --r-pink:       #E06A83;
+  --r-pink-d:     #B83C55;
+  --r-pink-lt:    #FFF0F2;
+}
+
+/* Page covers and backgrounds */
+.pink-bg { background: linear-gradient(160deg, var(--rose-ultra) 0%, white 60%); }
+.pink-label { background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep)); }
+.pink-num { color: rgba(224, 106, 131, 0.06); }
+.pink-quote { background: var(--pink-light); border-right: 4px solid var(--pink-primary); color: var(--pink-deep); }
+.pink-color { background: linear-gradient(135deg, var(--pink-light), white); border-bottom: 2px solid rgba(224, 106, 131, 0.2); }
+.badge-pink { background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep)); }
+
+/* Custom components */
+.nature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.nature-card { background: white; border-radius: var(--r-md); padding: 16px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--pink-primary); display: flex; flex-direction: column; gap: 8px; }
+.nature-icon { font-size: 26px; }
+.nature-card h4 { font-size: 14px; font-weight: 800; color: var(--dark); }
+.nature-card p { font-size: 12.5px; color: var(--g700); line-height: 1.7; }
+
+/* containment checklist */
+.contain-list { display: flex; flex-direction: column; gap: 10px; }
+.contain-item { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: var(--r-md); padding: 14px 18px; box-shadow: var(--sh-card); border-right: 4px solid var(--teal-light); }
+.contain-item-pink { border-right-color: var(--pink-primary); }
+.contain-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.contain-content h5 { font-size: 13.5px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.contain-content p { font-size: 12px; color: var(--g700); line-height: 1.7; }
+.contain-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; }
+.ct-pink { background: var(--pink-light); color: var(--pink-deep); }
+.ct-teal { background: var(--teal-light); color: var(--teal-deep); }
+
+/* wife map visual */
+.map-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0; }
+.map-card { border-radius: var(--r-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.map-sad { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1.5px solid #BFDBFE; }
+.map-angry { background: linear-gradient(135deg, #FFF5F5, #FEE2E2); border: 1.5px solid #FECACA; }
+.map-tired { background: linear-gradient(135deg, var(--gold-ultra), #FEF3CC); border: 1.5px solid #FCD34D; }
+.map-happy { background: linear-gradient(135deg, var(--teal-ul), #D4F5F2); border: 1.5px solid var(--teal-light); }
+.map-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: var(--dark); }
+.map-body { font-size: 11.5px; line-height: 1.6; color: var(--g700); }
+.map-body strong { display: block; color: var(--dark); margin-bottom: 2px; }
+.map-action { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 4px 8px; margin-top: 4px; display: inline-block; }
+.ma-sad { background: #BFDBFE; color: #1E3A8A; }
+.ma-angry { background: #FECACA; color: #991B1B; }
+.ma-tired { background: #FDE68A; color: #92400E; }
+.ma-happy { background: var(--teal-lt); color: var(--teal-d); }
+
+/* weekly checklist layout */
+.wb-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.wbc-cat { background: white; border-radius: var(--r-md); padding: 14px 16px; box-shadow: var(--sh-card); }
+.wbc-title { font-size: 12.5px; font-weight: 800; color: var(--pink-deep); border-bottom: 2px solid var(--pink-light); padding-bottom: 6px; margin-bottom: 8px; }
+.wbc-items { display: flex; flex-direction: column; gap: 6px; }
+.wbc-item { display: flex; align-items: center; gap: 8px; font-size: 11.5px; color: var(--g700); }
+.wbc-box { width: 14px; height: 14px; border: 1.5px solid var(--g200); border-radius: 3px; flex-shrink: 0; }
+
+/* cover specific changes */
+.cv-qawarir-badges { display: flex; gap: 8px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.cv-qb { padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; color: white; }
+.qb1 { background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep)); }
+.qb2 { background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep)); }
+.qb3 { background: linear-gradient(135deg, var(--gold), #A07000); }
+
+/* comparisons */
+.compare-box { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: center; }
+.comp-col { border-radius: var(--r-md); padding: 16px; }
+.comp-wrong { background: linear-gradient(135deg, #FFF5F5, #FEE2E2); border: 1px solid #FECACA; }
+.comp-right { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border: 1px solid #BBF7D0; }
+.comp-title { font-size: 13.5px; font-weight: 800; text-align: center; margin-bottom: 10px; }
+.comp-wrong .comp-title { color: #991B1B; }
+.comp-right .comp-title { color: #166534; }
+.comp-items { display: flex; flex-direction: column; gap: 6px; }
+.comp-item { font-size: 11.5px; line-height: 1.6; padding: 6px 10px; border-radius: 6px; }
+.comp-wrong .comp-item { background: rgba(239, 68, 68, 0.08); color: #991B1B; }
+.comp-right .comp-item { background: rgba(34, 197, 94, 0.08); color: #166534; }
+
+/* 30 day kindness grid */
+.kind-challenge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.kc-day { background: white; border-radius: var(--r-sm); padding: 8px; text-align: center; box-shadow: var(--sh-sm); border: 1px solid var(--g200); position: relative; }
+.kc-num { font-size: 16px; font-weight: 900; color: var(--pink-primary); font-family: var(--serif); line-height: 1; margin-bottom: 4px; }
+.kc-text { font-size: 9.5px; color: var(--g700); line-height: 1.4; font-weight: 600; }
+.kc-sp { background: var(--pink-light); border-color: var(--pink-primary); }
+.kc-sp2 { background: var(--teal-ul); border-color: var(--teal-primary); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 · COVER
+══════════════════════════════════════════ -->
+<div class="page cover-pg" style="background:linear-gradient(160deg,#FFF0F2 0%,#FFFFFF 45%,var(--gold-ul) 100%);position:relative">
+  <div class="cv-geo"></div>
+  <div class="cv-glow1" style="background:radial-gradient(circle,rgba(224,106,131,.12) 0%,transparent 70%)"></div>
+  <div class="cv-glow2"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(circle,rgba(29,191,176,.04) 0%,transparent 70%);border-radius:50%"></div>
+
+  <div class="cv-body">
+    <!-- top bar -->
+    <div class="cv-top">
+      <div class="cv-brand">
+        <span class="cv-brand-icon">💚</span>
+        <div>
+          <div class="cv-brand-ar">خيركم</div>
+          <div class="cv-brand-tag">خيركم لأهله · Khairokom</div>
+        </div>
+      </div>
+      <div class="cv-series" style="background:linear-gradient(135deg,var(--pink-primary),var(--pink-deep));color:white;border-color:rgba(224,106,131,.3)">سلسلة بناء المودة الأسرية</div>
+    </div>
+
+    <!-- hero icon -->
+    <div class="cv-hero">
+      <div class="cv-heart-frame">
+        <div class="cv-heart-outer" style="border-color:rgba(224,106,131,.2)"></div>
+        <div class="cv-heart-mid" style="border-color:rgba(200,151,58,.2)"></div>
+        <div style="font-size:68px;position:relative;z-index:2;animation:heartBeat 2s ease-in-out infinite;filter:drop-shadow(0 8px 24px rgba(224,106,131,.35))">🌸</div>
+      </div>
+      <div class="cv-coins">
+        <div class="cv-coin c1" style="font-size:22px">💗</div>
+        <div class="cv-coin c2" style="font-size:18px">💚</div>
+        <div class="cv-coin c3" style="font-size:20px">💛</div>
+        <div class="cv-coin c4" style="font-size:16px">🕊️</div>
+        <div class="cv-coin c5" style="font-size:18px">🌸</div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="cv-title-block">
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+      <h1 class="cv-main" style="font-size:58px;background:linear-gradient(135deg,var(--pink-deep) 0%,var(--pink-primary) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">رفقًا بالقوارير</h1>
+      <div style="font-family:var(--serif);font-size:26px;font-weight:700;color:var(--g700);margin:4px 0">الاحتواء العاطفي وفهم مشاعر الزوجة</div>
+      <div class="cv-rule" style="background:linear-gradient(90deg,var(--pink-primary),var(--gold))"></div>
+      <p class="cv-sub">دليل وتدريبات عملية للأزواج لتطوير مهارات<br>الاستماع والتحقق من المشاعر والرفق اليومي</p>
+      <div class="cv-orn">❦ ─────────────── ❦</div>
+    </div>
+
+    <!-- badges -->
+    <div class="cv-qawarir-badges">
+      <div class="cv-qb qb1">💖 فهم المشاعر</div>
+      <div class="cv-qb qb2">👂 الاحتواء العاطفي</div>
+      <div class="cv-qb qb3">🌱 الرفق والرحمة</div>
+    </div>
+
+    <div class="cv-divider"></div>
+
+    <div class="cv-bottom">
+      <div class="cv-author">تأليف وإعداد: فريق <strong>خيركم</strong></div>
+      <div class="cv-edition">دليل الزوج المربي · ٢٠٢٥</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 · INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page welcome-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--pink-primary),var(--pink-deep))">النهج النبوي في التعامل مع مشاعر الزوجة</div>
+  <div class="pg-body">
+    <div class="welcome-header">
+      <div class="welcome-icon">🌸</div>
+      <h2>لماذا رفقًا بالقوارير؟</h2>
+      <p>تأسيس المودة والرحمة في ضوء الهدي النبوي الشريف</p>
+    </div>
+
+    <div class="hadith-box">
+      <div class="hadith-text">«... وَاسْتَوْصُوا بِالنِّسَاءِ خَيْرًا، فَإِنَّهُنَّ خُلِقْنَ مِنْ ضِلَعٍ، وَإِنَّ أَعْوَجَ شَيْءٍ فِي الضِّلَعِ أَعْلَاهُ...»</div>
+      <div class="hadith-src">النبي محمد ﷺ · متفق عليه</div>
+    </div>
+
+    <div class="welcome-intro" style="border-right-color:var(--pink-primary)">
+      <p style="color:var(--pink-deep)">المرأة بقواريرها العاطفية رقيقة، تتأثر بأي هزة، وتشرق أسرتها حين تجد احتواءً دافئاً. هذا الدليل ليس ترفاً، بل هو تطبيق للوصية النبوية العظيمة «رفقاً بالقوارير» التي تلخص فن التعامل مع مشاعر المرأة وسرعة انكسارها إذا لم تُحاط بالحكمة والمحبة.</p>
+    </div>
+
+    <div class="three-col">
+      <div class="tc-card tc-green" style="background:var(--pink-light);border-color:rgba(224,106,131,.2)">
+        <div class="tc-icon">🧠</div>
+        <h4 style="color:var(--pink-deep)">فهم الفروق</h4>
+        <p>معرفة كيف تفكر الزوجة وتعبّر عن توترها يجنب الزوج سوء الفهم والاصطدام غير المبرر.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="tc-icon">👂</div>
+        <h4 style="color:var(--teal-d)">مهارة الإنصات</h4>
+        <p>الاستماع الحقيقي للمشاعر، وتأجيل تقديم النصائح والحلول، يمثل نصف الاحتواء العاطفي.</p>
+      </div>
+      <div class="tc-card tc-green" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="tc-icon">🏡</div>
+        <h4 style="color:var(--gold)">البيئة الآمنة</h4>
+        <p>توفير السكينة والطمأنينة للزوجة في أوقات تقلباتها الهرمونية والنفسية هو أمان للأسرة كلها.</p>
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <h4>💡 كيف تستخدم هذا الدليل التفاعلي؟</h4>
+      <div class="legend-grid">
+        <div class="leg-item"><div class="leg-icon leg-teal">🌱</div><span>اقرأ بوعي وانتباه</span></div>
+        <div class="leg-item"><div class="leg-icon leg-pink">✏️</div><span>أجب عن تدريبات التأمل</span></div>
+        <div class="leg-item"><div class="leg-icon leg-gold">🗓</div><span>التزم بتحدي الـ 30 يوماً</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>النهج النبوي · ص ٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 · TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="page toc-pg">
+  <div class="pg-top-bar pink-bar" style="background:linear-gradient(135deg,var(--pink-primary),var(--pink-deep))">فهرس المحتويات</div>
+  <div class="pg-body">
+    <div class="toc-title">
+      <h2>محتوى رحلة الرفق والاحتواء</h2>
+      <p>دليل مفصل لبناء وعي زوجي جديد وفهم عميق للزوجة</p>
+    </div>
+
+    <div class="toc-sections">
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--pink-primary)"></span>تمهيد ومقدمة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">النهج النبوي في التعامل مع مشاعر الزوجة</span><span class="te-dots"></span><span class="te-pg">٢</span></div>
+          <div class="toc-entry"><span class="te-name">أهمية الاحتواء العاطفي وسرعة الكسر</span><span class="te-dots"></span><span class="te-pg">٤</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--pink-primary)"></span>الفصل الأول: الطبيعة العاطفية للمرأة</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--pink-primary)">الفصل ١</span><span class="te-name">الفرق السيكولوجي بين تفكير الرجل والمرأة</span><span class="te-dots"></span><span class="te-pg">٥</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--pink-primary)">الفصل ١</span><span class="te-name">كيف تعبر المرأة عن توترها وضيقها؟</span><span class="te-dots"></span><span class="te-pg">٦</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--pink-primary)">الفصل ١</span><span class="te-name">الاحتياجات العاطفية الأساسية للزوجة</span><span class="te-dots"></span><span class="te-pg">٧</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--teal)"></span>الفصل الثاني: مهارات الاستماع والتحقق</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">الاستماع العاطفي مقابل تقديم الحلول</span><span class="te-dots"></span><span class="te-pg">٨</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">التحقق من المشاعر (Validation): السحر الضائع</span><span class="te-dots"></span><span class="te-pg">٩</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--teal)">الفصل ٢</span><span class="te-name">عبارات الاحتواء ونزع فتيل التوتر</span><span class="te-dots"></span><span class="te-pg">١٠</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--gold)"></span>الفصل الثالث: إدارة التقلبات الهرمونية والأزمات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">فهم أثر الدورة الشهرية والحمل والنفاس</span><span class="te-dots"></span><span class="te-pg">١١</span></div>
+          <div class="toc-entry"><span class="te-ch" style="background:var(--gold)">الفصل ٣</span><span class="te-name">خطة المساندة العملية للزوجة في أوقات التعب</span><span class="te-dots"></span><span class="te-pg">١٢</span></div>
+        </div>
+      </div>
+
+      <div class="toc-section">
+        <div class="toc-sec-title"><span class="toc-dot" style="background:var(--pink-deep)"></span>التمارين والتطبيقات</div>
+        <div class="toc-entries">
+          <div class="toc-entry"><span class="te-name">إنفوجرافيك: خارطة مشاعر الزوجة</span><span class="te-dots"></span><span class="te-pg">١٣</span></div>
+          <div class="toc-entry"><span class="te-name">أوراق العمل اليومية للزوج</span><span class="te-dots"></span><span class="te-pg">١٤</span></div>
+          <div class="toc-entry"><span class="te-name">ورقة التأمل الأسبوعية ومراجعة الأثر</span><span class="te-dots"></span><span class="te-pg">١٥</span></div>
+          <div class="toc-entry"><span class="te-name">تحدي الرفق والاحتواء (30 يوماً)</span><span class="te-dots"></span><span class="te-pg">١٦</span></div>
+          <div class="toc-entry"><span class="te-name">الخلاصة وميثاق الرفق اليومي</span><span class="te-dots"></span><span class="te-pg">١٧</span></div>
+          <div class="toc-entry"><span class="te-name">خاتمة ودعاء السكينة</span><span class="te-dots"></span><span class="te-pg">١٨</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الفهرس · ص ٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 · INTRODUCTION TO CONTAINMENT
+══════════════════════════════════════════ -->
+<div class="page intro-pg">
+  <div class="intro-sidebar" style="background:linear-gradient(180deg,var(--pink-primary),var(--gold),var(--teal))"></div>
+  <div class="pg-body intro-body">
+    <div class="intro-eyebrow" style="background:var(--pink-primary)">المقدمة</div>
+    <h2 class="intro-h2">أهمية الاحتواء العاطفي للزوجة</h2>
+
+    <div class="intro-quote-big" style="border-color:rgba(224,106,131,.2)">
+      <div class="iqb-mark" style="color:var(--pink-light)">"</div>
+      <p style="color:var(--pink-deep)">إن المرأة في أغلب الأحيان لا تبحث عن رجل يحلّ مشاكلها المالية أو يقدم لها استشارات منطقية فحسب، بل تبحث قبل كل شيء عن صدر يتسع لبوحها، وقلب يفهم نبرة صوتها، وعقل لا يحاكم مشاعرها.</p>
+    </div>
+
+    <p class="intro-para">الاحتواء العاطفي هو قدرة الزوج على استيعاب مشاعر زوجته السلبية — من حزن، أو غضب، أو قلق — دون أن يقابلها بالهجوم أو اللوم أو الهروب. وحين تشعر الزوجة بهذا الأمان، فإنها تفرغ توترها وتعود سريعاً إلى هدوئها وابتسامتها المعتادة.</p>
+
+    <div class="intro-stats-row">
+      <div class="isr-card isr-pink" style="background:var(--pink-light);border-color:rgba(224,106,131,.2)">
+        <div class="isr-num" style="color:var(--pink-deep)">الرفق</div>
+        <div class="isr-txt">ينزع فتيل التراكمات النفسية ويحمي الزواج من الجفاف الصامت.</div>
+      </div>
+      <div class="isr-card isr-gold" style="background:var(--gold-ul);border-color:var(--gold-light)">
+        <div class="isr-num" style="color:var(--gold)">الأمان</div>
+        <div class="isr-txt">هو المطلب الأساسي للمرأة لكي تبدع في الاهتمام ببيتها وأولادها.</div>
+      </div>
+      <div class="isr-card isr-teal" style="background:var(--teal-ul);border-color:var(--teal-light)">
+        <div class="isr-num" style="color:var(--teal-d)">الصحة</div>
+        <div class="isr-txt">الاحتواء يقلل من التوتر وضغط الدم والاضطرابات الجسدية للزوجين.</div>
+      </div>
+    </div>
+
+    <p class="intro-para">أولى الناس بالرفق وحسن الاستماع في حياتك هي زوجتك. هذا الدليل هو بوابتك العملية للتعرف على أسرار النفسية والروحية لـ "القوارير" وكيف تحميها بوعيك ومحبتك لتجعل بيتك سكنًا حقيقيًا.</p>
+
+    <div class="intro-promise" style="border-right-color:var(--pink-primary)">
+      <div class="ip-icon">🕊️</div>
+      <p style="color:var(--pink-deep)">وعد خيركم: عندما تبدأ بفهم أبعاد مشاعر زوجتك وتتوقف عن التبرير أو محاولة تغيير مشاعرها وتكتفي باحتوائها، ستشهد تحولاً مدهشاً في دفء بيتك ولطف شريكتك.</p>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>المقدمة · ص ٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 · CHAPTER 1 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg pink-bg">
+  <div class="ch-cover-num pink-num">١</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label pink-label">الفصل الأول</div>
+    <h2 class="ch-cover-title" style="color:var(--pink-deep)">الطبيعة العاطفية للمرأة</h2>
+    <p class="ch-cover-quote pink-quote">«فهم طبيعة شريكك هو النصف الأول من احتوائه ومحبته»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ الفروق السيكولوجية الأساسية بين تفكير الزوجين</div>
+        <div class="cco-item">✓ كيف تعبر المرأة عن الضغط النفسي والتوتر</div>
+        <div class="cco-item">✓ الاحتياجات العاطفية العميقة الخمس للزوجة</div>
+        <div class="cco-item">✓ تمرين عملي لفك شفرة لغة التواصل مع زوجتك</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 · CHAPTER 1 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header pink-color">
+    <span class="ch-badge badge-pink">الفصل الأول</span>
+    <span class="ch-title-sm">الفروق السيكولوجية والتعبير عن التوتر</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">الفرق السيكولوجي في التفكير والتعبير</h3>
+    <p class="body-p">تختلف المرأة في طريقة تعبيرها وسلوكها تحت الضغط النفسي مقارنة بالرجل. بينما يميل الرجل إلى الصمت أو العزلة لحل مشاكله (الكهف)، تحتاج المرأة إلى التعبير والحديث لتخفيف توترها العاطفي.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">🧠 طبيعة الرجل</div>
+        <div class="comp-items">
+          <div class="comp-item">يركز على النتائج والحلول العملية المباشرة</div>
+          <div class="comp-item">ينسحب للداخل ويفضل الصمت والوحدة لحل المشكلات</div>
+          <div class="comp-item">يرى الكلام وسيلة لنقل المعلومات والحقائق فقط</div>
+        </div>
+      </div>
+      <div class="comp-divider">⚡</div>
+      <div class="comp-col comp-right" style="background:var(--pink-light);border-color:rgba(224,106,131,.2)">
+        <div class="comp-title" style="color:var(--pink-deep)">🌸 طبيعة المرأة (الزوجة)</div>
+        <div class="comp-items">
+          <div class="comp-item" style="background:white;color:var(--pink-deep)">تركز على المشاعر والتفاصيل والعلاقات الحميمية</div>
+          <div class="comp-item" style="background:white;color:var(--pink-deep)">تحتاج للكلام ومشاركة المشاعر لترتاح نفسياً</div>
+          <div class="comp-item" style="background:white;color:var(--pink-deep)">ترى الكلام وسيلة لبناء الاتصال والألفة والاهتمام</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">كيف تعبر المرأة عن توترها؟</h3>
+    <p class="body-p">حين تتوتر الزوجة، قد تقول عبارات مبالغاً فيها أو تبدو غاضبة من أشياء بسيطة، مثل: «أنت لا تساعدني أبداً» أو «أشعر أن لا أحد يهتم بي». هذه العبارات لا تمثل حقائق حرفية، بل تعبيرات مجازية عن حاجتها الملحة للأمان والدعم والتقدير.</p>
+
+    <div class="callout teal-callout" style="background:var(--rose-ultra);border-color:rgba(224,106,131,.2)">
+      <div class="callout-ic">📢</div>
+      <div class="callout-txt" style="color:var(--pink-deep)"><strong>قاعدة الفهم:</strong> لا تجادل زوجتك في صحة العبارات المبالغ فيها أثناء توترها، بل استمع للمشاعر العميقة التي وراء الكلمات. هي تبحث عن الطمأنينة لا عن إثباتات منطقية.</div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">✏️</div>
+      <h4>تأمل ذاتي للزوج: فك الشفرة العاطفية</h4>
+      <p>ما هي العبارة الأكثر تكراراً التي تقولها زوجتك حين تكون متوترة؟ وما هي الحاجة الحقيقية التي قد تختبئ خلفها؟</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الفصل الأول · ص ٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 · CHAPTER 1 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header pink-color">
+    <span class="ch-badge badge-pink">الفصل الأول</span>
+    <span class="ch-title-sm">الاحتياجات العاطفية الخمس للزوجة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">أعمدة الاحتياج العاطفي للمرأة</h3>
+    <p class="body-p">توجد خمسة احتياجات عاطفية أساسية يجب على كل زوج إشباعها بانتظام لضمان شعور زوجته بالرضا والأمان التام داخل العلاقة:</p>
+
+    <div class="nature-grid">
+      <div class="nature-card" style="border-right-color:var(--pink-primary)">
+        <div class="nature-icon">🛡️</div>
+        <h4>١. الطمأنينة والأمان النفسي</h4>
+        <p>أن تشعر بأن وجودها في حياتك ثابت، وأنه لا تهديد لكرامتها أو بيتها، وتثق بمحبتك لها مهما تغيرت الظروف.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--teal-primary)">
+        <div class="nature-icon">👂</div>
+        <h4>٢. الاستماع والاهتمام بالتفاصيل</h4>
+        <p>حاجتها العميقة لأن تشعر بأن ما تقوله وتفكر به مهم لك، وأنك تخصص وقتاً للإنصات لأحاديثها العادية والعميقة.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--gold)">
+        <div class="nature-icon">💖</div>
+        <h4>٣. القبول الكامل وغير المشروط</h4>
+        <p>أن تُقبل بمحاسنها وعيوبها وتقلباتها المزاجية، دون مقارنات مستمرة بأخريات أو رغبة دائمة في تغيير طبيعتها.</p>
+      </div>
+
+      <div class="nature-card" style="border-right-color:var(--pink-deep)">
+        <div class="nature-icon">🤝</div>
+        <h4>٤. الدعم والمساندة العملية</h4>
+        <p>استشعارها بأنك شريك حقيقي يشاركها المسؤولية، ويساعدها في أعمال البيت وتربية الأبناء وخاصة في أوقات مرضها.</p>
+      </div>
+    </div>
+
+    <div class="nature-card" style="grid-column:1/-1;border-right-color:var(--pink-primary);margin-bottom:12px">
+      <div class="nature-icon" style="font-size:24px">🗣️</div>
+      <h4 style="font-size:13.5px">٥. المديح والتقدير اللفظي المستمر</h4>
+      <p style="font-size:12px">المرأة تزهر بكلمة إعجاب وتقدير حنونة لجهودها وجمالها وتفانيها في رعايتكم. الكلمة الطيبة هي وقود طاقتها اليومي.</p>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-ic">💡</div>
+      <div><strong>نصيحة خيركم الذهبية:</strong> إهمال هذه الاحتياجات العاطفية هو السبب الحقيقي لظهور أعراض النكد أو التذمر المستمر من الزوجة. الإشباع اليومي يمنحك بيتاً هادئاً ومستقراً.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الفصل الأول · ص ٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 · CHAPTER 2 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch1-bg">
+  <div class="ch-cover-num" style="color:rgba(29,191,176,.06)">٢</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--teal-primary),var(--teal-deep))">الفصل الثاني</div>
+    <h2 class="ch-cover-title" style="color:var(--teal-deep)">مهارات الاستماع والاحتواء</h2>
+    <p class="ch-cover-quote" style="background:var(--teal-ul);border-right-color:var(--teal-primary);color:var(--teal-d)">«الاستماع بقلبك أهم بكثير من الاستماع بأذنك وعقلك»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ٢٠ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ الفرق الحاسم بين الاستماع العاطفي وحل المشكلات البارد</div>
+        <div class="cco-item">✓ مهارة التحقق من مشاعر الزوجة (Validation) وكيفية تطبيقها</div>
+        <div class="cco-item">✓ عبارات سحرية لامتصاص غضب وضيق زوجتك في ثوانٍ</div>
+        <div class="cco-item">✓ تمرين الصمت والاتصال بالعينين لمدة ١٠ دقائق</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 · CHAPTER 2 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">الاستماع العاطفي والتحقق من المشاعر</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">فخ تقديم الحلول الباردة</h3>
+    <p class="body-p">يقع أغلب الرجال في فخ تقديم الحلول المنطقية الفورية لزوجاتهم حين يشتكين من مشكلة ما. هذا يجعلهن يشعرن بالإحباط لأن الزوج لم يشعر بحجم ألمهن أو تعبهن، بل يريد إغلاق الحديث سريعاً.</p>
+
+    <div class="callout teal-callout">
+      <div class="callout-ic">🎯</div>
+      <div class="callout-txt"><strong>الإنصات العاطفي:</strong> هو الاستماع لزوجتك بتركيز كامل، وإظهار التضامن العاطفي والقبول لمشاعرها، دون محاولة تصحيحها أو لومها. هدفك الأول هو أن تشعر أنها مسموعة ومقدرة، وليس تقديم اقتراحات للحل.</div>
+    </div>
+
+    <h3 class="section-title">مهارة التحقق من المشاعر (Validation)</h3>
+    <p class="body-p">هي الاعتراف بحق زوجتك في الشعور بما تشعر به، حتى وإن بدا لك غير منطقي أو مبالغاً فيه. إن قبولك لمشاعرها ومشاركتها الوجدان هو بلسم عاطفي قوي يزيل الحواجز بينكما.</p>
+
+    <div class="compare-box">
+      <div class="comp-col comp-wrong">
+        <div class="comp-title">❌ ردود تقتل الاحتواء</div>
+        <div class="comp-items">
+          <div class="comp-item">«الأمر لا يستحق كل هذا البكاء والغضب»</div>
+          <div class="comp-item">«أنت تكبرين الأمور كعادتك»</div>
+          <div class="comp-item">«الحل بسيط، فقط افعلي كذا وانتهى»</div>
+          <div class="comp-item">«أنت حساسة وتفهمين الأشياء خطأ»</div>
+        </div>
+      </div>
+      <div class="comp-divider">↔</div>
+      <div class="comp-col comp-right">
+        <div class="comp-title" style="color:var(--teal-d)">✅ ردود تحتوى عاطفياً</div>
+        <div class="comp-items">
+          <div class="comp-item" style="color:var(--teal-d)">«أنا معك وأشعر بمدى صعوبة الأمر عليك»</div>
+          <div class="comp-item" style="color:var(--teal-d)">«من حقك تماماً أن تحزني أو تقلقي»</div>
+          <div class="comp-item" style="color:var(--teal-d)">«أنا أسمعك بكل جوارحي، احكي لي»</div>
+          <div class="comp-item" style="color:var(--teal-d)">«أنا آسف لأنك تمرين بهذا الشعور الصعب»</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="rfl-icon">🧩</div>
+      <h4>تمرين تطبيقي للزوج:</h4>
+      <p>تخيل أن زوجتك عادت متعبة وتقول: «أنا مرهقة جداً ولا أستطيع تحمل ضغوط الأطفال اليوم». اكتب كيف ستجيبها بطريقة تحتوى مشاعرها بدلاً من توجيه اللوم لها أو تقديم حل بارد:</p>
+      <div class="write-lines"><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الفصل الثاني · ص ٩</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 10 · CHAPTER 2 CONTENT B
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch1-color">
+    <span class="ch-badge">الفصل الثاني</span>
+    <span class="ch-title-sm">عبارات ونبرات الاحتواء العملي</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">فن لغة الجسد ونبرة الصوت في الاحتواء</h3>
+    <p class="body-p">يمثل اللفظ ٢٠٪ فقط من رسالة الاحتواء، بينما تمثل نبرة صوتك الهادئة ولغة جسدك المتقبلة ٨٠٪ من الرسالة. الزوج الحكيم يستخدم جسده قبل لسانه لاحتواء قوارير زوجته.</p>
+
+    <div class="science-box" style="background:var(--rose-ultra);border-color:rgba(224,106,131,.2)">
+      <div class="sb-icon">🌸</div>
+      <div class="sb-content">
+        <h4 style="color:var(--pink-deep)">اللمسة الحانية وتنزيل هرمونات القلق</h4>
+        <p style="color:var(--pink-deep)">تثبت الأبحاث النفسية أن مجرد إمساك يد الزوجة المتوترة والربت على كتفها بحنان، أو عناقها لدقائق دون حديث، يحفز فوراً إفراز هرمون الأوكسيتوسين الذي يهدئ الجهاز العصبي وينزع فتيل الغضب الداخلي في ثوانٍ.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">أربع خطوات ذهبية للاحتواء السريع</h3>
+
+    <div class="deposits-detailed">
+      <div class="dd-item" style="border-right-color:var(--pink-primary)">
+        <div class="dd-num" style="color:rgba(224,106,131,.2)">٠١</div>
+        <div class="dd-icon">🔇</div>
+        <div class="dd-content">
+          <h4>اصمت واستمع بتركيز</h4>
+          <p>أغلق أي مشتت، وانظر في عيني زوجتك باهتمام، ودعها تتكلم دون مقاطعة أو دفاع عن النفس، حتى تنتهي من شحنتها تماماً.</p>
+        </div>
+      </div>
+
+      <div class="dd-item" style="border-right-color:var(--teal-primary)">
+        <div class="dd-num" style="color:var(--teal-lt)">٠٢</div>
+        <div class="dd-icon">🫂</div>
+        <div class="dd-content">
+          <h4>أظهر التعاطف بجسدك ونبرتك</h4>
+          <p>انحنِ نحوها، خفض نبرة صوتك لتكون دافئة وناعمة، وتواصل بعينيك واقبل قلقها دون تذمر.</p>
+        </div>
+      </div>
+
+      <div class="dd-item" style="border-right-color:var(--gold)">
+        <div class="dd-num" style="color:var(--gold-light)">٠٣</div>
+        <div class="dd-icon">💬</div>
+        <div class="dd-content">
+          <h4>اعترف بمشاعرها ودعمها</h4>
+          <p>قل كلمات داعمة صريحة: «أشعر بمدى إرهاقك اليوم»، «تعبك مقدر جداً يا حبيبتي وأنا فخور بجهودك».</p>
+        </div>
+      </div>
+
+      <div class="dd-item" style="border-right-color:var(--pink-deep)">
+        <div class="dd-num" style="color:var(--pink-light)">٠٤</div>
+        <div class="dd-icon">🤝</div>
+        <div class="dd-content">
+          <h4>اعرض المساعدة والحل لاحقاً</h4>
+          <p>بعد أن تهدأ وترتاح بحديثها، اسألها بلطف: «كيف أستطيع مساعدتك الآن؟ هل تودين أن نفعل شيئاً معاً لتخفيف هذا التعب؟»</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الفصل الثاني · ص ١٠</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 11 · CHAPTER 3 COVER
+══════════════════════════════════════════ -->
+<div class="page ch-cover-pg ch2-bg">
+  <div class="ch-cover-num" style="color:rgba(200,151,58,.06)">٣</div>
+  <div class="ch-cover-content">
+    <div class="ch-cover-label" style="background:linear-gradient(135deg,var(--gold),#A07000)">الفصل الثالث</div>
+    <h2 class="ch-cover-title" style="color:var(--gold)">الاحتواء في أوقات التقلبات والشدائد</h2>
+    <p class="ch-cover-quote" style="background:var(--gold-ul);border-right-color:var(--gold);color:#7A5000">«الزوج الحقيقي هو الذي يظهر أمانه ولطفه حين تشتد العواصف وتقلبات الحياة المزاجية والبيولوجية»</p>
+    <div class="ch-cover-time">⏱ وقت القراءة: ١٥ دقيقة</div>
+    <div class="ch-cover-objectives">
+      <div class="cco-title">ستتعلم في هذا الفصل:</div>
+      <div class="cco-list">
+        <div class="cco-item">✓ فهم الطبيعة البيولوجية والدورة الشهرية وتأثيرها على مزاج الزوجة</div>
+        <div class="cco-item">✓ مهارات التعامل مع فترة الحمل واكتئاب ما بعد الولادة</div>
+        <div class="cco-item">✓ خطة المساندة والرفق اليومية للزوج لتقاسم المهام بيسر</div>
+        <div class="cco-item">✓ ورقة فحص ومتابعة لتهيئة المنزل الهادئ للمرأة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 12 · CHAPTER 3 CONTENT A
+══════════════════════════════════════════ -->
+<div class="page content-pg">
+  <div class="content-header ch2-color">
+    <span class="ch-badge ch2-badge">الفصل الثالث</span>
+    <span class="ch-title-sm">التقلبات الهرمونية ومساندة الزوجة</span>
+  </div>
+  <div class="pg-body">
+    <h3 class="section-title">فهم الطبيعة البيولوجية للمرأة</h3>
+    <p class="body-p">تخضع المرأة لتقلبات هرمونية مستمرة طوال الشهر وطوال مراحل حياتها (الدورة الشهرية، الحمل، النفاس، الرضاعة). هذه التقلبات ليست خياراً للمرأة ولا عيباً فيها، بل هي طبيعة بيولوجية تفرض أثراً مباشراً على مزاجها ومستويات طاقتها الجسدية والنفسية.</p>
+
+    <div class="contain-list">
+      <div class="contain-item contain-item-pink">
+        <div class="contain-icon">🌸</div>
+        <div class="contain-content">
+          <h5>فترة ما قبل الدورة الشهرية (PMS)</h5>
+          <p>قد تعاني الزوجة في هذه الفترة من قلق وحزن بدون سبب واضح، وسرعة في الانفعال، وتعب شديد. الزوج الذكي يتجنب فتح المواضيع الحساسة والخلافية في هذا الأسبوع ويحاوطها بمزيد من التسامح والدلال العاطفي.</p>
+          <span class="contain-tag ct-pink">مساندة خاصة</span>
+        </div>
+      </div>
+
+      <div class="contain-item">
+        <div class="contain-icon">🤰</div>
+        <div class="contain-content">
+          <h5>مراحل الحمل وصعوباته</h5>
+          <p>تحمل المرأة في بطنها حياة جديدة مع كم هائل من تغير الهرمونات والإرهاق الجسدي. تحتاج هنا لزوج يطمئنها ويخفف عنها ويثني على صبرها وجمالها المتغير بكلمات تدعم ثقتها بنفسها.</p>
+          <span class="contain-tag ct-teal">اهتمام مضاعف</span>
+        </div>
+      </div>
+
+      <div class="contain-item contain-item-pink">
+        <div class="contain-icon">🍼</div>
+        <div class="contain-content">
+          <h5>اكتئاب ما بعد الولادة وسنين الرضاعة</h5>
+          <p>تتعرض الأم لنقص حاد ومفاجئ للهرمونات بعد الولادة مع قلة النوم وتعب المولود. دعم الزوج هنا بالاستيقاظ والمساعدة العملية وحفظ استقرارها النفسي يمنع حدوث اضطرابات نفسية حادة.</p>
+          <span class="contain-tag ct-pink">حماية عائلية</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-ic">⭐</div>
+      <div><strong>قاعدة الحكمة الزوجية:</strong> عندما تجد زوجتك غاضبة أو حزينة فجأة دون موقف يستدعي ذلك، اسأل نفسك فوراً عن حالتها الصحية أو أين هي من دورتها الشهرية، وتذكر وصية نبيك ﷺ «رفقاً بالقوارير» قبل أن تبدي أي رد فعل.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الفصل الثالث · ص ١٢</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 13 · INFOGRAPHIC: WIFE EMOTIONAL MAP
+══════════════════════════════════════════ -->
+<div class="page infographic-pg">
+  <div class="info-header info-header-pink">
+    <div class="info-badge info-badge-pink">خارطة مشاعر القوارير</div>
+    <h2>خارطة مشاعر الزوجة وكيفية احتوائها</h2>
+    <p>مرشدك البصري السريع للتعامل الذكي مع حالات زوجتك المزاجية المختلفة</p>
+  </div>
+
+  <div class="pg-body" style="padding-top:16px">
+    <div class="map-grid">
+      <!-- Sad -->
+      <div class="map-card map-sad">
+        <div class="map-header">😢 حزينة / منكسرة</div>
+        <div class="map-body">
+          <strong>الحالة:</strong> تلوذ بالصمت، أو تبكي وتشتكي من الوحدة والتعب وتغير معاملتك لها.
+          <strong>الحاجة:</strong> الحنان والاحتضان وكلمات التأكيد على حبك ومكانتها الكبيرة لديك.
+        </div>
+        <div class="map-action ma-sad">🔒 الرد: احضنها، قل «أنا معك ولن أتركك»</div>
+      </div>
+
+      <!-- Angry -->
+      <div class="map-card map-angry">
+        <div class="map-header">😡 غاضبة / متذمرة</div>
+        <div class="map-body">
+          <strong>الحالة:</strong> تنفعل سريعاً، ترفع صوتها وتلومك على قلة المساعدة أو نسيان وعودك.
+          <strong>الحاجة:</strong> الإنصات الهادئ دون مقاطعة أو دفاع، وتهدئة نبرتك تماماً لامتصاص غضبها.
+        </div>
+        <div class="map-action ma-angry">🔒 الرد: أصمت، قل «حقك علي، أنا أفهم ضيقك»</div>
+      </div>
+
+      <!-- Tired -->
+      <div class="map-card map-tired">
+        <div class="map-header">😫 متعبة / منهكة</div>
+        <div class="map-body">
+          <strong>الحالة:</strong> تبدو طاقة حركتها منخفضة، يغيب بيتها عن نظافته المعتادة ولا تطبخ طعاماً.
+          <strong>الحاجة:</strong> المساندة العملية، المساعدة المباشرة في المهام وإعفائها من أعباء اليوم لترتاح.
+        </div>
+        <div class="map-action ma-tired">🔒 الرد: ساعد بالمنزل، اطلب طعاماً جاهزاً</div>
+      </div>
+
+      <!-- Happy -->
+      <div class="map-card map-happy">
+        <div class="map-header">😊 سعيدة / مقبلة</div>
+        <div class="map-body">
+          <strong>الحالة:</strong> تبتسم، تتزين، ترغب في الكلام والتواصل والضحك ومشاركة يومها معك.
+          <strong>الحاجة:</strong> التفاعل الإيجابي والمرح والمشاركة بوعي وحضور عاطفي كامل وممتع.
+        </div>
+        <div class="map-action ma-happy">🔒 الرد: شاركها الحديث، امدح جمالها وبيتها</div>
+      </div>
+    </div>
+
+    <div class="hadith-box" style="margin-top:10px">
+      <div class="hadith-text">«أكملُ المؤمنين إيمانًا أحسنُهم خُلقًا، وخيارُكم خيارُكم لنسائهم»</div>
+      <div class="hadith-src">النبي محمد ﷺ · رواه الترمذي وصحّحه</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الإنفوجرافيك · ص ١٣</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 14 · WORKBOOK DAILY FOR HUSBAND
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink">
+    <div class="wb-badge">📝 ورقة عمل يومية للزوج</div>
+    <h2>تطبيق الاحتواء والرفق اليومي</h2>
+    <p>خصص دقائق في نهاية اليوم لتقييم ممارستك لمهارة الاحتواء والرفق مع زوجتك</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px">
+    <div class="wb-date-row">
+      <div class="wb-date-field">📅 التاريخ: <div class="wdf-line"></div></div>
+      <div class="wb-date-field">🌡️ مستوى رضا زوجتك اليوم: <div class="wdf-line"></div></div>
+    </div>
+
+    <div class="wb-check-grid" style="margin:12px 0">
+      <div class="wbc-cat">
+        <div class="wbc-title">🌱 الاستماع والتحقق</div>
+        <div class="wbc-items">
+          <div class="wbc-item"><div class="wbc-box"></div>استمعت لها ١٥ دقيقة دون مقاطعة</div>
+          <div class="wbc-item"><div class="wbc-box"></div>تجنبت الجدال أو فرض حل منطقي</div>
+          <div class="wbc-item"><div class="wbc-box"></div>أظهرت تعاطفاً مع شكواها أو تعبها</div>
+          <div class="wbc-item"><div class="wbc-box"></div>استخدمت نبرة صوت هادئة ومنخفضة</div>
+        </div>
+      </div>
+
+      <div class="wbc-cat">
+        <div class="wbc-title">💖 التقدير والرفق اللفظي</div>
+        <div class="wbc-items">
+          <div class="wbc-item"><div class="wbc-box"></div>مدحت مظهرها أو ترتيبها للمنزل</div>
+          <div class="wbc-item"><div class="wbc-box"></div>شكرتها بصدق على طعامها أو جهودها</div>
+          <div class="wbc-item"><div class="wbc-box"></div>أرسلت رسالة لطيفة في منتصف اليوم</div>
+          <div class="wbc-item"><div class="wbc-box"></div>عبرت لها عن حبك صراحةً «أحبك»</div>
+        </div>
+      </div>
+
+      <div class="wbc-cat" style="grid-column:1/3">
+        <div class="wbc-title">🤝 المساندة العينية والاحتواء وقت الأزمة</div>
+        <div class="wbc-items" style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <div class="wbc-item"><div class="wbc-box"></div>ساعدت في مهام المنزل أو رعاية الأبناء</div>
+          <div class="wbc-item"><div class="wbc-box"></div>بادرت بسؤالها عن تعبها وعرضت الراحة</div>
+          <div class="wbc-item"><div class="wbc-box"></div>احتضنتها عند بكائها أو حزنها ودعمتها</div>
+          <div class="wbc-item"><div class="wbc-box"></div>احترمت طبيعتها ومزاجها دون مقارنة</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--pink-primary)">١</div>
+          <h4>موقف استمعت فيه لزوجتك اليوم وكيف كان شعورها؟</h4>
+        </div>
+        <div class="write-area wa-md"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--pink-deep)">٢</div>
+          <h4>شيء فعلته اليوم لتخفيف العبء الجسدي أو النفسي عنها؟</h4>
+        </div>
+        <div class="write-area wa-md"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>ورقة عمل يومية · ص ١٤</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 15 · WEEKLY REFLECTION
+══════════════════════════════════════════ -->
+<div class="page workbook-pg">
+  <div class="wb-header wb-header-pink">
+    <div class="wb-badge">📝 ورقة التأمل الأسبوعية</div>
+    <h2>مراجعة الأثر وتقييم أسبوع الاحتواء</h2>
+    <p>تأمل أداءك مع زوجتك خلال الأسبوع الماضي لبناء وعي متجدد</p>
+  </div>
+  <div class="pg-body" style="padding-top:18px">
+    <div class="wb-sections">
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--pink-primary)">١</div>
+          <h4>ما هي أكثر المواقف التي تسببت في توتر زوجتك هذا الأسبوع؟ وكيف كان تعاملك معها؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--pink-primary)">٢</div>
+          <h4>هل نجحت في تطبيق "التحقق من مشاعرها" وتجنب فخ تقديم الحلول الباردة؟ اذكر مثالاً:</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+
+      <div class="wb-sec">
+        <div class="wbs-header">
+          <div class="wbs-num" style="background:var(--pink-primary)">٣</div>
+          <h4>كيف ترى أثر الرفق والكلمة الطيبة والتقدير على مزاجها العام وتعاملها معك في المقابل؟</h4>
+        </div>
+        <div class="write-area wa-lg"></div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:10px">
+      <div class="tip-ic">🌱</div>
+      <div><strong>ملاحظة هامة:</strong> التغير العاطفي يحتاج لبعض الوقت. استمر في تقديم الرفق والاحتواء حتى لو لم تجد رد فعل فوري، فالقوارير تلين وتتفتح بالحب والاتساق الطويل.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>مراجعة الأسبوع · ص ١٥</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 16 · 30-DAY KINDNESS CHALLENGE
+══════════════════════════════════════════ -->
+<div class="page challenge-pg">
+  <div class="wb-header wb-header-pink">
+    <div class="wb-badge">🗓 تحدي الرفق والاحتواء</div>
+    <h2>تحدي ٣٠ يوماً لتكون خيراً لأهلك</h2>
+    <p>تصرف يومي بسيط يغير جو أسرتك ويرسخ المودة والرحمة في قلوبكما</p>
+  </div>
+  <div class="pg-body" style="padding-top:16px;gap:12px">
+    <div class="kind-challenge">
+      <div class="kc-day kc-sp"><div class="kc-num">١</div><div class="kc-text">قل «أحبك» بصدق في الصباح</div></div>
+      <div class="kc-day"><div class="kc-num">٢</div><div class="kc-text">اسألها: كيف يومكِ دون مقاطعة</div></div>
+      <div class="kc-day"><div class="kc-num">٣</div><div class="kc-text">أرسل رسالة تقدير وقت عملك</div></div>
+      <div class="kc-day kc-sp2"><div class="kc-num">٤</div><div class="kc-text">امدح طعامها بصدق وامتنان</div></div>
+      
+      <div class="kc-day"><div class="kc-num">٥</div><div class="kc-text">ساعد في غسيل الأطباق أو مهمة</div></div>
+      <div class="kc-day kc-sp"><div class="kc-num">٦</div><div class="kc-text">هدية بسيطة تحبها دون مناسبة</div></div>
+      <div class="kc-day"><div class="kc-num">٧</div><div class="kc-text">أمسك يدها بلطف أثناء المشي</div></div>
+      <div class="kc-day kc-sp2"><div class="kc-num">٨</div><div class="kc-text">تجنب لومها على أي خطأ بالبيت</div></div>
+
+      <div class="kc-day kc-sp2"><div class="kc-num">٩</div><div class="kc-text">امدح زينتها ومظهرها بحرارة</div></div>
+      <div class="kc-day"><div class="kc-num">١٠</div><div class="kc-text">تحدث عنها بإيجاب وفخر أمام أهلك</div></div>
+      <div class="kc-day kc-sp"><div class="kc-num">١١</div><div class="kc-text">اصنع لها كوب قهوة/شاي بنفسك</div></div>
+      <div class="kc-day"><div class="kc-num">١٢</div><div class="kc-text">اعفها من مسؤولية واطلب عشاء جاهزاً</div></div>
+
+      <div class="kc-day"><div class="kc-num">١٣</div><div class="kc-text">دعها تنام ساعة إضافية وراعِ الأولاد</div></div>
+      <div class="kc-day kc-sp2"><div class="kc-num">١٤</div><div class="kc-text">اعتذر عن خطأ ارتكبته بلطف</div></div>
+      <div class="kc-day kc-sp"><div class="kc-num">١٥</div><div class="kc-text">سهرة خاصة خالية من المشتتات والعمل</div></div>
+      <div class="kc-day"><div class="kc-num">١٦</div><div class="kc-text">اسألها عن أحلامها واستمع لدعمها</div></div>
+
+      <div class="kc-day kc-sp"><div class="kc-num">١٧</div><div class="kc-text">ربّت على كتفها بحنان عند تعبها</div></div>
+      <div class="kc-day"><div class="kc-num">١٨</div><div class="kc-text">اكتب لها رسالة ورقية قصيرة دافئة</div></div>
+      <div class="kc-day kc-sp2"><div class="kc-num">١٩</div><div class="kc-text">تجنب فتح جدال حين تبدو متوترة</div></div>
+      <div class="kc-day"><div class="kc-num">٢٠</div><div class="kc-text">احترم صمتها وأعلمها بوجودك جانبها</div></div>
+
+      <div class="kc-day kc-sp2"><div class="kc-num">٢١</div><div class="kc-text">ساعد في ترتيب خزانة أو ركن معها</div></div>
+      <div class="kc-day"><div class="kc-num">٢٢</div><div class="kc-text">اجلس معها ودعها تتكلم كيفما تشاء</div></div>
+      <div class="kc-day kc-sp"><div class="kc-num">٢٣</div><div class="kc-text">امدح صبرها ورعايتها للأولاد بصوت مسموع</div></div>
+      <div class="kc-day"><div class="kc-num">٢٤</div><div class="kc-text">قبل رأسها شاكراً وجودها في حياتك</div></div>
+
+      <div class="kc-day"><div class="kc-num">٢٥</div><div class="kc-text">اتفق معها على خطة أسبوعية لراحتها</div></div>
+      <div class="kc-day kc-sp2"><div class="kc-num">٢٦</div><div class="kc-text">اشترِ لها نوع شوكولاتة أو حلوى تفضلها</div></div>
+      <div class="kc-day kc-sp"><div class="kc-num">٢٧</div><div class="kc-text">تحدث عن ذكرياتكما الجميلة معاً</div></div>
+      <div class="kc-day"><div class="kc-num">٢٨</div><div class="kc-text">اسألها: «هل تشعرين بأمان وحب معي؟»</div></div>
+    </div>
+    
+    <div class="kind-challenge" style="grid-template-columns:1fr 1fr;margin-top:4px">
+      <div class="kc-day kc-sp" style="padding:12px"><div class="kc-num">٢٩</div><div class="kc-text">اكتب في ورقة ١٠ أشياء تميزها وتشكرها عليها</div></div>
+      <div class="kc-day kc-sp2" style="padding:12px;background:linear-gradient(135deg,var(--pink-primary),var(--pink-deep));border-color:var(--pink-deep)"><div class="kc-num" style="color:white">٣٠</div><div class="kc-text" style="color:white">احتفلا بنجاح رحلة الاحتواء وقدم لها وردة 🌹</div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>تحدي ٣٠ يوماً · ص ١٦</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 17 · SUMMARY & COMMITMENT
+══════════════════════════════════════════ -->
+<div class="page summary-pg">
+  <div class="sum-header" style="background:linear-gradient(135deg,var(--pink-primary),var(--pink-deep));color:white">
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+    <h2>ميثاق الرفق والرحمة الزوجية</h2>
+    <p>عهد على بناء أسرة يسودها الهدوء والسكينة والاحتواء المتبادل</p>
+    <div class="sum-orn" style="color:white;opacity:.8">❦ ──────────── ❦</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="sum-cards">
+      <div class="sum-card" style="border-bottom-color:var(--pink-primary)">
+        <div class="sc-i">🌸</div>
+        <h4>استمع لتشعر وتفهم</h4>
+        <p>توقف عن إلقاء المواعظ أو لوم مشاعر زوجتك. استمع بقلب محب يدرك حجم العبء اليومي عليها.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--teal-primary)">
+        <div class="sc-i">🤝</div>
+        <h4>ساند بالقول والعمل</h4>
+        <p>المشاركة العملية في شؤون الحياة والمنزل هي إثبات الحب الصادق والرحمة النبوية بأهلك.</p>
+      </div>
+      <div class="sum-card" style="border-bottom-color:var(--gold)">
+        <div class="sc-i">🛡️</div>
+        <h4>كن حصن الطمأنينة</h4>
+        <p>لا تهدم أمانها وقت غضبها أو تقلبها. احتواؤك يزيل قلقها ويعيد السكن لبيتكما سريعاً.</p>
+      </div>
+    </div>
+
+    <div class="final-quote" style="border-right-color:var(--pink-primary)">
+      <div class="fq-mark" style="color:var(--pink-light)">"</div>
+      <p style="color:var(--pink-deep)">البيوت لا تُبنى بفرض السلطة والجدال العقيم، بل تلين بالكلمة الطيبة واللمسة الحانية وفهم الطبيعة العاطفية. رفقاً بالقوارير، تكن بيوتكم دور مودة ورحمة وسلام.</p>
+    </div>
+
+    <div class="commitment-pg">
+      <h4 style="color:var(--pink-deep)">🤝 تعهد وميثاق الرفق الزوجي</h4>
+      <p>أتعهد أنا الزوج أمام الله، بأن أكون خيراً لأهلي، وأن أراعي طبيعة زوجتي العاطفية والجسدية، وأبذل وسعي في استيعاب توترها بالرفق واللين، وأسمع لبوحها بوعي واحتواء، ولا أكسر قوارير مادتها النفسية بغلظة أو إهمال. وأسأل الله التوفيق للسكينة والمودة.</p>
+      <div class="cm-sigs">
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوج الباني / التاريخ</span></div>
+        <div class="cm-sig"><div class="cm-sig-line"></div><span>توقيع الزوجة الشريكة / التاريخ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span>خيركم | رفقاً بالقوارير</span><span>الخلاصة والميثاق · ص ١٧</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 18 · THANK YOU & CONCLUSION
+══════════════════════════════════════════ -->
+<div class="page thankyou-pg">
+  <div class="ty-top-stripe" style="background:linear-gradient(90deg,var(--pink-primary),var(--gold),var(--teal-primary))"></div>
+  <div class="ty-geo"></div>
+  <div class="ty-body">
+    <div class="ty-heart-anim">
+      <div class="ty-ring ty-r1" style="border-color:rgba(224,106,131,.3)"></div>
+      <div class="ty-ring ty-r2" style="border-color:rgba(200,151,58,.2)"></div>
+      <div class="ty-ring ty-r3" style="border-color:rgba(29,191,176,.2)"></div>
+      <div class="ty-heart-main" style="color:var(--pink-primary);animation:none">🌸</div>
+    </div>
+
+    <h2 class="ty-title" style="color:var(--pink-deep)">جزاك الله خيراً</h2>
+    <p class="ty-sub">على سعيك الصادق لتكون خير الناس لأهلك وتطبيق وصية نبيك ﷺ<br>بيتك هو مشروعك الأهم في الدنيا والآخرة</p>
+
+    <div class="ty-dua" style="background:var(--pink-light);border-right:4px solid var(--pink-primary)">
+      <div class="ty-dua-icon">🤲</div>
+      <p style="color:var(--pink-deep)">اللهم ارزقنا السكينة والمودة والرحمة في بيوتنا، واجعلنا لزوجاتنا كما تحب وترضى، وأعنا على حفظ أماناتنا والرفق بقواريرنا، واجمع قلوبنا على طاعتك. آمين.</p>
+    </div>
+
+    <div class="ty-divider-line"></div>
+
+    <div class="ty-brand-block">
+      <div class="ty-brand-logo-wrap">
+        <div class="ty-brand-icon">💚</div>
+        <div>
+          <div class="ty-brand-ar">خيركم</div>
+          <div class="ty-brand-en">Khairokom · خيركم لأهله</div>
+        </div>
+      </div>
+      <p class="ty-brand-desc">منصة خيركم متخصصة في نشر وتوعية الأسر المسلمة بفنون الإرشاد والعلاقات الزوجية المستندة للهدي النبوي الشريف والتطبيقات العلمية والنفسية المعاصرة لضمان زواج آمن ومستمر.</p>
+    </div>
+
+    <div class="ty-share">
+      <p>📲 شارك هذا الدليل مع أصدقائك المتزوجين لتساهم في نشر المودة والرفق</p>
+    </div>
+
+    <div class="ty-copyright">
+      <p>© ٢٠٢٥ خيركم | Khairokom — جميع الحقوق محفوظة</p>
+      <p>«دليل رفقاً بالقوارير» — مادة تثقيفية غير تجارية مصممة للنشر الأسري</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
