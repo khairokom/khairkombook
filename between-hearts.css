@@ -1729,6 +1729,254 @@ button {
 }
 
 /* ========================================================
+   RESPONSIVE MOBILE STYLES (Screen widths <= 768px)
+   ======================================================== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .top-nav {
+    position: static;
+    padding: 6px 0;
+  }
+  .nav-inner {
+    padding: 8px 16px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    gap: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .nav-print-btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  .hero-content {
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+  }
+  .hero-tagline {
+    font-size: 14px;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* 3D Box Scene sizing */
+  .box-3d-scene {
+    width: 260px;
+    height: 366px;
+  }
+  .box-front, .box-back {
+    width: 260px;
+    height: 366px;
+  }
+  .box-left, .box-right {
+    width: 60px;
+    height: 366px;
+    left: 100px;
+  }
+  .box-top, .box-bottom {
+    width: 260px;
+    height: 60px;
+    top: 153px;
+  }
+  .pkg-main-title {
+    font-size: 38px;
+  }
+  .pkg-logo-wrap {
+    margin-top: 15px;
+  }
+
+  /* Section layouts */
+  .section {
+    padding: 60px 16px;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .glass-panel {
+    padding: 20px 16px;
+  }
+
+  /* Packaging Design Grid */
+  .packaging-design-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Booklet Container */
+  .booklet-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .booklet-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .booklet-nav-btn {
+    white-space: nowrap;
+    padding: 10px 16px;
+    text-align: center;
+  }
+  .booklet-viewer {
+    padding: 20px;
+    min-height: auto;
+  }
+  .booklet-title {
+    font-size: 20px;
+  }
+  .booklet-body {
+    font-size: 13px;
+  }
+
+  /* Score Book Grid */
+  .scorebook-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .scorebook-sheet {
+    padding: 16px;
+  }
+  .scorebook-main-title {
+    font-size: 22px;
+  }
+  .scorebook-table th, .scorebook-table td {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  .scorebook-table td input {
+    width: 45px;
+    font-size: 12px;
+  }
+  .score-percentage {
+    font-size: 26px;
+  }
+
+  /* Welcome Card */
+  .welcome-card-render {
+    padding: 20px 12px;
+  }
+  .welcome-card-render::before {
+    inset: 8px;
+  }
+  .welcome-card-inner {
+    padding: 16px;
+  }
+  .wcard-title {
+    font-size: 24px;
+  }
+  .wcard-message {
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  /* Social Mockups Grid */
+  .social-mockups-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Website Hero Banner Compact */
+  .hero-showcase-compact {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    text-align: center;
+  }
+  .hsc-left h2 {
+    font-size: 26px;
+  }
+  .hsc-left p {
+    font-size: 13px;
+  }
+  .hsc-right {
+    height: 200px;
+    margin-top: 20px;
+  }
+  .hsc-visual-box {
+    width: 130px;
+    height: 180px;
+  }
+  .hsc-visual-card {
+    width: 90px;
+    height: 130px;
+  }
+  .hsc-c1 {
+    transform: rotate(-15deg) translate(-25px, 10px);
+  }
+  .hsc-c2 {
+    transform: rotate(15deg) translate(25px, 10px);
+  }
+
+  /* Mockup Scene */
+  .mockup-scene {
+    padding: 30px 16px;
+  }
+  .mockup-render-area {
+    gap: 20px;
+  }
+
+  /* Premium Gift Edition */
+  .gift-edition-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .gift-details h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .gift-sleeve-render {
+    padding: 24px;
+    height: 240px;
+  }
+  .gift-bow {
+    width: 60px;
+    height: 60px;
+  }
+  .gift-logo {
+    font-size: 15px;
+  }
+}
+
+/* ========================================================
    PRINT READY STYLES (A4, 300 DPI, CMYK COMPATIBLE)
    ======================================================== */
 @media print {
