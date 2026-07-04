@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بين قلبين – لعبة التوافق الزوجي | من منصة خيركم</title>
+  <meta name="description" content="العلامة التجارية والمنتجات الفاخرة للعبة التوافق الزوجي بين قلبين - من خيركم خيركم لأهله" />
+  <link rel="stylesheet" href="between-hearts.css" />
+</head>
+<body>
+
+  <!-- ===== TOP NAVIGATION NAVBAR ===== -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <div class="logo-container">
+        <img src="logo.png" alt="شعار خيركم" class="logo-img" onerror="this.style.display='none'">
+        <div class="game-title-wrap">
+          <span class="nav-brand-ar">بين قلبين 💍</span>
+          <span class="nav-tagline">من منصة خيركم</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link active-nav">الرئيسية</a>
+        <a href="#packaging" class="nav-link">الغلاف والتغليف</a>
+        <a href="#cards" class="nav-link">الـ 120 كرتاً</a>
+        <a href="#booklet" class="nav-link">كتيب التعليمات</a>
+        <a href="#scorebook" class="nav-link">دفتر النتائج</a>
+        <a href="#welcome" class="nav-link">بطاقة الترحيب</a>
+        <a href="#mockups" class="nav-link">المعروضات والتسويق</a>
+      </div>
+      <button class="nav-print-btn" onclick="printDeck()">🖨 طباعة الكروت</button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="publisher-badge">
+          <img src="logo.png" alt="خيركم" style="height:20px; width:auto; background:white; padding:2px; border-radius:4px;" onerror="this.style.display='none'">
+          <span class="publisher-text">خيركم لأهله يقدم</span>
+        </div>
+        <h1 class="hero-title">💍 بين قلبين</h1>
+        <h2 class="hero-subtitle">لعبة التوافق الزوجي الفاخرة</h2>
+        <p class="hero-tagline">
+          من يعرف قلب الآخر أكثر؟ رحلة تفاعلية استثنائية للزوجين عبر 120 كرت حواري وتحدٍ عفوي يعيد دفء المشاعر ويبني رصيداً لا ينفد من الأمان والمحبة.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#cards" class="btn-primary"><span>تصفح الكروت التفاعلية</span> 💬</a>
+          <a href="#packaging" class="btn-secondary">استعراض التغليف الفاخر</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="box-3d-scene">
+          <div class="box-3d">
+            <!-- Front Face -->
+            <div class="box-face box-front">
+              <div class="packaging-face-render" style="height:100%; border-width:1px;">
+                <div class="luxury-ornament orn-top-right"></div>
+                <div class="luxury-ornament orn-top-left"></div>
+                <div class="luxury-ornament orn-bottom-right"></div>
+                <div class="luxury-ornament orn-bottom-left"></div>
+                <div class="pkg-logo-wrap" style="margin-top:15px;">
+                  <img src="logo.png" alt="خيركم" class="pkg-brand-logo" style="height:35px;">
+                </div>
+                <div class="pkg-title-area" style="margin-top:15px;">
+                  <h1 class="pkg-main-title" style="font-size:32px;">بين قلبين</h1>
+                  <div class="pkg-subtitle" style="font-size:13px;">لعبة التوافق الزوجي</div>
+                </div>
+                <div class="pkg-graphics" style="margin:20px 0;">
+                  <div class="rings-graphic" style="transform:scale(0.8);">
+                    <div class="ring-shape ring-1"><div class="ring-diamond"></div></div>
+                    <div class="ring-shape ring-2"></div>
+                  </div>
+                </div>
+                <div class="pkg-bottom-meta" style="margin-top:15px; padding-top:10px; font-size:10px;">
+                  <span>120 كرت لعب</span>
+                  <span>+18 متزوجون</span>
+                  <span>لعبة زوجية فاخرة</span>
+                </div>
+              </div>
+            </div>
+            <!-- Back Face -->
+            <div class="box-face box-back">
+              <div class="packaging-face-render" style="height:100%; border-width:1px; transform: scaleX(-1);">
+                <div class="luxury-ornament orn-top-right"></div>
+                <div class="luxury-ornament orn-top-left"></div>
+                <div class="luxury-ornament orn-bottom-right"></div>
+                <div class="luxury-ornament orn-bottom-left"></div>
+                <div class="pkg-title-area" style="margin-top:15px;">
+                  <h2 style="font-family:var(--font-serif); font-size:24px; color:var(--gold);">عن اللعبة</h2>
+                </div>
+                <p style="font-size:10px; color:var(--gray-400); text-align:center; padding:10px; line-height:1.6;">
+                  اكتشف أعماق تفضيلات شريكك مع 120 كرت حوار مقسمة إلى 5 مجالات عاطفية فاخرة.
+                </p>
+                <div class="pkg-barcode-area" style="position:absolute; bottom:20px; left:20px; right:20px;">
+                  <div class="pkg-barcode"><div class="barcode-lines"></div><span class="barcode-num">6281234567890</span></div>
+                  <img src="logo.png" alt="خيركم" style="height:25px; background:white; padding:2px; border-radius:4px;">
+                </div>
+              </div>
+            </div>
+            <!-- Sides -->
+            <div class="box-face box-left"></div>
+            <div class="box-face box-right"></div>
+            <div class="box-face box-top"></div>
+            <div class="box-face box-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 1. PREMIUM CARD BOX PACKAGING & 2/3. COVERS ===== -->
+  <section class="section" id="packaging">
+    <div class="section-header-wrap">
+      <span class="section-badge">التغليف الخارجي الفاخر</span>
+      <h2 class="section-title">علبة اللعبة والأغلفة الطباعية</h2>
+      <p class="section-desc">
+        تصميم علبة اللعبة (Packaging) والوجهين الأمامي والخلفي بدقة طباعة 300 DPI متوافقة مع ألوان الهوية البصرية لـ "خيركم".
+      </p>
+    </div>
+
+    <div class="glass-panel packaging-design-grid">
+      <!-- Front Cover Mockup -->
+      <div>
+        <h3 style="font-family:var(--font-serif); font-size:24px; color:var(--gold); margin-bottom:20px; text-align:center;">1. الغلاف الأمامي (Front Cover)</h3>
+        <div class="packaging-face-render">
+          <div class="luxury-ornament orn-top-right"></div>
+          <div class="luxury-ornament orn-top-left"></div>
+          <div class="luxury-ornament orn-bottom-right"></div>
+          <div class="luxury-ornament orn-bottom-left"></div>
+          
+          <div class="pkg-logo-wrap">
+            <img src="logo.png" alt="شعار خيركم" class="pkg-brand-logo" onerror="this.style.display='none'">
+          </div>
+
+          <div class="pkg-title-area">
+            <h1 class="pkg-main-title">بين قلبين</h1>
+            <div class="pkg-subtitle">لعبة التوافق الزوجي الفاخرة</div>
+            <p class="pkg-tagline">"من يعرف قلب الآخر أكثر؟"</p>
+          </div>
+
+          <div class="pkg-graphics">
+            <div class="rings-graphic">
+              <div class="ring-shape ring-1">
+                <div class="ring-diamond"></div>
+              </div>
+              <div class="ring-shape ring-2"></div>
+            </div>
+          </div>
+
+          <div class="pkg-bottom-meta">
+            <span>👤 2 لاعبين (زوجان)</span>
+            <span>⏱ 45 دقيقة للجلسة</span>
+            <span>⭐ إصدار فاخر</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back Cover Mockup -->
+      <div>
+        <h3 style="font-family:var(--font-serif); font-size:24px; color:var(--gold); margin-bottom:20px; text-align:center;">2. الغلاف الخلفي (Back Cover)</h3>
+        <div class="packaging-face-render">
+          <div class="luxury-ornament orn-top-right"></div>
+          <div class="luxury-ornament orn-top-left"></div>
+          <div class="luxury-ornament orn-bottom-right"></div>
+          <div class="luxury-ornament orn-bottom-left"></div>
+
+          <div class="pkg-title-area" style="margin-top:10px; margin-bottom:20px;">
+            <h2 style="font-family:var(--font-serif); font-size:28px; color:var(--gold); text-align:center;">محتويات وتفاصيل اللعبة</h2>
+          </div>
+
+          <p class="pkg-back-desc">
+            رحلة من الحوار العاطفي والألفة المتجددة. تحتوي هذه اللعبة على 120 كرت حوار وتحدٍ مقسمة على 5 فئات دقيقة تعيد التآلف وتنمي لغة الحب المشترك وتحديث خارطة التقارب.
+          </p>
+
+          <div class="pkg-back-features">
+            <div class="pkg-feat-item">❤️ 24 كرت عرف شريكك (رملي وردي)</div>
+            <div class="pkg-feat-item">💬 24 كرت لغة القلب (سماوي مائي)</div>
+            <div class="pkg-feat-item">🌹 24 كرت ذكرياتنا (خزامى لافندر)</div>
+            <div class="pkg-feat-item">🌱 24 كرت مستقبلنا معاً (أخضر زمردي)</div>
+            <div class="pkg-feat-item">⭐ 24 كرت تحديات زوجية (ذهبي ملكي)</div>
+            <div class="pkg-feat-item">📋 كتيب تعليمات ودليل النتائج</div>
+          </div>
+
+          <div class="pkg-barcode-area">
+            <div class="pkg-barcode">
+              <div class="barcode-lines"></div>
+              <span class="barcode-num">6281234567890</span>
+            </div>
+            <div class="pkg-warning">
+              ⚠️ تحذير: للمتزوجين والمقبلين على الزواج فقط.<br>
+              صنع بحب في منصة خيركم
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 120 PLAYING CARDS ===== -->
+  <section class="section card-gallery-section" id="cards">
+    <div class="section-header-wrap">
+      <span class="section-badge">كروت اللعبة الـ 120 التفاعلية</span>
+      <h2 class="section-title">فئات كروت اللعبة وتفاصيلها</h2>
+      <p class="section-desc">
+        تصفح كروت اللعب الـ 120 الموزعة بالتساوي على فئاتها الخمسة بحدود ذهبية أنيقة وأسئلة زوجية دقيقة. انقر على أي كرت لقلبه لرؤية الخلفية.
+      </p>
+    </div>
+
+    <!-- Filters and Search -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-category="all">عرض الجميع</button>
+      <button class="filter-btn" data-category="rose">❤️ عرف شريكك</button>
+      <button class="filter-btn" data-category="blue">💬 لغة القلب</button>
+      <button class="filter-btn" data-category="purple">🌹 ذكرياتنا</button>
+      <button class="filter-btn" data-category="green">🌱 مستقبلنا معاً</button>
+      <button class="filter-btn" data-category="gold">⭐ تحديات زوجية</button>
+    </div>
+
+    <div class="search-wrap">
+      <input type="text" id="card-search" placeholder="ابحث عن سؤال معين في الكروت..." class="search-input" />
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid" id="cards-grid">
+      <!-- Cards will be populated dynamically from between-hearts.js -->
+    </div>
+  </section>
+
+  <!-- ===== 5. INSTRUCTION BOOKLET ===== -->
+  <section class="section" id="booklet">
+    <div class="section-header-wrap">
+      <span class="section-badge">دليل اللعب والنهج</span>
+      <h2 class="section-title">كتيب تعليمات وقوانين اللعبة</h2>
+      <p class="section-desc">
+        كيف تلعب مع شريكك؟ استكشف كتيب القوانين والأدلة العاطفية المرفق لتوفير أجواء مثالية للجلسة.
+      </p>
+    </div>
+
+    <div class="glass-panel booklet-container">
+      <!-- Booklet Nav -->
+      <div class="booklet-nav">
+        <button class="booklet-nav-btn active" onclick="setupBooklet(0)">١. مقدمة اللعبة والنهج</button>
+        <button class="booklet-nav-btn" onclick="setupBooklet(1)">٢. كيفية اللعب والإعداد</button>
+        <button class="booklet-nav-btn" onclick="setupBooklet(2)">٣. رصد النقاط والتوافق</button>
+        <button class="booklet-nav-btn" onclick="setupBooklet(3)">٤. نصائح لجلسة استثنائية</button>
+      </div>
+
+      <!-- Booklet Viewer Page -->
+      <div class="booklet-viewer" id="booklet-viewer">
+        <div class="booklet-page-content">
+          <div class="booklet-header">
+            <span class="booklet-header-brand">💍 بين قلبين — من منصة خيركم</span>
+            <span style="font-size:11px; opacity:0.6;">كتيب الإرشادات</span>
+          </div>
+          <h3 class="booklet-title">مقدمة اللعبة والنهج</h3>
+          <div class="booklet-body">
+            <!-- Content Injected via JS -->
+          </div>
+        </div>
+        <div class="booklet-footer">
+          <button onclick="navigateBooklet(-1)">السابق ◀</button>
+          <span class="booklet-page-num">صفحة ١ من ٤</span>
+          <button onclick="navigateBooklet(1)">التالي ▶</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. SCORE BOOK ===== -->
+  <section class="section" id="scorebook">
+    <div class="section-header-wrap">
+      <span class="section-badge">كراسة رصد التوافق المشترك</span>
+      <h2 class="section-title">دفتر تسجيل النتائج الرقمي والتفاعلي</h2>
+      <p class="section-desc">
+        رصيد النتائج المشترك للزوجين لتقييم مدى التوافق وحساب نسبة الانسجام في السهرة.
+      </p>
+    </div>
+
+    <div class="glass-panel scorebook-grid">
+      <!-- Score Sheet Table -->
+      <div class="scorebook-sheet">
+        <div class="scorebook-header">
+          <h3 class="scorebook-main-title">دفتر رصد النتائج</h3>
+          <div class="scorebook-meta">
+            <span>التاريخ: <span class="scorebook-meta-line"></span></span>
+            <span>الزوجين: <span class="scorebook-meta-line"></span></span>
+          </div>
+        </div>
+
+        <table class="scorebook-table">
+          <thead>
+            <tr>
+              <th>الفئة</th>
+              <th>المعدل المستهدف</th>
+              <th>عدد الإجابات النموذجية (0 - 5)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>❤️ عرف شريكك</td>
+              <td>5 نقاط لكل كرت</td>
+              <td><input type="number" class="score-input" data-weight="5" value="4" min="0" max="5"></td>
+            </tr>
+            <tr>
+              <td>💬 لغة القلب</td>
+              <td>5 نقاط لكل كرت</td>
+              <td><input type="number" class="score-input" data-weight="5" value="3" min="0" max="5"></td>
+            </tr>
+            <tr>
+              <td>🌹 ذكرياتنا</td>
+              <td>10 نقاط لكل كرت</td>
+              <td><input type="number" class="score-input" data-weight="10" value="4" min="0" max="5"></td>
+            </tr>
+            <tr>
+              <td>🌱 مستقبلنا معاً</td>
+              <td>10 نقاط لكل كرت</td>
+              <td><input type="number" class="score-input" data-weight="10" value="3" min="0" max="5"></td>
+            </tr>
+            <tr>
+              <td>⭐ تحديات زوجية</td>
+              <td>15 نقطة لكل كرت</td>
+              <td><input type="number" class="score-input" data-weight="15" value="5" min="0" max="5"></td>
+            </tr>
+            <tr class="scorebook-total-row">
+              <td colspan="2">إجمالي رصيد التوافق المحقق</td>
+              <td id="calc-total-points">180 نقطة</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:11px; color:#555; text-align:center; line-height:1.5;">
+          * مجموع النقاط الكلي المستهدف يعتمد على مجموع الأوزان وعدد الإجابات المسجلة.
+        </p>
+      </div>
+
+      <!-- Compatibility Gauge -->
+      <div class="score-calculator">
+        <h3 class="calc-title">مقياس التوافق والانسجام الزوجي</h3>
+        <div class="compatibility-meter">
+          <svg width="160" height="160">
+            <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
+            <circle class="circle-progress" id="score-progress" cx="80" cy="80" r="70"></circle>
+          </svg>
+          <div class="score-percentage" id="score-percent">82%</div>
+        </div>
+        <p class="score-message" id="score-message">
+          امتياز! توافق رائع وعلاقة متينة تفهم دقات القلوب وتفاصيل المشاعر. استمروا على هذا النهج الدافئ!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. WELCOME CARD ===== -->
+  <section class="section" id="welcome">
+    <div class="section-header-wrap">
+      <span class="section-badge">رسالة ترحيبية مغلفة بالامتنان</span>
+      <h2 class="section-title">بطاقة ترحيبية من فريق خيركم</h2>
+      <p class="section-desc">
+        البطاقة الفاخرة المدرجة في مقدمة علبة اللعبة مع تفاصيل الرقائق النحاسية الفاخرة (Rose Gold Foil).
+      </p>
+    </div>
+
+    <div class="glass-panel welcome-card-display">
+      <div class="welcome-card-render">
+        <div class="welcome-card-inner">
+          <div class="wcard-logo-wrap">
+            <img src="logo.png" alt="خيركم" class="wcard-logo" onerror="this.style.display='none'">
+          </div>
+          <h2 class="wcard-title">بين قلبين</h2>
+          <p class="wcard-message">
+            شريك حياتنا العزيز،<br><br>
+            نسعد جداً بوضع هذه اللعبة الحوارية الفاخرة بين يديكما. لقد صممنا "بين قلبين" بمشاعر صادقة وأسس تربوية ونفسية متينة لتكون دليلاً عملياً لفتح قنوات حوار وجداني ودافئ بين قلبيكما. نؤمن بأن الحب ليس مجرد عواطف عابرة، بل هو رعاية يومية متواصلة وتبادل مستمر للمشاعر والذكريات الجميلة.<br><br>
+            ممتنون لثقتكم باختيار لعبة "بين قلبين" لتكون رفيقة سهراتكم الدافئة.<br><br>
+            تمنياتنا لكم بحياة زوجية مليئة بالسكن والمودة والرحمة.
+          </p>
+          <div class="wcard-signature">
+            فريق منصة خيركم
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. SOCIAL MEDIA & 9. HERO BANNER ===== -->
+  <section class="section" id="mockups">
+    <div class="section-header-wrap">
+      <span class="section-badge">العرض الرقمي والتسويق الإلكتروني</span>
+      <h2 class="section-title">موك آب منصات التواصل الاجتماعي والويب</h2>
+      <p class="section-desc">
+        تنسيق المنشورات الترويجية واللافتات الإلكترونية للترويج للمنتج على المتاجر ومواقع التواصل الاجتماعي.
+      </p>
+    </div>
+
+    <div class="glass-panel social-mockups-grid">
+      <!-- Instagram post mockup -->
+      <div class="social-mock-post">
+        <div class="post-header">
+          <div class="post-avatar">
+            <img src="logo.png" alt="خيركم" onerror="this.style.display='none'">
+          </div>
+          <div class="post-username">khairokom_hub</div>
+        </div>
+        <div class="post-media-area">
+          <h2 class="post-product-title">بين قلبين</h2>
+          <div class="post-product-subtitle">لعبة التوافق الزوجي المحدثة</div>
+          <div style="font-size: 56px; margin: 15px 0;">💍💖</div>
+          <p style="font-size:11px; opacity:0.8; color:var(--luxury-gold); font-weight:700;">جديد إصدارات سلسلة المودة الزوجية</p>
+        </div>
+        <div class="post-social-info">
+          ❤️ 1,248 إعجاب &nbsp; 💬 56 تعليق
+        </div>
+        <p class="post-caption">
+          <strong>khairokom_hub</strong> متى كانت آخر جلسة حوار دافئة جمعتكما؟ لعبة "بين قلبين" الفاخرة متوفرة الآن للطلب لكسر روتين الأيام وإشعال الحب والانسجام مجدداً. #خيركم #بين_قلبين #حب_زوجي
+        </p>
+      </div>
+
+      <!-- Instagram story mockup -->
+      <div class="social-mock-story">
+        <div class="story-bar"><div class="story-bar-fill"></div></div>
+        <div class="story-header" style="margin-top:10px;">
+          <div class="post-avatar" style="width:24px; height:24px;"><img src="logo.png" alt="خيركم" onerror="this.style.display='none'"></div>
+          <div class="post-username" style="font-size:10px;">khairokom_hub</div>
+        </div>
+        <div class="story-center">
+          <span style="font-size:12px; color:var(--pink-primary); font-weight:800; letter-spacing:1px;">سلسلة المودة الزوجية</span>
+          <h2 style="font-family:var(--font-serif); font-size:28px; background:var(--gold-gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:10px 0;">لعبة بين قلبين</h2>
+          <p style="font-size:11px; color:var(--gray-400); margin-bottom:20px; line-height:1.6;">
+            من يعرف قلب الآخر أكثر؟<br>120 سؤال وتحدي لتقريب المسافات
+          </p>
+          <div style="font-size:36px;">🎁✨</div>
+        </div>
+        <div class="story-swipe-up">
+          <span class="swipe-arrow">▲</span><br>
+          <span>اسحب للأعلى لطلب هديتك الفاخرة</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. PRODUCT STORE MOCKUPS & 11. LISTING IMAGES ===== -->
+  <section class="section">
+    <div class="section-header-wrap">
+      <span class="section-badge">الموقع والتسويق الإلكتروني</span>
+      <h2 class="section-title">موك آب المتجر الإلكتروني وصور العرض</h2>
+      <p class="section-desc">
+        عرض تقديمي للمنتج لصفحات أمازون وإيتسي (Amazon / Etsy Listing Images) مع قائمة الأسعار والميزات.
+      </p>
+    </div>
+
+    <!-- Website Hero Banner Compact -->
+    <div class="glass-panel" style="margin-bottom:40px;">
+      <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--gold); margin-bottom:20px;">9. لافتة المتجر الإلكتروني الرئيسية (Hero Banner)</h3>
+      <div class="hero-showcase-compact">
+        <div class="hsc-left">
+          <h2>💍 لعبة التوافق الزوجي "بين قلبين"</h2>
+          <p>
+            تمنحك اللعبة مساحة حوارية آمنة وممتعة ومجهزة بأحدث الأساليب العاطفية المعتمدة لتقوية عرى الحياة المشتركة والروابط الحية.
+          </p>
+          <button class="btn-primary" style="padding:10px 24px; font-size:13px;">اطلب نسختك الآن 🛍️</button>
+        </div>
+        <div class="hsc-right">
+          <div class="hsc-visual-box">
+            <span style="font-family:var(--font-serif); font-size:18px; color:var(--gold);">بين قلبين</span>
+            <div style="font-size:28px; margin:10px 0;">💎</div>
+            <img src="logo.png" alt="خيركم" style="height:20px; background:white; padding:2px; border-radius:4px;">
+          </div>
+          <div class="hsc-visual-card hsc-c1">
+            <h4>❤️ عرف شريكك</h4>
+            <p style="margin-top:10px; font-size:7px;">ما هو الشيء الصغير الذي أفعله يومياً ويجعلك تبتسم؟</p>
+          </div>
+          <div class="hsc-visual-card hsc-c2">
+            <h4>🌱 مستقبلنا</h4>
+            <p style="margin-top:10px; font-size:7px;">أين ترى علاقتنا وحياتنا الزوجية بعد عشر سنوات؟</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Mockups & Listing Carousel -->
+    <div class="glass-panel mockup-scene" style="margin-bottom:40px;">
+      <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--gold); margin-bottom:20px; align-self:flex-start;">10. موك آب المتجر الرقمي (Store Mockup)</h3>
+      <div class="mockup-render-area">
+        <!-- Packaging Box Mockup -->
+        <div class="mock-item-box">
+          <img src="logo.png" alt="خيركم" style="height:30px; align-self:center; background:white; padding:4px; border-radius:4px;">
+          <h2 style="font-family:var(--font-serif); font-size:24px; color:var(--gold); text-align:center;">بين قلبين</h2>
+          <span style="font-size:10px; color:var(--gray-400); text-align:center;">لعبة التوافق الزوجي الفاخرة</span>
+          <div style="font-size:32px; text-align:center;">🎁</div>
+          <div style="font-size:10px; display:flex; justify-content:space-between; opacity:0.8;">
+            <span>120 كرت لعب</span>
+            <span>+18 متزوجون</span>
+          </div>
+        </div>
+
+        <!-- Sample Card Mockup -->
+        <div class="mock-item-card">
+          <div style="display:flex; justify-content:space-between; font-size:9px; color:var(--cat-rose-text); font-weight:800;">
+            <span>❤️ عرف شريكك</span>
+            <span>#001</span>
+          </div>
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; text-align:center;">
+            <h4 style="font-family:var(--font-serif); font-size:13px; color:var(--cat-rose-text);">ما هو الشيء الصغير الذي أفعله يومياً ويجعلك تبتسم؟</h4>
+          </div>
+          <div style="border-top:1px solid #eee; padding-top:8px; font-size:8px; color:#aaa; display:flex; justify-content:space-between;">
+            <span>سلسلة المودة الزوجية</span>
+            <span>خيركم</span>
+          </div>
+        </div>
+
+        <!-- Scorebook Sheet Mockup -->
+        <div class="mock-item-score">
+          <h4 style="font-family:var(--font-serif); font-size:11px; text-align:center; color:var(--teal-deep); border-bottom:1px solid #eee; padding-bottom:6px; margin-bottom:8px;">كراسة نتائج بين قلبين</h4>
+          <div style="font-size:8px; display:flex; flex-direction:column; gap:4px;">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #f9f9f9; padding:2px 0;"><span>عرف شريكك</span><span>4 / 5</span></div>
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #f9f9f9; padding:2px 0;"><span>لغات الحب</span><span>3 / 5</span></div>
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #f9f9f9; padding:2px 0;"><span>ذكرياتنا</span><span>5 / 5</span></div>
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #f9f9f9; padding:2px 0;"><span>مستقبلنا</span><span>4 / 5</span></div>
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #f9f9f9; padding:2px 0;"><span>التحديات</span><span>5 / 5</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-pricing-details">
+        <div class="mock-price">149 ريال سعودي / درهم</div>
+        <p style="font-size:13px; color:var(--gray-400);">التوصيل مجاني داخل دول مجلس التعاون الخليجي</p>
+      </div>
+    </div>
+
+    <!-- 11. Amazon / Etsy Listing Carousel -->
+    <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--gold); margin-bottom:20px;">11. صور الإدراج لـ Amazon / Etsy (Listing Images)</h3>
+    <div class="listing-carousel">
+      <!-- Slide 1 -->
+      <div class="listing-slide">
+        <span class="slide-num-badge">1</span>
+        <div class="slide-title-area">
+          <h4 class="slide-heading">الصورة الرئيسية الفاخرة</h4>
+          <p class="slide-desc">مظهر العلبة من الأمام والخلف مع الكروت بصورة فنية فاخرة.</p>
+        </div>
+        <div class="slide-graphic-area"><span style="font-size:48px;">📦✨</span></div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="listing-slide">
+        <span class="slide-num-badge">2</span>
+        <div class="slide-title-area">
+          <h4 class="slide-heading">أبعاد ومحتويات اللعبة</h4>
+          <p class="slide-desc">أبعاد الكروت والعلبة وعددها الدقيق لتعريف العميل بالمنتج.</p>
+        </div>
+        <div class="slide-graphic-area"><span style="font-size:48px;">📐🃏</span></div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="listing-slide">
+        <span class="slide-num-badge">3</span>
+        <div class="slide-title-area">
+          <h4 class="slide-heading">الفئات العاطفية الخمس</h4>
+          <p class="slide-desc">إنفوجرافيك يشرح المجالات الخمس للكروت مع نماذج للأسئلة.</p>
+        </div>
+        <div class="slide-graphic-area"><span style="font-size:48px;">❤️💬</span></div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="listing-slide">
+        <span class="slide-num-badge">4</span>
+        <div class="slide-title-area">
+          <h4 class="slide-heading">خطوات الإعداد واللعب</h4>
+          <p class="slide-desc">عرض مصور للخطوات البسيطة للبدء في سهرة التوافق الزوجي.</p>
+        </div>
+        <div class="slide-graphic-area"><span style="font-size:48px;">🕯️📋</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 12. PREMIUM GIFT EDITION ===== -->
+  <section class="section" style="padding-bottom:120px;">
+    <div class="section-header-wrap">
+      <span class="section-badge">هدية ليلة العمر المتميزة</span>
+      <h2 class="section-title">إصدار الهدية الفاخرة (Premium Gift Edition)</h2>
+      <p class="section-desc">
+        نسخة الهدية الفاخرة المجهزة بغلاف إضافي وشريط ساتان عريض وكارت الإهداء المخصص للمناسبات والذكرى السنوية.
+      </p>
+    </div>
+
+    <div class="glass-panel gift-edition-container">
+      <!-- Sleeve Render -->
+      <div class="gift-sleeve-render">
+        <div class="gift-ribbon"></div>
+        <div class="gift-ribbon-horizontal"></div>
+        <div class="gift-bow">
+          <span class="gift-logo">بين قلبين</span>
+        </div>
+      </div>
+
+      <!-- Sleeve Details -->
+      <div class="gift-details">
+        <h3 style="font-family:var(--font-serif); font-size:28px; color:var(--gold);">مميزات إصدار الهدايا</h3>
+        <p style="font-size:14.5px; color:var(--gray-400); line-height:1.8;">
+          صممنا هذا الإصدار الخاص ليكون هدية زواج فاخرة، أو لمناسبات ذكرى زواج السنوية مع باقة إضافية من الخدمات اللطيفة المدرجة.
+        </p>
+        <ul class="gift-feat-list">
+          <li><strong>🎀 غلاف إضافي فاخر:</strong> علبة من الكرتون الصلب بطلاء نحاسي مقاوم للخدش مع شريط أنيق من الساتان الوردي.</li>
+          <li><strong>✉️ بطاقة إهداء مخصصة:</strong> بطاقة مصنوعة من ورق القطن الطبيعي مع مساحة فارغة لكتابة رسالتك بخط يدوي أنيق.</li>
+          <li><strong>🕯️ شمعة عطرية دافئة:</strong> شمعة برائحة الفانيليا الطبيعية واللافندر لتهيئة الجلسة الهادئة للزوجين.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:var(--luxury-dark); border-top:1px solid rgba(200,151,58,0.2); padding:40px 24px; text-align:center;">
+    <img src="logo.png" alt="خيركم" style="height:40px; margin-bottom:15px; background:white; padding:4px; border-radius:4px;" onerror="this.style.display='none'">
+    <p style="font-size:13px; color:var(--gray-400); line-height:1.7;">
+      تأليف وإعداد: فريق منصة خيركم • جميع الحقوق محفوظة لعلامة بين قلبين © 2026<br>
+      "خيركم خيركم لأهله، وأنا خيركم لأهلي"
+    </p>
+  </footer>
+
+  <script src="between-hearts.js"></script>
+</body>
+</html>
