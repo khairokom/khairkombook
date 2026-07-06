@@ -17,41 +17,41 @@
   --gold:            #C8973A;
   --gold-light:      #F7E9CC;
   --gold-ultra:      #FDF7EC;
-  --dark:            #1A2E32;
+  --dark:            #111111; /* Extremely dark for maximum contrast */
   --white:           #FFFFFF;
-  --off-white:       #FBFDFA;
-  --gray-100:        #F4F6F8;
-  --gray-200:        #E8ECED;
-  --gray-400:        #9AADB0;
-  --gray-700:        #3D5258;
+  --off-white:       #FFFFFF;
+  --gray-100:        #F8F9FA;
+  --gray-200:        #E9ECEF;
+  --gray-400:        #6C757D;
+  --gray-700:        #222222; /* Deeper grey for text paragraphs */
 
   /* Luxury Accents */
-  --luxury-dark:     #FAF6F0; /* Clean Light Champagne */
-  --luxury-gold:     #C8973A; /* Luxury Gold */
-  --gold-gradient:   linear-gradient(135deg, #A87C28 0%, #D4AF37 50%, #8A6218 100%);
-  --rose-gradient:   linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
-  --dark-gradient:   linear-gradient(135deg, #FFFFFF 0%, #FDF7EC 100%);
+  --luxury-dark:     #FFFFFF; /* Pure White Background */
+  --luxury-gold:     #8A6218; /* Darker Gold for legibility */
+  --gold-gradient:   linear-gradient(135deg, #8A6218 0%, #C8973A 50%, #68480D 100%);
+  --rose-gradient:   linear-gradient(135deg, #FFA6B5 0%, #E63956 100%);
+  --dark-gradient:   linear-gradient(135deg, #FFFFFF 0%, #FDF9F3 100%);
 
-  /* Game Categories */
+  /* Game Categories - Deepened Text Colors for Accessibility */
   --cat-rose:        #FFF0F2;
-  --cat-rose-border: #FFB3C1;
-  --cat-rose-text:   #C92C5E;
+  --cat-rose-border: #FFA6B5;
+  --cat-rose-text:   #96123C; /* Deep Rose Red */
   
   --cat-blue:        #E6F4F8;
   --cat-blue-border: #9BCFE0;
-  --cat-blue-text:   #1A748E;
+  --cat-blue-text:   #0B4E63; /* Deep Blue-Teal */
   
   --cat-purple:      #F3EEF9;
   --cat-purple-border: #CEBDE3;
-  --cat-purple-text:   #6C3C96;
+  --cat-purple-text:   #4E2370; /* Deep Purple */
   
   --cat-green:       #EBF6F0;
   --cat-green-border: #A3D9C3;
-  --cat-green-text:   #187A4F;
+  --cat-green-text:   #0E5233; /* Deep Emerald Green */
   
   --cat-gold:        #FCF8EB;
   --cat-gold-border: #E5C384;
-  --cat-gold-text:   #9C6C1B;
+  --cat-gold-text:   #6B4910; /* Deep Gold */
 
   /* Typography */
   --font-main:       'Cairo', sans-serif;
@@ -139,12 +139,8 @@ button {
 }
 
 .logo-img {
-  height: 48px;
+  height: 60px;
   width: auto;
-  border-radius: 6px;
-  background: white;
-  padding: 4px;
-  box-shadow: 0 4px 12px rgba(29, 191, 176, 0.2);
 }
 
 .game-title-wrap {
@@ -471,14 +467,12 @@ button {
   margin: 0 auto;
 }
 
-/* Glass panel background */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.75);
+  background: #FFFDF9;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(200, 151, 58, 0.22);
+  border: 2px solid #E5C384;
   padding: 40px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 15px 40px rgba(200, 151, 58, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 /* ========================================================
@@ -532,11 +526,8 @@ button {
 }
 
 .pkg-brand-logo {
-  max-height: 50px;
+  max-height: 80px;
   width: auto;
-  background: white;
-  padding: 5px;
-  border-radius: 8px;
 }
 
 .pkg-title-area {
@@ -897,8 +888,9 @@ button {
 }
 
 .card-footer-logo img {
-  height: 16px;
+  height: 45px;
   width: auto;
+  object-fit: contain;
 }
 
 /* Category Specific Card Front Styling */
@@ -1232,7 +1224,7 @@ button {
 }
 
 .wcard-logo {
-  max-height: 40px;
+  max-height: 70px;
   width: auto;
 }
 

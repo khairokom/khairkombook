@@ -999,11 +999,11 @@ const BOOKLET_PAGES = [
       <p>تأتيكم هذه اللعبة بإنتاج مشترك من منصّة <strong>"خيركم" (خيركم لأهله)</strong>، لتكون رفيقاً عملياً في جلساتكم الهادئة وسهراتكم الخاصة.</p>
       <p>تنقسم الكروت إلى 5 فئات أساسية تغطي جوانب العلاقة الزوجية المختلفة:</p>
       <ul>
-        <li><strong>عرف شريكك (Soft Rose)</strong>: أسئلة حول عاداته وميوله المفضلة.</li>
-        <li><strong>لغة القلب (Sky Blue)</strong>: لفهم الاحتياجات العاطفية والتعبير الفعال.</li>
-        <li><strong>ذكرياتنا (Lavender)</strong>: لاستعادة دفء البدايات والمواقف الطريفة المشتركة.</li>
-        <li><strong>مستقبلنا معاً (Emerald Green)</strong>: لرسم أحلام الغد والرؤية المشتركة.</li>
-        <li><strong>تحديات زوجية (Gold)</strong>: أنشطة ومهام تفاعلية فورية لتعزيز الألفة.</li>
+        <li><strong>عرف شريكك (رملي وردي)</strong>: أسئلة حول عاداته وميوله المفضلة.</li>
+        <li><strong>لغة القلب (سماوي مائي)</strong>: لفهم الاحتياجات العاطفية والتعبير الفعال.</li>
+        <li><strong>ذكرياتنا (خزامى لافندر)</strong>: لاستعادة دفء البدايات والمواقف الطريفة المشتركة.</li>
+        <li><strong>مستقبلنا معاً (أخضر زمردي)</strong>: لرسم أحلام الغد والرؤية المشتركة.</li>
+        <li><strong>تحديات زوجية (ذهبي ملكي)</strong>: أنشطة ومهام تفاعلية فورية لتعزيز الألفة.</li>
       </ul>
     `
   },
@@ -1090,8 +1090,7 @@ function renderCardDeck(cards) {
           <div class="card-footer">
             <span>${card.meta}</span>
             <div class="card-footer-logo">
-              <img src="logo.png" alt="خيركم" onerror="this.style.display='none'">
-              <span>خيركم</span>
+              <img src="logo.png" alt="شعار خيركم" onerror="this.style.display='none'">
             </div>
           </div>
         </div>
